@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>经典水晶系列 | Raindrop Crystal · 天然水晶宠物项圈</title>
-<meta name="description" content="Raindrop 经典水晶系列 — 9款天然晶石宠物项圈。紫水晶·白水晶·粉水晶·多宝·绿水晶·粉水晶珍珠·紫黄水晶·蓝托帕。天然手工，全球配送。">
+<meta name="description" content="Raindrop 经典水晶系列 — 天然晶石宠物项圈。紫水晶·白水晶·粉水晶·多宝·绿水晶·粉水晶珍珠·紫黄水晶·蓝托帕。天然手工，全球配送。">
 <style>
 /* ===== RESET & BASE ===== */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -106,10 +106,6 @@ a{color:inherit;text-decoration:none}
   .nav-logo{font-size:18px}
   .nav-cta{padding:6px 12px;font-size:12px}
 }
-
-/* ===== LAZY LOADING ===== */
-.lazy-img{filter:blur(10px);transition:filter .4s ease-out}
-.lazy-img.loaded{filter:blur(0)}
 </style>
 </head>
 <body>
@@ -131,7 +127,7 @@ a{color:inherit;text-decoration:none}
 <section class="page-hero">
   <div class="tag">Classic Collection</div>
   <h1>经典<span>水晶</span>系列</h1>
-  <p>9款天然晶石宠物项圈 · 优雅与品质之选 · 手工温度，给毛孩子的闪耀礼物</p>
+  <p id="heroDesc">天然晶石宠物项圈 · 优雅与品质之选 · 手工温度，给毛孩子的闪耀礼物</p>
 </section>
 
 <!-- Products -->
@@ -145,7 +141,7 @@ a{color:inherit;text-decoration:none}
   <div class="footer-inner">
     <div class="footer-brand">
       <div class="logo">Raindrop</div>
-      <p>Raindrop 是专注天然水晶宠物饰品的独立品牌。经典水晶系列 — 9款天然晶石，每一款都承载着对大自然的敬畏与对宠物的温柔。</p>
+      <p id="footerDesc">Raindrop 是专注天然水晶宠物饰品的独立品牌。经典水晶系列 — 天然晶石，每一款都承载着对大自然的敬畏与对宠物的温柔。</p>
     </div>
     <div class="footer-col">
       <h4>探索系列</h4>
@@ -164,51 +160,56 @@ a{color:inherit;text-decoration:none}
 </footer>
 
 <script>
-// ===== PRODUCT DATA =====
+// ===== PRODUCT DATA (添加新产品只需在此数组追加对象) =====
 const products = [
-  {no:"01",cn:"紫水晶宠物项圈",en:"Amethyst Crystal Pet Collar",retail:"¥128",dropship:"¥68",
+  {no:"01",cn:"紫水晶宠物项圈",en:"Amethyst Crystal Pet Collar",retailUSD:"$32",dropshipUSD:"$9",
    photos:["1","1--","1-"],
    story:["紫水晶以优雅的紫色光泽闻名，象征平静、守护与温柔能量。适合追求优雅气质的毛孩子，让它们在人群中脱颖而出。","Amethyst is known for its elegant purple glow, symbolizing calmness, protection, and gentle energy."],
    use:["适合猫咪、小型犬及中型犬日常拍照、节日造型、精品宠物店陈列。","Suitable for cats, small dogs, and medium dogs for daily photos, seasonal styling, and boutique pet-store display."]},
-  {no:"02",cn:"白水晶宠物项圈",en:"Clear Quartz Pet Collar",retail:"¥168",dropship:"¥84",
+  {no:"02",cn:"白水晶宠物项圈",en:"Clear Quartz Pet Collar",retailUSD:"$37",dropshipUSD:"$12",
    photos:["2-","2--","2"],
    story:["白水晶通透纯净，象征清澈、平衡与祝福。适合喜欢简约风格的宠物主人，百搭任何毛色。","Clear quartz is transparent and pure, symbolizing clarity, balance, and blessings."],
    use:["尤其适合白色、奶油色、灰色与浅色系宠物，清新百搭。","Especially suited for white, cream, gray, and light-colored pets."]},
-  {no:"03",cn:"粉水晶宠物项圈",en:"Rose Quartz Pet Collar",retail:"¥108",dropship:"¥54",
+  {no:"03",cn:"粉水晶宠物项圈",en:"Rose Quartz Pet Collar",retailUSD:"$29",dropshipUSD:"$8",
    photos:["3-","3-","3"],
    story:["粉水晶色泽柔和甜美，常被视为爱与温柔的象征。戴上它，毛孩子瞬间甜度满分。","Rose quartz has a soft and sweet tone and is often seen as a symbol of love and tenderness."],
    use:["适合日常穿搭、生日造型、宠物摄影与礼品销售。","Suitable for daily styling, birthday looks, pet photography, and gift sales."]},
-  {no:"04",cn:"多宝宠物项圈",en:"Multi-Gemstone Pet Collar",retail:"¥128",dropship:"¥68",
+  {no:"04",cn:"多宝宠物项圈",en:"Multi-Gemstone Pet Collar",retailUSD:"$32",dropshipUSD:"$9",
    photos:["4","4--","4-"],
    story:["多宝款融合多种天然晶石色彩，层次丰富、视觉活泼。一条项圈汇聚多种晶石能量。","The multi-gemstone design combines several natural crystal colors for a rich and lively visual effect."],
    use:["适合活泼风格宠物、节日搭配、精品宠物店爆款陈列。","Suitable for playful styling, seasonal looks, and boutique bestseller display."]},
-  {no:"05",cn:"绿水晶宠物项圈",en:"Green Crystal Pet Collar",retail:"¥188",dropship:"¥94",
+  {no:"05",cn:"绿水晶宠物项圈",en:"Green Crystal Pet Collar",retailUSD:"$40",dropshipUSD:"$13",
    photos:["5","5-","5-"],
    story:["绿水晶带有清新自然的色调，象征生机、舒展与好运。夏日最佳搭配之选。","Green crystal carries a fresh natural tone, symbolizing vitality, ease, and good fortune."],
    use:["适合自然系、户外系、清新风格宠物造型。","Suitable for natural, outdoor, and fresh styling concepts."]},
-  {no:"06",cn:"粉水晶加珍珠宠物项圈",en:"Rose Quartz & Pearl Pet Collar",retail:"¥128",dropship:"¥68",
+  {no:"06",cn:"粉水晶加珍珠宠物项圈",en:"Rose Quartz & Pearl Pet Collar",retailUSD:"$32",dropshipUSD:"$9",
    photos:["6","6--","6-"],
    story:["粉水晶的柔和色泽搭配珍珠的温润光感，呈现甜美、优雅、精致的珠宝氛围。","Soft rose quartz paired with the warm luster of pearls creates a sweet, elegant, and refined jewelry mood."],
    use:["适合公主风、婚礼风、节日拍摄和宠物礼盒搭配。","Suitable for princess styling, wedding looks, holiday photos, and pet gift sets."]},
-  {no:"07",cn:"紫黄水晶宠物项圈",en:"Amethyst & Citrine Pet Collar",retail:"¥198",dropship:"¥94",
+  {no:"07",cn:"紫黄水晶宠物项圈",en:"Amethyst & Citrine Pet Collar",retailUSD:"$41",dropshipUSD:"$13",
    photos:["7","7--","7-"],
    story:["紫色与金黄色晶石相互映衬，寓意幸运、活力与美好祝福。高端品质之选。","Purple and golden crystals complement each other, symbolizing luck, vitality, and meaningful blessings."],
    use:["适合高端陈列、节日上新、礼品套装与跨境平台主图展示。","Suitable for premium display, seasonal launches, gift sets, and cross-border listing images."]},
-  {no:"08",cn:"紫水晶宠物项圈",en:"Amethyst Crystal Pet Collar",retail:"¥168",dropship:"¥84",
+  {no:"08",cn:"紫水晶宠物项圈 II",en:"Amethyst Crystal Pet Collar II",retailUSD:"$37",dropshipUSD:"$12",
    photos:["8","8--","8--","8-"],
    story:["此款紫水晶层次更轻盈，晶石垂坠感明显，整体风格优雅灵动。适合追求精致感的宠物主人。","This amethyst design feels lighter in layers, with a clear crystal drape and an elegant, fluid style."],
    use:["适合高级宠物摄影、精品门店陈列和礼品销售。","Suitable for premium pet photography, boutique display, and gift sales."]},
-  {no:"09",cn:"蓝托帕宠物项圈",en:"Blue Topaz Pet Collar",retail:"¥198",dropship:"¥98",
+  {no:"09",cn:"蓝托帕宠物项圈",en:"Blue Topaz Pet Collar",retailUSD:"$41",dropshipUSD:"$14",
    photos:["9-","9--","9"],
    story:["蓝托帕呈现清澈明亮的蓝色光感，象征清新、从容与幸运。海洋般的蓝色令人心旷神怡。","Blue topaz has a clear and bright blue glow, symbolizing freshness, calmness, and good fortune."],
    use:["适合清爽风格宠物、夏季主题陈列、跨境平台高客单展示。","Suitable for fresh styling, summer-themed display, and premium cross-border listings."]}
 ];
 
+// ===== DYNAMIC HERO & FOOTER =====
+const count = products.length;
+document.getElementById("heroDesc").textContent = `${count}款天然晶石宠物项圈 · 优雅与品质之选 · 手工温度，给毛孩子的闪耀礼物`;
+document.getElementById("footerDesc").textContent = `Raindrop 是专注天然水晶宠物饰品的独立品牌。经典水晶系列 — ${count}款天然晶石，每一款都承载着对大自然的敬畏与对宠物的温柔。`;
+
 // ===== BUILD PRODUCTS =====
 const container=document.getElementById("productsContainer");
 container.innerHTML=products.map(p=>{
   const mainPhoto=p.photos[0];
-  const thumbs=p.photos.slice(0,4); // max 4 thumbs
+  const thumbs=p.photos.slice(0,4);
   return `
   <div class="product-card" id="product-${p.no}">
     <div class="product-gallery">
@@ -217,8 +218,8 @@ container.innerHTML=products.map(p=>{
       </div>
       <div class="gallery-thumbs">
         ${thumbs.map((t,i)=>`
-          <button class="${i===0?'active':''}" data-img="images/classic/${t}.webp" data-thumb="images/classic/${t}_thumb.webp">
-            <img data-src="images/classic/${t}_thumb.webp" src="images/classic/${t}_thumb.webp" alt="${i===0?'主图':i===1?'佩戴图':'细节图'}" loading="lazy">
+          <button class="${i===0?'active':''}" data-img="images/classic/${t}.webp">
+            <img src="images/classic/${t}_thumb.webp" alt="${i===0?'主图':i===1?'佩戴图':'细节图'}" loading="lazy">
           </button>
         `).join("")}
       </div>
@@ -242,21 +243,21 @@ container.innerHTML=products.map(p=>{
       <div class="price-row">
         <div class="price-box retail">
           <div class="label">零售价 Retail</div>
-          <div class="price">${p.retail}</div>
+          <div class="price">${p.retailUSD}</div>
           <div class="sub">单件购买</div>
-          <a href="https://wa.me/8618271425419?text=Hi%20Raindrop%21%20我想购买${encodeURIComponent(p.cn+' '+p.retail)}" target="_blank" rel="noopener" class="cta">🛒 立即购买</a>
+          <a href="https://wa.me/8618271425419?text=Hi%20Raindrop%21%20我想购买${encodeURIComponent(p.cn+' '+p.retailUSD)}" target="_blank" rel="noopener" class="cta">🛒 立即购买</a>
         </div>
         <div class="price-box">
           <div class="label">代发价 Dropship</div>
-          <div class="price">${p.dropship}</div>
-          <div class="sub">≤10条 / ≤10 pcs</div>
-          <a href="https://wa.me/8618271425419?text=Hi%20Raindrop%21%20我想了解${encodeURIComponent(p.cn+'代发合作')}" target="_blank" rel="noopener" class="cta">💬 咨询代发</a>
+          <div class="price">${p.dropshipUSD}</div>
+          <div class="sub">≤10件 / ≤10 pcs</div>
+          <a href="https://wa.me/8618271425419?text=Hi%20Raindrop%21%20我想了解${encodeURIComponent(p.cn+' 代发合作')}" target="_blank" rel="noopener" class="cta">💬 咨询代发</a>
         </div>
         <div class="price-box">
           <div class="label">批发价 Wholesale</div>
           <div class="price">私聊</div>
           <div class="sub">MOQ 100+</div>
-          <a href="https://wa.me/8618271425419?text=Hi%20Raindrop%21%20我想了解${encodeURIComponent(p.cn+'批发合作')}" target="_blank" rel="noopener" class="cta">💬 咨询批发</a>
+          <a href="https://wa.me/8618271425419?text=Hi%20Raindrop%21%20我想了解${encodeURIComponent(p.cn+' 批发合作')}" target="_blank" rel="noopener" class="cta">💬 咨询批发</a>
         </div>
       </div>
     </div>
@@ -269,36 +270,10 @@ container.addEventListener("click",e=>{
   if(!btn)return;
   const gallery=btn.closest(".product-gallery");
   const mainImg=gallery.querySelector(".main-img");
-  const imgSrc=btn.dataset.img;
-  mainImg.src=imgSrc;
+  mainImg.src=btn.dataset.img;
   gallery.querySelectorAll("button").forEach(b=>b.classList.remove("active"));
   btn.classList.add("active");
 });
-
-// ===== LAZY LOADING =====
-const lazyImgs=document.querySelectorAll(".lazy-img:not(.main-img)");
-if("IntersectionObserver" in window){
-  const obs=new IntersectionObserver((entries,o)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){
-        const img=e.target;
-        const src=img.getAttribute("data-src");
-        if(src&&!img.src.includes(src)){
-          const full=new Image();
-          full.onload=()=>{img.src=src;img.classList.add("loaded")};
-          full.src=src;
-        }
-        o.unobserve(img);
-      }
-    });
-  },{rootMargin:"300px"});
-  lazyImgs.forEach(img=>obs.observe(img));
-}else{
-  lazyImgs.forEach(img=>{
-    const src=img.getAttribute("data-src");
-    if(src){img.src=src;img.classList.add("loaded")}
-  });
-}
 </script>
 </body>
 </html>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>星座守护系列 | Raindrop Crystal · 12星座天然水晶宠物项圈</title>
-<meta name="description" content="Raindrop 星座守护系列 — 12款专属星座晶石宠物项圈。水瓶座天河石·双鱼座绿水晶·白羊座石榴石·金牛座黄水晶·双子座海蓝宝·巨蟹座粉水晶·狮子座黄虎眼·处女座白水晶·天秤座紫水晶·天蝎座黑曜石·射手座青晶石·摩羯座茶晶。零售¥198，批发¥78。">
+<meta name="description" content="Raindrop 星座守护系列 — 12款专属星座晶石宠物项圈，全真皮材质。水瓶座天河石·双鱼座绿水晶·白羊座石榴石·金牛座黄水晶·双子座海蓝宝·巨蟹座粉水晶·狮子座黄虎眼·处女座白水晶·天秤座紫水晶·天蝎座黑曜石·射手座青晶石·摩羯座茶晶。零售$41 USD。">
 <style>
 /* ===== RESET & BASE ===== */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -73,7 +73,8 @@ a{color:inherit;text-decoration:none}
 .product-info .zodiac .emoji{font-size:24px}
 .product-info h2{font-size:clamp(22px,3vw,30px);font-weight:700;color:#2d2924;margin-bottom:4px}
 .product-info h3{font-size:16px;color:#776d61;font-weight:400;margin-bottom:16px}
-.product-info .crystal-tag{display:inline-block;background:linear-gradient(135deg,#f4eadb,#efe2cc);padding:6px 16px;border-radius:50px;font-size:13px;color:#2d2924;margin-bottom:20px}
+.product-info .crystal-tag{display:inline-block;background:linear-gradient(135deg,#f4eadb,#efe2cc);padding:6px 16px;border-radius:50px;font-size:13px;color:#2d2924;margin-bottom:12px}
+.product-info .leather-tag{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#2d2924,#4a3728);color:#d4b87a;padding:6px 16px;border-radius:50px;font-size:12px;font-weight:600;letter-spacing:1px;margin-bottom:20px}
 .product-info .divider{height:1px;background:#f0e8d8;margin:20px 0}
 
 .product-info .info-block{margin-bottom:20px}
@@ -127,10 +128,6 @@ a{color:inherit;text-decoration:none}
   .nav-cta{padding:6px 12px;font-size:12px}
   .price-row{flex-direction:column}
 }
-
-/* ===== LAZY LOADING ===== */
-.lazy-img{filter:blur(10px);transition:filter .4s ease-out}
-.lazy-img.loaded{filter:blur(0)}
 </style>
 </head>
 <body>
@@ -153,7 +150,7 @@ a{color:inherit;text-decoration:none}
   <div class="stars-bg" id="starsBg"></div>
   <div class="tag">Zodiac Guardian Collection</div>
   <h1>星座<span>守护</span>系列</h1>
-  <p>12星座专属守护晶石 · 按1-12月顺序排列 · 零售¥198 / 批发¥78</p>
+  <p>12星座专属守护晶石 · 全真皮材质 · 按1-12月顺序排列 · 零售$41 USD</p>
   <div class="zodiac-row">
     <span>♒️</span><span>♓️</span><span>♈️</span><span>♉️</span><span>♊️</span><span>♋️</span>
     <span>♌️</span><span>♍️</span><span>♎️</span><span>♏️</span><span>♐️</span><span>♑️</span>
@@ -178,7 +175,7 @@ a{color:inherit;text-decoration:none}
   <div class="footer-inner">
     <div class="footer-brand">
       <div class="logo">Raindrop</div>
-      <p>Raindrop 是专注天然水晶宠物饰品的独立品牌。星座守护系列 — 为每只毛孩子找到属于它的那颗星。</p>
+      <p>Raindrop 是专注天然水晶宠物饰品的独立品牌。星座守护系列 — 全真皮材质，为每只毛孩子找到属于它的那颗星。</p>
     </div>
     <div class="footer-col">
       <h4>探索系列</h4>
@@ -266,7 +263,6 @@ filterBar.addEventListener("click",e=>{
   document.querySelectorAll(".product-card").forEach(card=>{
     card.style.display=(f==="all"||card.dataset.id===f)?"":"none";
   });
-  // 滚动到视野内
   e.target.scrollIntoView({behavior:"smooth",block:"nearest",inline:"center"});
 });
 
@@ -324,6 +320,7 @@ container.innerHTML=zodiacProducts.map(p=>{
       <h2>「${p.name}」</h2>
       <h3>${p.en} · 宠物晶石项圈</h3>
       <div class="crystal-tag">💎 水晶能量：${p.crystal}（${p.crystalEn}）</div>
+      <div class="leather-tag">🐂 全真皮 Genuine Leather</div>
       <div class="divider"></div>
       <div class="info-block">
         <h4>晶石物语 / Crystal Story</h4>
@@ -339,13 +336,13 @@ container.innerHTML=zodiacProducts.map(p=>{
       <div class="price-row">
         <div class="price-box retail">
           <div class="label">零售价 Retail</div>
-          <div class="price">¥198</div>
+          <div class="price">$41</div>
           <div class="sub">单件购买</div>
-          <a href="https://wa.me/8618271425419?text=Hi%20Raindrop%21%20我想购买${encodeURIComponent('「'+p.name+'」'+p.zodiacName+'守护款 ¥198')}" target="_blank" rel="noopener" class="cta">🛒 立即购买</a>
+          <a href="https://wa.me/8618271425419?text=Hi%20Raindrop%21%20我想购买${encodeURIComponent('「'+p.name+'」'+p.zodiacName+'守护款 $41')}" target="_blank" rel="noopener" class="cta">🛒 立即购买</a>
         </div>
         <div class="price-box">
           <div class="label">批发价 Wholesale</div>
-          <div class="price">¥78</div>
+          <div class="price">$11</div>
           <div class="sub">MOQ 100+ · 详情私聊</div>
           <a href="https://wa.me/8618271425419?text=Hi%20Raindrop%21%20我想了解${encodeURIComponent('「'+p.name+'」'+p.zodiacName+'守护款批发合作')}" target="_blank" rel="noopener" class="cta">💬 咨询批发</a>
         </div>
@@ -365,31 +362,6 @@ container.addEventListener("click",e=>{
   gallery.querySelectorAll("button").forEach(b=>b.classList.remove("active"));
   btn.classList.add("active");
 });
-
-// ===== LAZY LOADING =====
-const lazyImgs=document.querySelectorAll(".lazy-img:not(.main-img)");
-if("IntersectionObserver" in window){
-  const obs=new IntersectionObserver((entries,o)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){
-        const img=e.target;
-        const src=img.getAttribute("data-src");
-        if(src&&!img.src.includes(src)){
-          const full=new Image();
-          full.onload=()=>{img.src=src;img.classList.add("loaded")};
-          full.src=src;
-        }
-        o.unobserve(img);
-      }
-    });
-  },{rootMargin:"300px"});
-  lazyImgs.forEach(img=>obs.observe(img));
-}else{
-  lazyImgs.forEach(img=>{
-    const src=img.getAttribute("data-src");
-    if(src){img.src=src;img.classList.add("loaded")}
-  });
-}
 </script>
 </body>
 </html>

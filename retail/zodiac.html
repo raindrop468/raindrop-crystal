@@ -72,7 +72,8 @@ a{color:inherit;text-decoration:none}
 .product-info .zodiac .emoji{font-size:24px}
 .product-info h2{font-size:clamp(22px,3vw,30px);font-weight:700;color:#2d2924;margin-bottom:4px}
 .product-info h3{font-size:16px;color:#776d61;font-weight:400;margin-bottom:16px}
-.product-info .crystal-tag{display:inline-block;background:linear-gradient(135deg,#f4eadb,#efe2cc);padding:6px 16px;border-radius:50px;font-size:13px;color:#2d2924;margin-bottom:20px}
+.product-info .crystal-tag{display:inline-block;background:linear-gradient(135deg,#f4eadb,#efe2cc);padding:6px 16px;border-radius:50px;font-size:13px;color:#2d2924;margin-bottom:12px}
+.product-info .leather-tag{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#2d2924,#4a3728);color:#d4b87a;padding:6px 16px;border-radius:50px;font-size:12px;font-weight:600;letter-spacing:1px;margin-bottom:20px}
 .product-info .divider{height:1px;background:#f0e8d8;margin:20px 0}
 
 .product-info .info-block{margin-bottom:20px}
@@ -144,7 +145,7 @@ a{color:inherit;text-decoration:none}
   <div class="stars-bg" id="starsBg"></div>
   <div class="tag">Zodiac Guardian Collection</div>
   <h1>Zodiac <span>Guardian</span></h1>
-  <p>12 Exclusive Zodiac Crystal Collars · Jan–Dec Order · $41 USD Each · Free Shipping Over $60</p>
+  <p>12 Exclusive Zodiac Crystal Collars · Genuine Leather · Jan–Dec Order · $41 USD Each · Free Shipping Over $60</p>
   <div class="zodiac-row">
     <span>♒️</span><span>♓️</span><span>♈️</span><span>♉️</span><span>♊️</span><span>♋️</span>
     <span>♌️</span><span>♍️</span><span>♎️</span><span>♏️</span><span>♐️</span><span>♑️</span>
@@ -316,6 +317,7 @@ container.innerHTML=zodiacProducts.map(p=>{
       <h2>${p.name}</h2>
       <h3>${p.crystal} · Pet Crystal Collar</h3>
       <div class="crystal-tag">💎 Crystal Energy: ${p.crystal}</div>
+      <div class="leather-tag">🐂 Genuine Leather · 全真皮</div>
       <div class="divider"></div>
       <div class="info-block">
         <h4>Crystal Story</h4>
