@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Classic Crystal | Raindrop · Natural Crystal Pet Collars</title>
+<meta name="description" content="Raindrop Classic — 9 natural crystal pet collars. Amethyst, Clear Quartz, Rose Quartz, Green Crystal, Blue Topaz. Handcrafted, worldwide shipping.">
+<style>
+/* ===== RESET & BASE ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Segoe UI","Microsoft YaHei",system-ui,-apple-system,sans-serif;color:#2d2924;background:#fffdf8;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+
+/* ===== NAV ===== */
+.nav{position:sticky;top:0;z-index:99;background:rgba(255,253,248,.95);backdrop-filter:blur(12px);border-bottom:1px solid #ded0ba;padding:0 32px}
+.nav-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:Georgia,"Times New Roman",serif;font-size:22px;font-weight:700;color:#b4935e;letter-spacing:1px}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{font-size:14px;color:#776d61;transition:color .2s}
+.nav-links a:hover{color:#b4935e}
+.nav-links a.active{color:#b4935e;font-weight:700}
+.nav-cta{background:#b4935e;color:#fff!important;padding:8px 18px;border-radius:6px;font-weight:600;transition:background .2s!important}
+.nav-cta:hover{background:#9a7d4e!important}
+
+/* ===== PAGE HERO ===== */
+.page-hero{background:linear-gradient(135deg,#fbf8f1 0%,#f4eadb 50%,#efe2cc 100%);padding:64px 32px;text-align:center;position:relative;overflow:hidden}
+.page-hero>*{position:relative;z-index:1}
+.page-hero .tag{display:inline-block;background:#fff;border:1px solid #ded0ba;border-radius:50px;padding:6px 20px;font-size:12px;color:#776d61;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
+.page-hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(28px,5vw,48px);color:#2d2924;letter-spacing:2px;margin-bottom:12px}
+.page-hero h1 span{color:#b4935e}
+.page-hero p{color:#776d61;font-size:15px;max-width:600px;margin:0 auto}
+
+/* ===== PRODUCTS ===== */
+.products-section{max-width:1280px;margin:0 auto;padding:48px 32px 80px}
+.product-card{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding:48px 0;border-bottom:1px solid #f0e8d8;align-items:start}
+.product-card:last-child{border-bottom:none}
+
+/* Gallery */
+.product-gallery{position:sticky;top:140px}
+.product-card:nth-child(even) .product-gallery{order:2}
+.gallery-main{aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:#f4eadb;margin-bottom:12px}
+.gallery-main img{width:100%;height:100%;object-fit:cover}
+.gallery-thumbs{display:flex;gap:8px}
+.gallery-thumbs button{flex:1;aspect-ratio:4/3;border-radius:8px;overflow:hidden;border:2px solid transparent;cursor:pointer;padding:0;background:#f4eadb;transition:border-color .2s;opacity:.6}
+.gallery-thumbs button.active{border-color:#b4935e;opacity:1}
+.gallery-thumbs button img{width:100%;height:100%;object-fit:cover}
+
+/* Info */
+.product-info .product-no{display:inline-block;font-size:11px;letter-spacing:2px;color:#b4935e;font-weight:700;text-transform:uppercase;margin-bottom:8px}
+.product-info h2{font-size:clamp(22px,3vw,30px);font-weight:700;color:#2d2924;margin-bottom:4px}
+.product-info h3{font-size:16px;color:#776d61;font-weight:400;margin-bottom:20px}
+.product-info .divider{height:1px;background:#f0e8d8;margin:20px 0}
+
+.product-info .info-block{margin-bottom:20px}
+.product-info .info-block h4{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:#b4935e;margin-bottom:8px}
+.product-info .info-block p{font-size:14px;color:#2d2924;line-height:1.8}
+.product-info .info-block p.en{color:#776d61;font-size:13px;margin-top:4px}
+
+/* Price */
+.price-row{display:flex;gap:16px;margin-top:24px;flex-wrap:wrap}
+.price-box{flex:1;min-width:200px;background:linear-gradient(135deg,#fbf8f1,#fff);border:2px solid #b4935e;border-radius:10px;padding:20px;text-align:center}
+.price-box .label{font-size:12px;color:#776d61;margin-bottom:4px}
+.price-box .price{font-size:32px;font-weight:700;color:#b4935e}
+.price-box .sub{font-size:12px;color:#b0a490;margin-top:4px}
+.price-box .cta{display:inline-block;margin-top:12px;padding:12px 32px;background:#b4935e;color:#fff;border-radius:8px;font-size:15px;font-weight:600;transition:background .2s}
+.price-box .cta:hover{background:#9a7d4e}
+
+/* Sizes */
+.sizes-row{display:flex;gap:8px;margin-top:8px}
+.sizes-row span{background:#f4eadb;padding:4px 12px;border-radius:50px;font-size:12px}
+
+/* Back to top */
+.back-top{text-align:center;padding:32px}
+.back-top a{display:inline-flex;align-items:center;gap:6px;color:#776d61;font-size:14px;transition:color .2s}
+.back-top a:hover{color:#b4935e}
+
+/* Shipping info */
+.shipping-info{max-width:600px;margin:0 auto 40px;text-align:center;padding:16px 24px;background:#fbf8f1;border-radius:10px;font-size:13px;color:#776d61;line-height:1.8}
+
+/* ===== FOOTER ===== */
+.footer{background:#2d2924;color:#c4beb4;padding:48px 32px 24px}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px}
+.footer-brand .logo{font-family:Georgia,"Times New Roman",serif;font-size:22px;color:#b4935e;font-weight:700;margin-bottom:12px}
+.footer-brand p{font-size:13px;line-height:1.8}
+.footer-col h4{font-size:13px;text-transform:uppercase;letter-spacing:1.5px;color:#fff;margin-bottom:16px;font-weight:600}
+.footer-col a{display:block;font-size:13px;color:#c4beb4;margin-bottom:10px;transition:color .2s}
+.footer-col a:hover{color:#b4935e}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding-top:24px;text-align:center;font-size:12px;color:#776d61}
+.footer-bottom a{color:#b4935e}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:960px){
+  .product-card{grid-template-columns:1fr;gap:24px;padding:32px 0}
+  .product-card:nth-child(even) .product-gallery{order:0}
+  .product-gallery{position:static}
+}
+@media(max-width:768px){
+  .nav{padding:0 16px}.nav-links{gap:16px}.nav-links a{font-size:12px}
+  .products-section{padding:32px 16px 60px}.page-hero{padding:48px 16px}
+  .footer-inner{grid-template-columns:1fr;gap:32px}
+}
+@media(max-width:480px){
+  .nav-inner{height:56px}.nav-logo{font-size:18px}.nav-cta{padding:6px 12px;font-size:12px}
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Raindrop</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="classic.html" class="active">Classic</a>
+      <a href="zodiac.html">Zodiac</a>
+      <a href="https://wa.me/8618271425419" target="_blank" rel="noopener" class="nav-cta">💬 WhatsApp</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="tag">Classic Collection</div>
+  <h1>Classic <span>Crystal</span></h1>
+  <p>9 Natural Crystal Pet Collars · Handcrafted with Care · Worldwide Shipping</p>
+</section>
+
+<section class="shipping-info">
+  🌍 <strong>Free Shipping</strong> on orders over $60 · <strong>7-Day</strong> Easy Returns · 💎 <strong>100% Natural</strong> Crystals
+</section>
+
+<!-- Products -->
+<section class="products-section" id="productsContainer"></section>
+
+<!-- Back to top -->
+<div class="back-top"><a href="#top">↑ Back to Top</a></div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo">Raindrop</div>
+      <p>Raindrop is an independent brand specializing in natural crystal pet accessories. Each piece is handcrafted with genuine crystals — a sparkling gift for your beloved pet.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Collections</h4>
+      <a href="classic.html">Classic Crystal</a>
+      <a href="zodiac.html">Zodiac Guardian</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="https://wa.me/8618271425419" target="_blank" rel="noopener">WhatsApp: +86 182 7142 5419</a>
+      <a href="mailto:raindrop468@outlook.com">raindrop468@outlook.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 <a href="index.html">Raindrop Crystal</a>. All rights reserved. Made with 💛 for pets worldwide.
+  </div>
+</footer>
+
+<script>
+// ===== PRODUCT DATA (Retail: original price + 100 CNY → USD) =====
+const products = [
+  {no:"01",cn:"Amethyst Crystal Pet Collar",cnShort:"紫水晶",en:"Amethyst Crystal",usd:"32",cny:"¥228",
+   photos:["1","1--","1-"],
+   story:["Amethyst is known for its elegant purple glow, symbolizing calmness, protection, and gentle energy. A timeless choice for pets with refined style.","紫水晶以优雅的紫色光泽闻名，象征平静、守护与温柔能量。适合追求优雅气质的毛孩子。"],
+   use:["Suitable for cats, small & medium dogs — daily wear, photos, seasonal styling, and boutique display.","适合猫咪、小型犬及中型犬日常拍照、节日造型、精品宠物店陈列。"]},
+  {no:"02",cn:"Clear Quartz Crystal Pet Collar",cnShort:"白水晶",en:"Clear Quartz Crystal",usd:"37",cny:"¥268",
+   photos:["2-","2--","2"],
+   story:["Clear Quartz is transparent and pure, symbolizing clarity, balance, and blessings. Perfect for minimalist pet owners — matches any fur color beautifully.","白水晶通透纯净，象征清澈、平衡与祝福。适合喜欢简约风格的宠物主人，百搭任何毛色。"],
+   use:["Especially suited for white, cream, gray, and light-colored pets. Clean and versatile.","尤其适合白色、奶油色、灰色与浅色系宠物，清新百搭。"]},
+  {no:"03",cn:"Rose Quartz Crystal Pet Collar",cnShort:"粉水晶",en:"Rose Quartz Crystal",usd:"29",cny:"¥208",
+   photos:["3-","3-","3"],
+   story:["Rose Quartz has a soft and sweet tone, often seen as a symbol of love and tenderness. Your pet will look instantly sweeter wearing this charming piece.","粉水晶色泽柔和甜美，常被视为爱与温柔的象征。戴上它，毛孩子瞬间甜度满分。"],
+   use:["Suitable for daily styling, birthday looks, pet photography, and gift sales.","适合日常穿搭、生日造型、宠物摄影与礼品销售。"]},
+  {no:"04",cn:"Multi-Gemstone Crystal Pet Collar",cnShort:"多宝",en:"Multi-Gemstone Crystal",usd:"32",cny:"¥228",
+   photos:["4","4--","4-"],
+   story:["The multi-gemstone design combines several natural crystal colors for a rich, lively look. One collar gathers the energy of multiple crystals.","多宝款融合多种天然晶石色彩，层次丰富、视觉活泼。一条项圈汇聚多种晶石能量。"],
+   use:["Suitable for playful styling, seasonal looks, and boutique bestseller display.","适合活泼风格宠物、节日搭配、精品宠物店爆款陈列。"]},
+  {no:"05",cn:"Green Crystal Pet Collar",cnShort:"绿水晶",en:"Green Crystal",usd:"40",cny:"¥288",
+   photos:["5","5-","5-"],
+   story:["Green Crystal carries a fresh natural tone, symbolizing vitality, ease, and good fortune. The perfect summer accessory for your pet.","绿水晶带有清新自然的色调，象征生机、舒展与好运。夏日最佳搭配之选。"],
+   use:["Suitable for natural, outdoor, and fresh styling concepts.","适合自然系、户外系、清新风格宠物造型。"]},
+  {no:"06",cn:"Rose Quartz & Pearl Pet Collar",cnShort:"粉水晶珍珠",en:"Rose Quartz & Pearl",usd:"32",cny:"¥228",
+   photos:["6","6--","6-"],
+   story:["Soft rose quartz paired with warm pearl luster creates a sweet, elegant, refined jewelry mood. Perfect for princess-style pet photography.","粉水晶的柔和色泽搭配珍珠的温润光感，呈现甜美、优雅、精致的珠宝氛围。"],
+   use:["Suitable for princess styling, wedding looks, holiday photos, and pet gift sets.","适合公主风、婚礼风、节日拍摄和宠物礼盒搭配。"]},
+  {no:"07",cn:"Amethyst & Citrine Pet Collar",cnShort:"紫黄水晶",en:"Amethyst & Citrine",usd:"41",cny:"¥298",
+   photos:["7","7--","7-"],
+   story:["Purple and golden crystals complement each other, symbolizing luck, vitality, and meaningful blessings. A premium choice for discerning pet parents.","紫色与金黄色晶石相互映衬，寓意幸运、活力与美好祝福。高端品质之选。"],
+   use:["Suitable for premium display, seasonal launches, gift sets, and cross-border listings.","适合高端陈列、节日上新、礼品套装与跨境平台主图展示。"]},
+  {no:"08",cn:"Amethyst Crystal Pet Collar II",cnShort:"紫水晶 II",en:"Amethyst Crystal II",usd:"37",cny:"¥268",
+   photos:["8","8--","8--","8-"],
+   story:["A lighter, airier amethyst design with a clear crystal drape — elegant and fluid. Perfect for pet parents who appreciate refined details.","此款紫水晶层次更轻盈，晶石垂坠感明显，整体风格优雅灵动。适合追求精致感的宠物主人。"],
+   use:["Suitable for premium pet photography, boutique display, and gift sales.","适合高级宠物摄影、精品门店陈列和礼品销售。"]},
+  {no:"09",cn:"Blue Topaz Pet Collar",cnShort:"蓝托帕",en:"Blue Topaz Crystal",usd:"41",cny:"¥298",
+   photos:["9-","9--","9"],
+   story:["Blue Topaz has a clear, bright blue glow — symbolizing freshness, calmness, and good fortune. The ocean-like blue is truly breathtaking.","蓝托帕呈现清澈明亮的蓝色光感，象征清新、从容与幸运。海洋般的蓝色令人心旷神怡。"],
+   use:["Suitable for fresh styling, summer-themed display, and premium cross-border listings.","适合清爽风格宠物、夏季主题陈列、跨境平台高客单展示。"]}
+];
+
+// ===== BUILD PRODUCTS =====
+const container=document.getElementById("productsContainer");
+container.innerHTML=products.map(p=>{
+  const mainPhoto=p.photos[0];
+  const thumbs=p.photos.slice(0,4);
+  return `
+  <div class="product-card" id="product-${p.no}">
+    <div class="product-gallery">
+      <div class="gallery-main">
+        <img src="images/classic/${mainPhoto}.webp" class="main-img" alt="${p.cnShort}" id="main-${p.no}">
+      </div>
+      <div class="gallery-thumbs">
+        ${thumbs.map((t,i)=>`
+          <button class="${i===0?'active':''}" data-img="images/classic/${t}.webp">
+            <img src="images/classic/${t}_thumb.webp" alt="View ${i+1}" loading="lazy">
+          </button>
+        `).join("")}
+      </div>
+    </div>
+    <div class="product-info">
+      <div class="product-no">Product ${p.no}</div>
+      <h2>${p.cn}</h2>
+      <h3>${p.en}</h3>
+      <div class="divider"></div>
+      <div class="info-block">
+        <h4>Crystal Story</h4>
+        <p>${p.story[0]}</p>
+        <p class="en">${p.story[1]}</p>
+      </div>
+      <div class="info-block">
+        <h4>Suitable Pets</h4>
+        <p>${p.use[0]}</p>
+        <p class="en">${p.use[1]}</p>
+        <div class="sizes-row"><span>S</span><span>M</span><span>L</span></div>
+      </div>
+      <div class="price-row">
+        <div class="price-box">
+          <div class="label">Price</div>
+          <div class="price">$${p.usd}</div>
+          <div class="sub">${p.cny} CNY · Free Shipping over $60</div>
+          <a href="https://wa.me/8618271425419?text=Hi%20Raindrop!%20I'm%20interested%20in%20${encodeURIComponent(p.cn)}%20-%20$${p.usd}" target="_blank" rel="noopener" class="cta">🛒 Order via WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>`;
+}).join("");
+
+// ===== GALLERY SWITCHER =====
+container.addEventListener("click",e=>{
+  const btn=e.target.closest(".gallery-thumbs button");
+  if(!btn)return;
+  const gallery=btn.closest(".product-gallery");
+  const mainImg=gallery.querySelector(".main-img");
+  mainImg.src=btn.dataset.img;
+  gallery.querySelectorAll("button").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+});
+</script>
+</body>
+</html>

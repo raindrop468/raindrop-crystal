@@ -1,0 +1,25 @@
+name: Deploy Retail Site to Netlify
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'retail/**'
+  workflow_dispatch:
+
+jobs:
+  deploy-retail:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v3
+        with:
+          publish-dir: './retail'
+          production-deploy: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          netlify-config-path: './retail/netlify.toml'
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: 8ae45537-3c0d-4d1d-815e-683ab8ef84ea
+        timeout-minutes: 5

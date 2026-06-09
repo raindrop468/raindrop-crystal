@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raindrop | Natural Crystal Pet Jewelry · Handcrafted Crystal Pet Collars</title>
+<meta name="description" content="Raindrop — Natural crystal pet jewelry brand. Classic & Zodiac Guardian collections. 100% natural crystals, handcrafted, worldwide shipping. Shop now via WhatsApp.">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Segoe UI","Microsoft YaHei",system-ui,-apple-system,sans-serif;color:#2d2924;background:#fffdf8;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+
+/* Promo */
+.promo-bar{background:#b4935e;color:#fff;text-align:center;padding:8px 16px;font-size:13px;letter-spacing:.5px;overflow:hidden;position:relative;z-index:100}
+.promo-bar .inner{display:flex;animation:promo-scroll 12s linear infinite;white-space:nowrap}
+.promo-bar span{padding:0 40px;flex-shrink:0}
+@keyframes promo-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* Nav */
+.nav{position:sticky;top:0;z-index:99;background:rgba(255,253,248,.95);backdrop-filter:blur(12px);border-bottom:1px solid #ded0ba;padding:0 32px}
+.nav-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:Georgia,"Times New Roman",serif;font-size:22px;font-weight:700;color:#b4935e;letter-spacing:1px}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{font-size:14px;color:#776d61;transition:color .2s;letter-spacing:.3px}
+.nav-links a:hover{color:#b4935e}
+.nav-cta{background:#b4935e;color:#fff!important;padding:8px 18px;border-radius:6px;font-weight:600;transition:background .2s!important}
+.nav-cta:hover{background:#9a7d4e!important;color:#fff!important}
+
+/* Hero */
+.hero{position:relative;background:linear-gradient(135deg,#fbf8f1 0%,#f4eadb 50%,#efe2cc 100%);padding:80px 32px 60px;text-align:center;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 30% 50%,rgba(180,147,94,.08) 0%,transparent 60%);pointer-events:none}
+.hero-badge{display:inline-block;background:#fff;border:1px solid #ded0ba;border-radius:50px;padding:6px 20px;font-size:13px;color:#776d61;margin-bottom:24px;letter-spacing:.5px}
+.hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(36px,7vw,64px);font-weight:700;color:#2d2924;line-height:1.15;margin-bottom:12px;letter-spacing:2px}
+.hero h1 span{color:#b4935e}
+.hero p.sub{font-size:clamp(15px,2vw,18px);color:#776d61;margin-bottom:8px;letter-spacing:.5px}
+.hero .stars{margin:16px 0 32px;display:flex;justify-content:center;align-items:center;gap:6px}
+.hero .stars svg{width:20px;height:20px;fill:#b4935e}
+.hero .stars .label{font-size:13px;color:#776d61;margin-left:8px}
+
+/* Collection Cards */
+.collections{max-width:1200px;margin:-40px auto 60px;padding:0 32px;display:grid;grid-template-columns:1fr 1fr;gap:32px;position:relative;z-index:2}
+.col-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.06);transition:transform .3s,box-shadow .3s;cursor:pointer;display:block}
+.col-card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,0,0,.1)}
+.col-card-img{height:320px;overflow:hidden;position:relative;background:#f4eadb}
+.col-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.col-card:hover .col-card-img img{transform:scale(1.05)}
+.col-card-body{padding:28px 24px}
+.col-card-body .tag{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:#b4935e;font-weight:700;margin-bottom:8px}
+.col-card-body h3{font-size:22px;font-weight:700;margin-bottom:6px;color:#2d2924}
+.col-card-body p{font-size:14px;color:#776d61;line-height:1.7}
+.col-card-body .arrow{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:14px;font-weight:600;color:#b4935e}
+.col-card-body .arrow svg{width:16px;height:16px;transition:transform .3s}
+.col-card:hover .arrow svg{transform:translateX(4px)}
+
+/* Reviews */
+.reviews{max-width:1200px;margin:0 auto 80px;padding:0 32px}
+.section-head{text-align:center;margin-bottom:48px}
+.section-head .tag{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:#b4935e;font-weight:700;margin-bottom:8px}
+.section-head h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(24px,4vw,36px);color:#2d2924;margin-bottom:8px}
+.section-head p{font-size:15px;color:#776d61}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.review-card{background:#fff;border:1px solid #f0e8d8;border-radius:12px;padding:24px;transition:box-shadow .3s}
+.review-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.06)}
+.review-stars{display:flex;gap:2px;margin-bottom:12px}
+.review-stars svg{width:16px;height:16px;fill:#b4935e}
+.review-text{font-size:14px;color:#2d2924;line-height:1.7;margin-bottom:16px;font-style:italic}
+.review-author{display:flex;align-items:center;gap:10px}
+.review-avatar{width:40px;height:40px;border-radius:50%;background:#f4eadb;display:flex;align-items:center;justify-content:center;font-size:18px}
+.review-meta .name{font-size:14px;font-weight:600;color:#2d2924}
+.review-meta .date{font-size:12px;color:#b0a490}
+
+/* Trust */
+.trust{background:#fbf8f1;padding:48px 32px}
+.trust-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center}
+.trust-item .icon{font-size:32px;margin-bottom:12px}
+.trust-item h4{font-size:14px;font-weight:700;color:#2d2924;margin-bottom:4px}
+.trust-item p{font-size:12px;color:#776d61}
+
+/* Footer */
+.footer{background:#2d2924;color:#c4beb4;padding:48px 32px 24px}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px}
+.footer-brand .logo{font-family:Georgia,"Times New Roman",serif;font-size:22px;color:#b4935e;font-weight:700;margin-bottom:12px}
+.footer-brand p{font-size:13px;line-height:1.8}
+.footer-col h4{font-size:13px;text-transform:uppercase;letter-spacing:1.5px;color:#fff;margin-bottom:16px;font-weight:600}
+.footer-col a{display:block;font-size:13px;color:#c4beb4;margin-bottom:10px;transition:color .2s}
+.footer-col a:hover{color:#b4935e}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding-top:24px;text-align:center;font-size:12px;color:#776d61}
+.footer-bottom a{color:#b4935e}
+
+@media(max-width:768px){
+  .nav{padding:0 16px}.nav-links{gap:16px;font-size:12px}.nav-links a{font-size:12px}
+  .collections{grid-template-columns:1fr;margin:-20px auto 40px;padding:0 16px}.col-card-img{height:220px}
+  .reviews-grid{grid-template-columns:1fr}.trust-inner{grid-template-columns:repeat(2,1fr);gap:24px}
+  .footer-inner{grid-template-columns:1fr;gap:32px}.hero{padding:60px 16px 40px}
+}
+@media(max-width:480px){
+  .nav-inner{height:56px}.nav-logo{font-size:18px}.nav-cta{padding:6px 12px;font-size:12px}
+  .review-card{padding:20px}
+}
+
+.lazy-img{filter:blur(10px);transition:filter .4s ease-out}
+.lazy-img.loaded{filter:blur(0)}
+</style>
+</head>
+<body>
+
+<div class="promo-bar">
+  <div class="inner">
+    <span>🛒 Free Shipping on Orders Over $60 · New Customers Get 10% Off</span>
+    <span>✨ 100% Natural Crystals · Handcrafted · 7-Day Easy Returns</span>
+    <span>🌍 Worldwide Shipping · Order via WhatsApp</span>
+    <span>🛒 Free Shipping on Orders Over $60 · New Customers Get 10% Off</span>
+    <span>✨ 100% Natural Crystals · Handcrafted · 7-Day Easy Returns</span>
+    <span>🌍 Worldwide Shipping · Order via WhatsApp</span>
+  </div>
+</div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Raindrop</a>
+    <div class="nav-links">
+      <a href="classic.html">Classic</a>
+      <a href="zodiac.html">Zodiac</a>
+      <a href="https://wa.me/8618271425419" target="_blank" rel="noopener" class="nav-cta">💬 WhatsApp</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">✦ Natural Crystal Pet Jewelry</div>
+  <h1><span>Raindrop</span> Crystal</h1>
+  <p class="sub">Natural Crystal Pet Collars — Handcrafted with Care</p>
+  <p class="sub">A Sparkling Gift for Your Beloved Pet · Worldwide Shipping</p>
+  <div class="stars">
+    <svg viewBox="0 0 20 20"><path d="M10 1l2.4 4.9 5.3.8-3.9 3.8.9 5.3L10 13.5l-4.7 2.5.9-5.3-3.9-3.8 5.3-.8z"/></svg>
+    <svg viewBox="0 0 20 20"><path d="M10 1l2.4 4.9 5.3.8-3.9 3.8.9 5.3L10 13.5l-4.7 2.5.9-5.3-3.9-3.8 5.3-.8z"/></svg>
+    <svg viewBox="0 0 20 20"><path d="M10 1l2.4 4.9 5.3.8-3.9 3.8.9 5.3L10 13.5l-4.7 2.5.9-5.3-3.9-3.8 5.3-.8z"/></svg>
+    <svg viewBox="0 0 20 20"><path d="M10 1l2.4 4.9 5.3.8-3.9 3.8.9 5.3L10 13.5l-4.7 2.5.9-5.3-3.9-3.8 5.3-.8z"/></svg>
+    <svg viewBox="0 0 20 20"><path d="M10 1l2.4 4.9 5.3.8-3.9 3.8.9 5.3L10 13.5l-4.7 2.5.9-5.3-3.9-3.8 5.3-.8z"/></svg>
+    <span class="label">Trusted by 2,000+ Pet Parents</span>
+  </div>
+</section>
+
+<section class="collections">
+  <a href="classic.html" class="col-card">
+    <div class="col-card-img">
+      <img src="images/classic/9-_thumb.webp" alt="Classic Crystal Collection">
+    </div>
+    <div class="col-card-body">
+      <div class="tag">Classic Collection</div>
+      <h3>Classic Crystal</h3>
+      <p>Amethyst · Clear Quartz · Rose Quartz · Green Crystal · Blue Topaz — 9 timeless natural crystal pet collars. From $29 USD.</p>
+      <div class="arrow">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </div>
+  </a>
+  <a href="zodiac.html" class="col-card">
+    <div class="col-card-img">
+      <img src="images/zodiac/1_thumb.webp" alt="Zodiac Guardian Collection">
+    </div>
+    <div class="col-card-body">
+      <div class="tag">New · Zodiac Series</div>
+      <h3>Zodiac Guardian</h3>
+      <p>12 exclusive zodiac guardian crystals — Amazonite · Garnet · Citrine · Aquamarine · Rose Quartz · Tiger's Eye. $41 USD each.</p>
+      <div class="arrow">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </div>
+  </a>
+</section>
+
+<section class="reviews">
+  <div class="section-head">
+    <div class="tag">Customer Love</div>
+    <h2>What Pet Parents Say</h2>
+    <p>Reviews from worldwide customers</p>
+  </div>
+  <div class="reviews-grid" id="reviewsGrid"></div>
+</section>
+
+<section class="trust">
+  <div class="trust-inner">
+    <div class="trust-item"><div class="icon">💎</div><h4>Natural Crystals</h4><p>100% Genuine Stones</p></div>
+    <div class="trust-item"><div class="icon">🤲</div><h4>Handcrafted</h4><p>Made with Love & Care</p></div>
+    <div class="trust-item"><div class="icon">🔄</div><h4>7-Day Returns</h4><p>Easy & Hassle-Free</p></div>
+    <div class="trust-item"><div class="icon">🌍</div><h4>Worldwide</h4><p>Free Shipping Over $60</p></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo">Raindrop</div>
+      <p>Raindrop is an independent brand of natural crystal pet accessories. We believe every pet deserves to shine — with the gentle energy of genuine crystals.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Collections</h4>
+      <a href="classic.html">Classic Crystal</a>
+      <a href="zodiac.html">Zodiac Guardian</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="https://wa.me/8618271425419" target="_blank" rel="noopener">WhatsApp: +86 182 7142 5419</a>
+      <a href="mailto:raindrop468@outlook.com">raindrop468@outlook.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 <a href="index.html">Raindrop Crystal</a>. All rights reserved. Made with 💛 for pets worldwide.
+  </div>
+</footer>
+
+<script>
+const reviews = [
+  {stars:5,text:"Got the Amethyst collar for my Corgi — absolutely stunning! The crystal sparkles beautifully in sunlight, and the material is super comfortable. Already recommended to friends!",name:"Bambi's Mom",avatar:"🐶",date:"2026-06-02"},
+  {stars:5,text:"Saw similar crystal collars at a pet expo for 3x the price. This quality is incredible for $32! The Rose Quartz looks gorgeous on my white cat — already ordered my third one.",name:"CatLady_SF",avatar:"🐱",date:"2026-05-28"},
+  {stars:5,text:"First time buying crystal accessories for my dog — exceeded expectations! The collar is well-crafted, crystals are clear and genuine. Neighbors keep asking where I got it!",name:"Max's Dad",avatar:"🐕",date:"2026-05-25"},
+  {stars:5,text:"As a pet boutique owner, I ordered samples and my customers LOVE them. Beautiful packaging and excellent craftsmanship. Will be a long-term partner.",name:"PetLovers_NYC",avatar:"🏪",date:"2026-05-20"},
+  {stars:4,text:"Bought two as gifts for a friend's cats — she was thrilled! The Green Crystal color is perfect for summer. Only wish there were even more color options.",name:"Emily_Pets",avatar:"🐾",date:"2026-05-15"},
+  {stars:5,text:"Found Raindrop through Instagram — the actual product looks even better than the photos! My poodle wears it daily, lightweight and comfortable. Joined their referral program!",name:"Tiffany & Luna",avatar:"✨",date:"2026-05-10"}
+];
+
+document.getElementById("reviewsGrid").innerHTML = reviews.map(r => `
+  <div class="review-card">
+    <div class="review-stars">${Array(r.stars).fill('<svg viewBox="0 0 20 20"><path d="M10 1l2.4 4.9 5.3.8-3.9 3.8.9 5.3L10 13.5l-4.7 2.5.9-5.3-3.9-3.8 5.3-.8z"/></svg>').join("")}</div>
+    <p class="review-text">"${r.text}"</p>
+    <div class="review-author">
+      <div class="review-avatar">${r.avatar}</div>
+      <div class="review-meta">
+        <div class="name">${r.name}</div>
+        <div class="date">${r.date}</div>
+      </div>
+    </div>
+  </div>
+`).join("");
+</script>
+</body>
+</html>
