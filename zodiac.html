@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>星座守护系列 | Raindrop Crystal · 12星座天然水晶宠物项圈</title>
+<meta name="description" content="Raindrop 星座守护系列 — 12款专属星座晶石宠物项圈。狮子座黄虎眼·金牛座黄水晶·处女座白水晶·射手座青晶石·水瓶座天河石·双鱼座绿水晶·巨蟹座粉水晶·天秤座紫水晶·摩羯座茶晶·白羊座石榴石·天蝎座黑曜石·双子座海蓝宝。零售¥198，批发¥78。">
+<style>
+/* ===== RESET & BASE ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Segoe UI","Microsoft YaHei",system-ui,-apple-system,sans-serif;color:#2d2924;background:#fffdf8;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+
+/* ===== NAV ===== */
+.nav{position:sticky;top:0;z-index:99;background:rgba(255,253,248,.95);backdrop-filter:blur(12px);border-bottom:1px solid #ded0ba;padding:0 32px}
+.nav-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:Georgia,"Times New Roman",serif;font-size:22px;font-weight:700;color:#b4935e;letter-spacing:1px}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{font-size:14px;color:#776d61;transition:color .2s}
+.nav-links a:hover{color:#b4935e}
+.nav-links a.active{color:#b4935e;font-weight:700}
+.nav-cta{background:#b4935e;color:#fff!important;padding:8px 18px;border-radius:6px;font-weight:600;transition:background .2s!important}
+.nav-cta:hover{background:#9a7d4e!important}
+
+/* ===== PAGE HERO ===== */
+.page-hero{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 40%,#0f3460 100%);padding:64px 32px;text-align:center;position:relative;overflow:hidden}
+.page-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 80%,rgba(180,147,94,.15) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(255,255,255,.05) 0%,transparent 50%)}
+.page-hero .stars-bg{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.page-hero .stars-bg span{position:absolute;width:2px;height:2px;background:#fff;border-radius:50%;animation:twinkle 3s infinite}
+@keyframes twinkle{0%,100%{opacity:0}50%{opacity:1}}
+.page-hero>*{position:relative;z-index:1}
+.page-hero .tag{display:inline-block;background:rgba(180,147,94,.2);color:#d4b87a;border:1px solid rgba(180,147,94,.3);border-radius:50px;padding:6px 20px;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
+.page-hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(28px,5vw,48px);color:#fff;letter-spacing:2px;margin-bottom:12px}
+.page-hero h1 span{color:#d4b87a}
+.page-hero p{color:rgba(255,255,255,.7);font-size:15px;max-width:600px;margin:0 auto}
+.page-hero .zodiac-row{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:24px}
+.page-hero .zodiac-row span{font-size:20px;opacity:.6;transition:opacity .3s;cursor:default}
+.page-hero .zodiac-row span:hover{opacity:1}
+
+/* ===== FILTER BAR ===== */
+.filter-bar{background:#fff;border-bottom:1px solid #f0e8d8;position:sticky;top:64px;z-index:10;padding:0 32px}
+.filter-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;gap:12px;overflow-x:auto;padding:12px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.filter-inner::-webkit-scrollbar{display:none}
+.filter-chip{flex-shrink:0;padding:8px 16px;border-radius:50px;border:1px solid #ded0ba;font-size:13px;color:#776d61;cursor:pointer;transition:all .2s;white-space:nowrap}
+.filter-chip:hover{border-color:#b4935e;color:#b4935e}
+.filter-chip.active{background:#b4935e;color:#fff;border-color:#b4935e}
+
+/* ===== PRODUCTS ===== */
+.products-section{max-width:1280px;margin:0 auto;padding:48px 32px 80px}
+.product-card{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding:48px 0;border-bottom:1px solid #f0e8d8;align-items:start}
+.product-card:last-child{border-bottom:none}
+
+/* Gallery */
+.product-gallery{position:sticky;top:140px}
+.gallery-main{aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:#f4eadb;margin-bottom:12px}
+.gallery-main img{width:100%;height:100%;object-fit:cover}
+.gallery-thumbs{display:flex;gap:8px}
+.gallery-thumbs button{flex:1;aspect-ratio:4/3;border-radius:8px;overflow:hidden;border:2px solid transparent;cursor:pointer;padding:0;background:#f4eadb;transition:border-color .2s;opacity:.6}
+.gallery-thumbs button.active{border-color:#b4935e;opacity:1}
+.gallery-thumbs button img{width:100%;height:100%;object-fit:cover}
+
+/* Info */
+.product-info .zodiac{display:inline-flex;align-items:center;gap:6px;font-size:14px;color:#b4935e;font-weight:700;margin-bottom:8px}
+.product-info .zodiac .emoji{font-size:24px}
+.product-info h2{font-size:clamp(22px,3vw,30px);font-weight:700;color:#2d2924;margin-bottom:4px}
+.product-info h3{font-size:16px;color:#776d61;font-weight:400;margin-bottom:16px}
+.product-info .crystal-tag{display:inline-block;background:linear-gradient(135deg,#f4eadb,#efe2cc);padding:6px 16px;border-radius:50px;font-size:13px;color:#2d2924;margin-bottom:20px}
+.product-info .divider{height:1px;background:#f0e8d8;margin:20px 0}
+
+.product-info .info-block{margin-bottom:20px}
+.product-info .info-block h4{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:#b4935e;margin-bottom:8px}
+.product-info .info-block p{font-size:14px;color:#2d2924;line-height:1.8}
+.product-info .info-block p.en{color:#776d61;font-size:13px;margin-top:4px}
+
+/* Price */
+.price-row{display:flex;gap:16px;margin-top:24px}
+.price-box{flex:1;background:#fbf8f1;border:1px solid #f0e8d8;border-radius:10px;padding:16px;text-align:center}
+.price-box.retail{background:linear-gradient(135deg,#fbf8f1,#fff)}
+.price-box .label{font-size:12px;color:#776d61;margin-bottom:4px}
+.price-box .price{font-size:24px;font-weight:700;color:#b4935e}
+.price-box.retail .price{font-size:28px}
+.price-box .sub{font-size:11px;color:#b0a490;margin-top:2px}
+.price-box .cta{display:inline-block;margin-top:12px;padding:10px 24px;background:#b4935e;color:#fff;border-radius:8px;font-size:14px;font-weight:600;transition:background .2s}
+.price-box .cta:hover{background:#9a7d4e}
+
+/* Back to top */
+.back-top{text-align:center;padding:32px}
+.back-top a{display:inline-flex;align-items:center;gap:6px;color:#776d61;font-size:14px;transition:color .2s}
+.back-top a:hover{color:#b4935e}
+
+/* ===== FOOTER ===== */
+.footer{background:#2d2924;color:#c4beb4;padding:48px 32px 24px}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px}
+.footer-brand .logo{font-family:Georgia,"Times New Roman",serif;font-size:22px;color:#b4935e;font-weight:700;margin-bottom:12px}
+.footer-brand p{font-size:13px;line-height:1.8}
+.footer-col h4{font-size:13px;text-transform:uppercase;letter-spacing:1.5px;color:#fff;margin-bottom:16px;font-weight:600}
+.footer-col a{display:block;font-size:13px;color:#c4beb4;margin-bottom:10px;transition:color .2s}
+.footer-col a:hover{color:#b4935e}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding-top:24px;text-align:center;font-size:12px;color:#776d61}
+.footer-bottom a{color:#b4935e}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:960px){
+  .product-card{grid-template-columns:1fr;gap:24px;padding:32px 0}
+  .product-gallery{position:static}
+}
+@media(max-width:768px){
+  .nav{padding:0 16px}
+  .nav-links{gap:16px}
+  .nav-links a{font-size:12px}
+  .products-section{padding:32px 16px 60px}
+  .page-hero{padding:48px 16px}
+  .footer-inner{grid-template-columns:1fr;gap:32px}
+}
+@media(max-width:480px){
+  .nav-inner{height:56px}
+  .nav-logo{font-size:18px}
+  .nav-cta{padding:6px 12px;font-size:12px}
+  .price-row{flex-direction:column}
+}
+
+/* ===== LAZY LOADING ===== */
+.lazy-img{filter:blur(10px);transition:filter .4s ease-out}
+.lazy-img.loaded{filter:blur(0)}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Raindrop</a>
+    <div class="nav-links">
+      <a href="index.html">首页</a>
+      <a href="classic.html">经典系列</a>
+      <a href="zodiac.html" class="active">星座系列</a>
+      <a href="https://wa.me/8618271425419" target="_blank" rel="noopener" class="nav-cta">💬 WhatsApp</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="stars-bg" id="starsBg"></div>
+  <div class="tag">Zodiac Guardian Collection</div>
+  <h1>星座<span>守护</span>系列</h1>
+  <p>12星座专属守护晶石 · 每一颗星星都有一位守护者 · 零售¥198 / 批发¥78</p>
+  <div class="zodiac-row">
+    <span>♈️</span><span>♉️</span><span>♊️</span><span>♋️</span><span>♌️</span><span>♍️</span>
+    <span>♎️</span><span>♏️</span><span>♐️</span><span>♑️</span><span>♒️</span><span>♓️</span>
+  </div>
+</section>
+
+<!-- Filter Bar -->
+<div class="filter-bar">
+  <div class="filter-inner" id="filterBar">
+    <button class="filter-chip active" data-filter="all">全部星座</button>
+  </div>
+</div>
+
+<!-- Products -->
+<section class="products-section" id="productsContainer"></section>
+
+<!-- Back to top -->
+<div class="back-top"><a href="#top">↑ 回到顶部</a></div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo">Raindrop</div>
+      <p>Raindrop 是专注天然水晶宠物饰品的独立品牌。星座守护系列 — 为每只毛孩子找到属于它的那颗星。</p>
+    </div>
+    <div class="footer-col">
+      <h4>探索系列</h4>
+      <a href="classic.html">经典水晶系列</a>
+      <a href="zodiac.html">星座守护系列</a>
+      <a href="https://wa.me/8618271425419" target="_blank" rel="noopener">批发合作</a>
+    </div>
+    <div class="footer-col">
+      <h4>联系我们</h4>
+      <a href="https://wa.me/8618271425419" target="_blank" rel="noopener">WhatsApp: +86 182 7142 5419</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 <a href="index.html">Raindrop Crystal</a>. All rights reserved.
+  </div>
+</footer>
+
+<script>
+// ===== STARS BACKGROUND =====
+const bg = document.getElementById("starsBg");
+for(let i=0;i<60;i++){
+  const s=document.createElement("span");
+  s.style.left=Math.random()*100+"%";
+  s.style.top=Math.random()*100+"%";
+  s.style.animationDelay=Math.random()*3+"s";
+  s.style.animationDuration=(2+Math.random()*3)+"s";
+  bg.appendChild(s);
+}
+
+// ===== ZODIAC DATA =====
+const zodiacProducts = [
+  {id:"z01",zodiac:"♌️",zodiacName:"狮子座",name:"曜阳烈火",en:"Solar Flame",crystal:"黄虎眼石",crystalEn:"Tiger's Eye",
+   story:"黄虎眼石如狮子座般炽热耀眼，金色流光中蕴含着王者的自信与无畏。这款「曜阳烈火」以狮子的勇气为灵感，为你的宠物戴上太阳般的光芒——让它无论走到哪里，都是最闪耀的存在。",
+   storyEn:"Tiger's Eye blazes like Leo's inner fire, its golden bands embodying confidence and fearlessness. Inspired by the lion's courage, Solar Flame cloaks your pet in radiance — making them shine wherever they go."},
+  {id:"z02",zodiac:"♉️",zodiacName:"金牛座",name:"大地鎏金",en:"Gilded Earth",crystal:"黄水晶",crystalEn:"Citrine",
+   story:"金牛座扎根大地，稳重而丰饶。黄水晶的金色光泽如秋日麦浪，象征富足与安宁。「大地鎏金」以金牛的温厚为底色，为毛孩子带来一份踏实而温暖的能量。",
+   storyEn:"Taurus stands firm upon the earth, steady and abundant. Citrine's golden glow mirrors autumn harvests, symbolizing prosperity and peace. Gilded Earth wraps your pet in the warmth of grounded energy."},
+  {id:"z03",zodiac:"♍️",zodiacName:"处女座",name:"极简秩序",en:"Pure Order",crystal:"白水晶",crystalEn:"Clear Quartz",
+   story:"处女座追求完美与纯净，一如白水晶的通透无瑕。「极简秩序」以极简线条诠释处女的精致美学——每一颗水晶都经过精心挑选，让纯净之光守护毛孩子的每一天。",
+   storyEn:"Virgo seeks perfection and purity, much like flawless Clear Quartz. Pure Order channels Virgo's refined aesthetic through minimalist design — each crystal carefully selected to guard your pet with pristine light."},
+  {id:"z04",zodiac:"♐️",zodiacName:"射手座",name:"星辰远征",en:"Stellar Voyage",crystal:"青晶石",crystalEn:"Sapphirine",
+   story:"射手座向往远方与自由，青晶石如深邃星空般幽蓝神秘。「星辰远征」以旅者的灵魂为设计灵源，戴上它，仿佛每一程都是新的冒险——你的宠物，生来就是探索家。",
+   storyEn:"Sagittarius yearns for distant horizons, and Sapphirine echoes the deep blue cosmos. Stellar Voyage channels the traveler's spirit — every walk becomes a new adventure for your born explorer."},
+  {id:"z05",zodiac:"♒️",zodiacName:"水瓶座",name:"灵感脉冲",en:"Creative Pulse",crystal:"天河石",crystalEn:"Amazonite",
+   story:"水瓶座思维跳脱、创意无限，天河石的蓝绿色泽如极光般变幻莫测。「灵感脉冲」捕捉水瓶的灵感火花，让毛孩子也拥有那份独一无二的奇妙气质。",
+   storyEn:"Aquarius thinks outside every box, and Amazonite shifts between blue and green like the aurora. Creative Pulse captures that spark of originality — gifting your pet with one-of-a-kind wonder."},
+  {id:"z06",zodiac:"♓️",zodiacName:"双鱼座",name:"梦境涟漪",en:"Dream Ripple",crystal:"绿水晶",crystalEn:"Green Crystal",
+   story:"双鱼座温柔浪漫、富有想象力，绿水晶的柔和光泽如水波般轻漾。「梦境涟漪」以双鱼的梦幻气质为灵感——让毛孩子的每一天都像在童话中漫步。",
+   storyEn:"Pisces is gentle, romantic, and deeply imaginative. Green Crystal's soft luster ripples like gentle waves. Dream Ripple draws from Pisces' dreamy essence — turning every day into a fairy tale stroll."},
+  {id:"z07",zodiac:"♋️",zodiacName:"巨蟹座",name:"月光柔情",en:"Moonlight Tender",crystal:"粉水晶",crystalEn:"Rose Quartz",
+   story:"巨蟹座以温柔和守护著称，粉水晶的柔粉色光泽正如月光般细腻。「月光柔情」将巨蟹的细腻爱意融入每一颗晶石——这是给毛孩子最温暖的抱抱。",
+   storyEn:"Cancer is known for tenderness and protection. Rose Quartz's soft pink glows like moonlight. Moonlight Tender weaves Cancer's gentle love into every stone — the warmest embrace for your furry one."},
+  {id:"z08",zodiac:"♎️",zodiacName:"天秤座",name:"灵动平衡",en:"Graceful Balance",crystal:"紫水晶",crystalEn:"Amethyst",
+   story:"天秤座追求和谐与优雅，紫水晶的高贵紫韵正是平衡之美的化身。「灵动平衡」以天秤的美学直觉，打造一款兼具优雅与灵动的晶石项圈——美，从来不偏不倚。",
+   storyEn:"Libra seeks harmony and elegance. Amethyst's noble purple embodies balanced beauty. Graceful Balance channels Libra's aesthetic instinct — creating a collar where elegance and vitality meet in perfect equilibrium."},
+  {id:"z09",zodiac:"♑️",zodiacName:"摩羯座",name:"沉稳远见",en:"Steadfast Vision",crystal:"茶晶",crystalEn:"Smoky Quartz",
+   story:"摩羯座沉稳坚毅、目光长远，茶晶的深褐色泽如大地般厚重可靠。「沉稳远见」以摩羯的笃定为灵魂——陪伴毛孩子踏实地走过每一天。",
+   storyEn:"Capricorn is steady, resilient, and far-sighted. Smoky Quartz's deep brown echoes the earth's dependable weight. Steadfast Vision channels Capricorn's unwavering spirit — walking faithfully beside your pet every day."},
+  {id:"z10",zodiac:"♈️",zodiacName:"白羊座",name:"元气觉醒",en:"Vital Spark",crystal:"石榴石",crystalEn:"Garnet",
+   story:"白羊座热情勇敢、活力四射，石榴石的深红色泽如火焰般热烈。「元气觉醒」点燃白羊的蓬勃朝气——让毛孩子的每一天都充满能量与热情。",
+   storyEn:"Aries is bold, passionate, and bursting with energy. Garnet's deep red blazes like fire. Vital Spark ignites Aries' vibrant spirit — filling every day with unstoppable energy for your pet."},
+  {id:"z11",zodiac:"♏️",zodiacName:"天蝎座",name:"深渊之光",en:"Abyssal Light",crystal:"黑曜石",crystalEn:"Obsidian",
+   story:"天蝎座深邃神秘、力量内敛，黑曜石如深渊般漆黑却蕴藏光芒。「深渊之光」以天蝎的深邃魅力为诠释——暗色之下，是无可匹敌的守护之力。",
+   storyEn:"Scorpio is deep, mysterious, and inwardly powerful. Obsidian's darkness holds hidden light within. Abyssal Light captures Scorpio's magnetic depth — beneath the darkness lies unmatched protective force."},
+  {id:"z12",zodiac:"♊️",zodiacName:"双子座",name:"灵动思域",en:"Mercurial Mind",crystal:"海蓝宝",crystalEn:"Aquamarine",
+   story:"双子座机智灵动、思维敏捷，海蓝宝的清澈蔚蓝如晴空般明朗。「灵动思域」以双子的聪明才智为灵感——戴上它，毛孩子仿佛也变得更加机灵可爱。",
+   storyEn:"Gemini is witty, agile, and quick-thinking. Aquamarine's clear blue shines like a bright sky. Mercurial Mind draws from Gemini's cleverness — making your pet seem just a bit smarter and more charming."}
+];
+
+// ===== BUILD FILTER CHIPS =====
+const filterBar=document.getElementById("filterBar");
+zodiacProducts.forEach(p=>{
+  const btn=document.createElement("button");
+  btn.className="filter-chip";
+  btn.dataset.filter=p.id;
+  btn.textContent=p.zodiac+" "+p.zodiacName;
+  filterBar.appendChild(btn);
+});
+filterBar.addEventListener("click",e=>{
+  if(!e.target.classList.contains("filter-chip"))return;
+  filterBar.querySelectorAll(".filter-chip").forEach(c=>c.classList.remove("active"));
+  e.target.classList.add("active");
+  const f=e.target.dataset.filter;
+  document.querySelectorAll(".product-card").forEach(card=>{
+    card.style.display=(f==="all"||card.dataset.id===f)?"":"none";
+  });
+});
+
+// ===== BUILD PRODUCTS =====
+const container=document.getElementById("productsContainer");
+container.innerHTML=zodiacProducts.map((p,i)=>{
+  const n=i+1;
+  return `
+  <div class="product-card" data-id="${p.id}" id="product-${p.id}">
+    <div class="product-gallery">
+      <div class="gallery-main">
+        <img data-src="images/zodiac/${n}.webp" src="images/zodiac/${n}_thumb.webp" class="lazy-img main-img" alt="${p.name} - ${p.crystal}" id="main-${p.id}">
+      </div>
+      <div class="gallery-thumbs">
+        <button class="active" data-img="images/zodiac/${n}.webp" data-thumb="images/zodiac/${n}_thumb.webp">
+          <img data-src="images/zodiac/${n}_thumb.webp" src="images/zodiac/${n}_thumb.webp" alt="主图" loading="lazy">
+        </button>
+        <button data-img="images/zodiac/${n}-.webp" data-thumb="images/zodiac/${n}-_thumb.webp">
+          <img data-src="images/zodiac/${n}-_thumb.webp" src="images/zodiac/${n}-_thumb.webp" alt="佩戴图" loading="lazy">
+        </button>
+        <button data-img="images/zodiac/${n}--.webp" data-thumb="images/zodiac/${n}--_thumb.webp">
+          <img data-src="images/zodiac/${n}--_thumb.webp" src="images/zodiac/${n}--_thumb.webp" alt="细节图" loading="lazy">
+        </button>
+      </div>
+    </div>
+    <div class="product-info">
+      <div class="zodiac"><span class="emoji">${p.zodiac}</span> ${p.zodiacName}守护款</div>
+      <h2>「${p.name}」</h2>
+      <h3>${p.en} · 宠物晶石项圈</h3>
+      <div class="crystal-tag">💎 水晶能量：${p.crystal}（${p.crystalEn}）</div>
+      <div class="divider"></div>
+      <div class="info-block">
+        <h4>晶石物语 / Crystal Story</h4>
+        <p>${p.story}</p>
+        <p class="en">${p.storyEn}</p>
+      </div>
+      <div class="info-block">
+        <h4>适合宠物 / Best For</h4>
+        <p>适合猫咪、小型犬及中型犬日常佩戴、拍照、节日造型。</p>
+        <p class="en">Suitable for cats, small & medium dogs — daily wear, photos, and seasonal styling.</p>
+        <div style="display:flex;gap:8px;margin-top:12px"><span style="background:#f4eadb;padding:4px 12px;border-radius:50px;font-size:12px">S</span><span style="background:#f4eadb;padding:4px 12px;border-radius:50px;font-size:12px">M</span><span style="background:#f4eadb;padding:4px 12px;border-radius:50px;font-size:12px">L</span></div>
+      </div>
+      <div class="price-row">
+        <div class="price-box retail">
+          <div class="label">零售价 Retail</div>
+          <div class="price">¥198</div>
+          <div class="sub">单件购买</div>
+          <a href="https://wa.me/8618271425419?text=Hi%20Raindrop%21%20我想购买${encodeURIComponent('「'+p.name+'」'+p.zodiacName+'守护款 ¥198')}" target="_blank" rel="noopener" class="cta">🛒 立即购买</a>
+        </div>
+        <div class="price-box">
+          <div class="label">批发价 Wholesale</div>
+          <div class="price">¥78</div>
+          <div class="sub">MOQ 100+ · 详情私聊</div>
+          <a href="https://wa.me/8618271425419?text=Hi%20Raindrop%21%20我想了解${encodeURIComponent('「'+p.name+'」'+p.zodiacName+'守护款批发合作')}" target="_blank" rel="noopener" class="cta">💬 咨询批发</a>
+        </div>
+      </div>
+    </div>
+  </div>`;
+}).join("");
+
+// ===== GALLERY SWITCHER =====
+container.addEventListener("click",e=>{
+  const btn=e.target.closest(".gallery-thumbs button");
+  if(!btn)return;
+  const gallery=btn.closest(".product-gallery");
+  const mainImg=gallery.querySelector(".main-img");
+  const imgSrc=btn.dataset.img;
+  const thumbSrc=btn.dataset.thumb;
+  mainImg.src=thumbSrc;
+  mainImg.setAttribute("data-src",imgSrc);
+  const fullImg=new Image();
+  fullImg.onload=()=>{mainImg.src=imgSrc;mainImg.classList.add("loaded")};
+  fullImg.src=imgSrc;
+  gallery.querySelectorAll("button").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+});
+
+// ===== LAZY LOADING =====
+const lazyImgs=document.querySelectorAll(".lazy-img:not(.main-img)");
+if("IntersectionObserver" in window){
+  const obs=new IntersectionObserver((entries,o)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const img=e.target;
+        const src=img.getAttribute("data-src");
+        if(src&&!img.src.includes(src)){
+          const full=new Image();
+          full.onload=()=>{img.src=src;img.classList.add("loaded")};
+          full.src=src;
+        }
+        o.unobserve(img);
+      }
+    });
+  },{rootMargin:"300px"});
+  lazyImgs.forEach(img=>obs.observe(img));
+}else{
+  lazyImgs.forEach(img=>{
+    const src=img.getAttribute("data-src");
+    if(src){img.src=src;img.classList.add("loaded")}
+  });
+}
+</script>
+</body>
+</html>
