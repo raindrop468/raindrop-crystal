@@ -1,0 +1,771 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Raindrop | Natural Crystal Pet Jewelry</title>
+  <style>
+    :root {
+      --paper: #fbf8f1;
+      --soft: #f4eadb;
+      --ink: #2d2924;
+      --muted: #776d61;
+      --gold: #b4935e;
+      --line: #ded0ba;
+      --white: #fffdf8;
+      --shadow: 0 18px 44px rgba(64, 47, 24, .12);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.55;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    img {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+    }
+
+    .shell {
+      max-width: 1280px;
+      margin: 0 auto;
+      background: var(--paper);
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 16px 42px;
+      background: rgba(251, 248, 241, .94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+
+    .mark {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 30px;
+      line-height: 1;
+      color: var(--ink);
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 14px;
+      color: var(--muted);
+      font-size: 14px;
+      min-width: 0;
+    }
+
+    .nav a {
+      padding: 6px 0;
+      border-bottom: 1px solid transparent;
+      overflow-wrap: anywhere;
+    }
+
+    .nav a:hover { border-color: var(--gold); color: var(--ink); }
+
+    .page {
+      min-height: 100vh;
+      padding: 58px 54px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: .92fr 1.08fr;
+      gap: 46px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      margin: 0 0 16px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(58px, 8vw, 116px);
+      line-height: .92;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    .kicker {
+      margin: 0 0 20px;
+      color: var(--gold);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 24px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .lead-cn {
+      margin: 0 0 8px;
+      font-size: 29px;
+      font-weight: 600;
+    }
+
+    .lead-en {
+      margin: 0 0 30px;
+      color: var(--muted);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 22px;
+      font-style: italic;
+    }
+
+    .contact {
+      display: inline-flex;
+      gap: 12px;
+      align-items: center;
+      padding: 13px 18px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      font-size: 15px;
+    }
+
+    .contact strong { color: var(--gold); }
+
+    .hero-gallery {
+      display: grid;
+      grid-template-columns: 1fr .78fr;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .frame {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      box-shadow: var(--shadow);
+    }
+
+    .frame img,
+    .image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .hero-main { height: 660px; }
+
+    .hero-stack {
+      display: grid;
+      gap: 18px;
+    }
+
+    .hero-small { height: 260px; }
+
+    .section-head {
+      max-width: 820px;
+      margin-bottom: 34px;
+    }
+
+    .section-head h2 {
+      margin: 0 0 10px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 48px;
+      line-height: 1.08;
+      font-weight: 500;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .panel {
+      padding: 28px;
+      background: rgba(255, 253, 248, .78);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--gold);
+    }
+
+    .panel h3 {
+      margin: 0 0 16px;
+      font-size: 24px;
+      line-height: 1.25;
+    }
+
+    .pair { margin: 0 0 16px; }
+    .pair .cn { margin: 0 0 4px; color: var(--ink); font-size: 18px; }
+    .pair .en { margin: 0; color: var(--muted); font-size: 16px; font-style: italic; }
+
+    .advantages {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 26px;
+    }
+
+    .advantage {
+      min-height: 104px;
+      padding: 18px;
+      background: var(--white);
+      border: 1px solid var(--line);
+    }
+
+    .advantage b {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 17px;
+    }
+
+    .advantage span {
+      display: block;
+      color: var(--muted);
+      font-size: 14px;
+      font-style: italic;
+    }
+
+    .product {
+      display: grid;
+      grid-template-columns: 1.04fr .96fr;
+      gap: 38px;
+      align-items: start;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .photo-card {
+      min-height: 230px;
+      padding: 10px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      box-shadow: var(--shadow);
+    }
+
+    .photo-card.main {
+      grid-column: 1 / -1;
+      min-height: 410px;
+      background: var(--soft);
+    }
+
+    .photo-card figure {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      height: 100%;
+    }
+
+    .photo-card .image-box {
+      flex: 1;
+      min-height: 190px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .photo-card.main .image-box { min-height: 360px; }
+
+    .photo-card figcaption {
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .product-copy {
+      padding-top: 6px;
+    }
+
+    .product-no {
+      margin-bottom: 14px;
+      color: var(--gold);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 17px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .product h2 {
+      margin: 0 0 4px;
+      font-size: clamp(34px, 4vw, 54px);
+      line-height: 1.08;
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+
+    .product h3 {
+      margin: 0 0 24px;
+      color: var(--gold);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 23px;
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .info {
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .info-title {
+      margin-bottom: 10px;
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .sizes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .sizes span {
+      min-width: 48px;
+      padding: 5px 14px;
+      text-align: center;
+      background: var(--white);
+      border: 1px solid var(--line);
+      font-weight: 700;
+    }
+
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 22px 0;
+    }
+
+    .price-card {
+      min-height: 132px;
+      padding: 16px;
+      background: var(--white);
+      border: 1px solid var(--line);
+    }
+
+    .price-card b,
+    .price-card em {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.35;
+      font-style: normal;
+    }
+
+    .price-card em {
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+
+    .price-card strong {
+      display: block;
+      color: var(--ink);
+      font-size: 28px;
+      line-height: 1.1;
+    }
+
+    .note {
+      margin-top: 8px;
+      padding: 14px 16px;
+      background: rgba(255, 253, 248, .7);
+      border: 1px solid var(--line);
+    }
+
+    .cooperation {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    @media (max-width: 960px) {
+      .topbar {
+        position: static;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 16px 24px;
+      }
+
+      .nav { justify-content: flex-start; }
+      .page { padding: 34px 24px; }
+      .hero,
+      .hero-gallery,
+      .story-grid,
+      .product,
+      .cooperation {
+        grid-template-columns: 1fr;
+      }
+      .hero-main { height: 560px; min-height: 0; }
+      .hero-stack { grid-template-columns: 1fr 1fr; }
+      .hero-small { height: 190px; }
+      .advantages { grid-template-columns: repeat(2, 1fr); }
+      .photo-card.main { min-height: 320px; }
+      .photo-card.main .image-box { min-height: 280px; }
+    }
+
+    @media (max-width: 620px) {
+      .hero h1 { font-size: 56px; }
+      .nav {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px 14px;
+      }
+      .kicker {
+        max-width: 300px;
+        font-size: 20px;
+        overflow-wrap: anywhere;
+      }
+      .lead-cn { font-size: 24px; }
+      .lead-en { font-size: 18px; max-width: 280px; }
+      .section-head h2 { font-size: 38px; }
+      .advantages,
+      .photo-grid,
+      .price-grid,
+      .hero-stack {
+        grid-template-columns: 1fr;
+      }
+      .photo-card.main { grid-column: auto; }
+      .photo-card { min-height: 250px; }
+      .photo-card .image-box { min-height: 210px; }
+    }
+
+    @media print {
+      @page {
+        size: A4 landscape;
+        margin: 10mm;
+      }
+
+      body {
+        background: var(--paper);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .shell {
+        max-width: none;
+      }
+
+      .topbar {
+        position: static;
+        padding: 8px 0 10px;
+        background: transparent;
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .page {
+        min-height: auto;
+        padding: 18mm 10mm;
+        break-after: page;
+        page-break-after: always;
+      }
+
+      .page:last-child {
+        break-after: auto;
+        page-break-after: auto;
+      }
+
+      .hero-main {
+        height: 132mm;
+      }
+
+      .hero-small {
+        height: 58mm;
+      }
+
+      .product {
+        grid-template-columns: 1.04fr .96fr;
+        gap: 10mm;
+      }
+
+      .photo-card {
+        min-height: 44mm;
+        box-shadow: none;
+      }
+
+      .photo-card.main {
+        min-height: 78mm;
+      }
+
+      .photo-card .image-box {
+        min-height: 34mm;
+      }
+
+      .photo-card.main .image-box {
+        min-height: 68mm;
+      }
+
+      .panel,
+      .frame,
+      .photo-card,
+      .price-card,
+      .note,
+      .contact {
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="mark" href="#cover">Raindrop</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#story">Brand / 品牌</a>
+        <a href="#products">Products / 产品</a>
+        <a href="#cooperation">Cooperation / 合作</a>
+        <a href="https://wa.me/8618271425419">WhatsApp</a>
+      </nav>
+    </header>
+
+    <section class="page hero" id="cover">
+      <div>
+        <h1>Raindrop</h1>
+        <p class="kicker">Natural Crystal Pet Jewelry</p>
+        <p class="lead-cn">天然水晶宠物饰品</p>
+        <p class="lead-en">Let Your Pet Shine With Natural Crystal Energy</p>
+        <a class="contact" href="https://wa.me/8618271425419">WhatsApp <strong>+86 182 7142 5419</strong></a>
+      </div>
+      <div class="hero-gallery">
+        <div class="frame hero-main"><img src="8--.jpg" alt="Raindrop crystal pet collar worn by a cat"></div>
+        <div class="hero-stack">
+          <div class="frame hero-small"><img src="8-.jpg" alt="Purple crystal pet collar detail"></div>
+          <div class="frame hero-small"><img src="9.jpg" alt="Blue topaz pet collar detail"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="story">
+      <div class="section-head">
+        <h2>About Raindrop</h2>
+        <p>关于品牌 / Brand Story</p>
+      </div>
+      <div class="story-grid">
+        <article class="panel">
+          <h3>关于 Raindrop / About Raindrop</h3>
+          <div class="pair"><p class="cn">Raindrop 诞生于对宠物与天然水晶的热爱。</p><p class="en">Raindrop was born from a passion for pets and natural crystals.</p></div>
+          <div class="pair"><p class="cn">我们相信，宠物不仅是陪伴，更是家庭成员。</p><p class="en">We believe pets are not just companions; they are family.</p></div>
+          <div class="pair"><p class="cn">天然水晶不仅拥有独特的美感，也承载着人们对于幸运、治愈与祝福的美好期待。</p><p class="en">Natural crystals carry unique beauty as well as meaningful hopes for luck, healing, and blessings.</p></div>
+          <div class="pair"><p class="cn">因此，我们将天然水晶珠宝工艺与宠物用品结合，打造兼具时尚美学与情感价值的宠物饰品。</p><p class="en">By combining crystal jewelry craftsmanship with pet accessories, we create pet jewelry with both fashion aesthetics and emotional value.</p></div>
+        </article>
+        <article class="panel">
+          <h3>品牌优势 / Why Choose Raindrop</h3>
+          <div class="advantages" id="advantages"></div>
+        </article>
+      </div>
+    </section>
+
+    <div id="products"></div>
+
+    <section class="page" id="cooperation">
+      <div class="section-head">
+        <h2>Cooperation Model</h2>
+        <p>合作模式 / Wholesale & Dropshipping</p>
+      </div>
+      <div class="cooperation">
+        <article class="panel">
+          <h3>批发合作 / Wholesale</h3>
+          <div class="pair"><p class="cn">MOQ：100 PCS+</p><p class="en">MOQ: 100 PCS+</p></div>
+          <div class="pair"><p class="cn">支持颜色、晶石、包装与品牌定制。</p><p class="en">Color, crystal, packaging, and branding customization are available.</p></div>
+          <div class="pair"><p class="cn">适合宠物精品店、跨境电商、礼品渠道和品牌联名合作。</p><p class="en">Suitable for pet boutiques, cross-border e-commerce, gift channels, and brand collaborations.</p></div>
+        </article>
+        <article class="panel">
+          <h3>一件代发 / Dropshipping</h3>
+          <div class="pair"><p class="cn">10 条以内按目录代发价执行。</p><p class="en">Orders of 10 pcs or less follow the catalog dropshipping price.</p></div>
+          <div class="pair"><p class="cn">单款单色大于 10 条可联系客服获取专属价格。</p><p class="en">For single-style single-color orders above 10 pcs, contact us for a special price.</p></div>
+          <div class="pair"><p class="cn">WhatsApp：+86 182 7142 5419</p><p class="en">WhatsApp: +86 182 7142 5419</p></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const advantages = [
+      ["天然水晶设计", "Natural crystal design"],
+      ["手工搭配制作", "Handcrafted styling"],
+      ["可定制颜色与晶石", "Custom colors and crystal options"],
+      ["支持 OEM / ODM", "OEM / ODM available"],
+      ["支持跨境代发", "Cross-border dropshipping available"],
+      ["全球批发合作", "Global wholesale cooperation"],
+      ["小批量试单支持", "Small trial orders supported"],
+      ["宠物时尚赛道蓝海产品", "Emerging opportunity in pet fashion"]
+    ];
+
+    const products = [
+      {
+        no: "01",
+        cn: "紫水晶宠物项圈",
+        en: "Amethyst Crystal Pet Collar",
+        retail: "¥128",
+        dropship: "¥68",
+        photos: ["1.jpg", "1--.png", "1-.jpg"],
+        story: ["紫水晶以优雅的紫色光泽闻名，象征平静、守护与温柔能量。", "Amethyst is known for its elegant purple glow, symbolizing calmness, protection, and gentle energy."],
+        use: ["适合猫咪、小型犬及中型犬日常拍照、节日造型、精品宠物店陈列。", "Suitable for cats, small dogs, and medium dogs for daily photos, seasonal styling, and boutique pet-store display."]
+      },
+      {
+        no: "02",
+        cn: "白水晶宠物项圈",
+        en: "Clear Quartz Pet Collar",
+        retail: "¥168",
+        dropship: "¥84",
+        photos: ["2-.jpg", "2--.png", "2.jpg"],
+        story: ["白水晶通透纯净，象征清澈、平衡与祝福。", "Clear quartz is transparent and pure, symbolizing clarity, balance, and blessings."],
+        use: ["适合猫咪、小型犬及中型犬，尤其适合白色、奶油色、灰色与浅色系宠物。", "Suitable for cats, small dogs, and medium dogs, especially white, cream, gray, and light-colored pets."]
+      },
+      {
+        no: "03",
+        cn: "粉水晶宠物项圈",
+        en: "Rose Quartz Pet Collar",
+        retail: "¥108",
+        dropship: "¥54",
+        photos: ["3-.jpg", "3-.png", "3.jpg"],
+        story: ["粉水晶色泽柔和甜美，常被视为爱与温柔的象征。", "Rose quartz has a soft and sweet tone and is often seen as a symbol of love and tenderness."],
+        use: ["适合猫咪、小型犬及中型犬，适合日常穿搭、生日造型、宠物摄影与礼品销售。", "Suitable for cats, small dogs, and medium dogs for daily styling, birthday looks, pet photography, and gift sales."]
+      },
+      {
+        no: "04",
+        cn: "多宝宠物项圈",
+        en: "Multi-Gemstone Pet Collar",
+        retail: "¥128",
+        dropship: "¥68",
+        photos: ["4.jpg", "4--.png", "4-.jpg"],
+        story: ["多宝款融合多种天然晶石色彩，层次丰富、视觉更活泼。", "The multi-gemstone design combines several natural crystal colors for a rich and lively visual effect."],
+        use: ["适合猫咪、小型犬及中型犬，适合活泼风格宠物、节日搭配、精品宠物店爆款陈列。", "Suitable for cats, small dogs, and medium dogs with playful styling, seasonal looks, and boutique bestseller display."]
+      },
+      {
+        no: "05",
+        cn: "绿水晶宠物项圈",
+        en: "Green Crystal Pet Collar",
+        retail: "¥188",
+        dropship: "¥94",
+        photos: ["5.jpg", "5-.png", "5-.jpg"],
+        story: ["绿水晶带有清新自然的色调，象征生机、舒展与好运。", "Green crystal carries a fresh natural tone, symbolizing vitality, ease, and good fortune."],
+        use: ["适合猫咪、小型犬及中型犬，适合自然系、户外系、清新风格宠物造型。", "Suitable for cats, small dogs, and medium dogs with natural, outdoor, and fresh styling concepts."]
+      },
+      {
+        no: "06",
+        cn: "粉水晶加珍珠宠物项圈",
+        en: "Rose Quartz & Pearl Pet Collar",
+        retail: "¥128",
+        dropship: "¥68",
+        photos: ["6.jpg", "6--.jpg", "6-.jpg"],
+        story: ["粉水晶的柔和色泽搭配珍珠的温润光感，呈现甜美、优雅、精致的珠宝氛围。", "Soft rose quartz paired with the warm luster of pearls creates a sweet, elegant, and refined jewelry mood."],
+        use: ["适合猫咪、小型犬及中型犬，适合公主风、婚礼风、节日拍摄和宠物礼盒搭配。", "Suitable for cats, small dogs, and medium dogs for princess styling, wedding looks, holiday photos, and pet gift sets."]
+      },
+      {
+        no: "07",
+        cn: "紫黄水晶宠物项圈",
+        en: "Amethyst & Citrine Pet Collar",
+        retail: "¥198",
+        dropship: "¥94",
+        photos: ["7.jpg", "7--.png", "7-.jpg"],
+        story: ["紫色与金黄色晶石相互映衬，寓意幸运、活力与美好祝福。", "Purple and golden crystals complement each other, symbolizing luck, vitality, and meaningful blessings."],
+        use: ["适合猫咪、小型犬及中型犬，适合高端陈列、节日上新、礼品套装与跨境平台主图展示。", "Suitable for cats, small dogs, and medium dogs for premium display, seasonal launches, gift sets, and cross-border listing images."]
+      },
+      {
+        no: "08",
+        cn: "紫水晶宠物项圈",
+        en: "Amethyst Crystal Pet Collar",
+        retail: "¥168",
+        dropship: "¥84",
+        photos: ["8.jpg", "8--.png", "8--.jpg", "8-.jpg"],
+        story: ["此款紫水晶层次更轻盈，晶石垂坠感明显，整体风格优雅灵动。", "This amethyst design feels lighter in layers, with a clear crystal drape and an elegant, fluid style."],
+        use: ["适合猫咪、小型犬及中型犬，适合高级宠物摄影、精品门店陈列和礼品销售。", "Suitable for cats, small dogs, and medium dogs for premium pet photography, boutique display, and gift sales."]
+      },
+      {
+        no: "09",
+        cn: "蓝托帕宠物项圈",
+        en: "Blue Topaz Pet Collar",
+        retail: "¥198",
+        dropship: "¥98",
+        photos: ["9-.jpg", "9--.png", "9.jpg"],
+        story: ["蓝托帕呈现清澈明亮的蓝色光感，象征清新、从容与幸运。", "Blue topaz has a clear and bright blue glow, symbolizing freshness, calmness, and good fortune."],
+        use: ["适合猫咪、小型犬及中型犬，适合清爽风格宠物、夏季主题陈列、跨境平台高客单展示。", "Suitable for cats, small dogs, and medium dogs for fresh styling, summer-themed display, and premium cross-border listings."]
+      }
+    ];
+
+    const productRoot = document.querySelector("#products");
+    const advantageRoot = document.querySelector("#advantages");
+
+    advantageRoot.innerHTML = advantages.map(([cn, en]) => `
+      <div class="advantage">
+        <b>${cn}</b>
+        <span>${en}</span>
+      </div>
+    `).join("");
+
+    productRoot.innerHTML = products.map((product, productIndex) => `
+      <section class="page product" id="product-${product.no}">
+        <div class="photo-grid">
+          ${product.photos.map((photo, index) => `
+            <div class="photo-card ${index === 0 ? "main" : ""}">
+              <figure>
+                <div class="image-box"><img src="${photo}" alt="${product.cn} / ${product.en} image ${index + 1}"></div>
+                <figcaption>${index === 0 ? "产品大图 / Main Product Image" : index === 1 ? "佩戴图 / Wearing Image" : "细节图 / Detail Image"}</figcaption>
+              </figure>
+            </div>
+          `).join("")}
+        </div>
+        <div class="product-copy">
+          <div class="product-no">Product ${product.no}</div>
+          <h2>${product.cn}</h2>
+          <h3>${product.en}</h3>
+          <div class="info">
+            <div class="info-title">水晶介绍 / Crystal Story</div>
+            <div class="pair"><p class="cn">${product.story[0]}</p><p class="en">${product.story[1]}</p></div>
+          </div>
+          <div class="info">
+            <div class="info-title">适合宠物 / Suitable Pets</div>
+            <div class="pair"><p class="cn">${product.use[0]}</p><p class="en">${product.use[1]}</p></div>
+            <div class="sizes" aria-label="sizes"><span>S</span><span>M</span><span>L</span></div>
+          </div>
+          <div class="price-grid">
+            <div class="price-card"><b>零售价</b><em>Retail Price</em><strong>${product.retail}</strong></div>
+            <div class="price-card"><b>代发价</b><em>Dropshipping Price</em><strong>${product.dropship}</strong><small>≤10 条 / 10 pcs or less</small></div>
+            <div class="price-card"><b>批发价</b><em>Wholesale Price</em><strong>私聊</strong><small>MOQ 100+ / Contact us</small></div>
+          </div>
+          <div class="note">
+            <div class="pair"><p class="cn">备注：代发价为小于或等于 10 条的价格；单款单色大于 10 条价格可私聊。</p><p class="en">Note: The dropshipping price applies to orders of 10 pcs or less; contact us for single-style single-color orders above 10 pcs.</p></div>
+          </div>
+        </div>
+      </section>
+    `).join("");
+
+    if (window.location.hash) {
+      requestAnimationFrame(() => {
+        document.querySelector(window.location.hash)?.scrollIntoView();
+      });
+    }
+  </script>
+</body>
+</html>
