@@ -268,7 +268,7 @@ container.innerHTML=zodiacProducts.map((p,i)=>{
   <div class="product-card" data-id="${p.id}" id="product-${p.id}">
     <div class="product-gallery">
       <div class="gallery-main">
-        <img data-src="images/zodiac/${n}.webp" src="images/zodiac/${n}_thumb.webp" class="lazy-img main-img" alt="${p.name} - ${p.crystal}" id="main-${p.id}">
+        <img src="images/zodiac/${n}.webp" class="main-img" alt="${p.name} - ${p.crystal}" id="main-${p.id}">
       </div>
       <div class="gallery-thumbs">
         <button class="active" data-img="images/zodiac/${n}.webp" data-thumb="images/zodiac/${n}_thumb.webp">
@@ -324,12 +324,7 @@ container.addEventListener("click",e=>{
   const gallery=btn.closest(".product-gallery");
   const mainImg=gallery.querySelector(".main-img");
   const imgSrc=btn.dataset.img;
-  const thumbSrc=btn.dataset.thumb;
-  mainImg.src=thumbSrc;
-  mainImg.setAttribute("data-src",imgSrc);
-  const fullImg=new Image();
-  fullImg.onload=()=>{mainImg.src=imgSrc;mainImg.classList.add("loaded")};
-  fullImg.src=imgSrc;
+  mainImg.src=imgSrc;
   gallery.querySelectorAll("button").forEach(b=>b.classList.remove("active"));
   btn.classList.add("active");
 });

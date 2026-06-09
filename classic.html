@@ -213,7 +213,7 @@ container.innerHTML=products.map(p=>{
   <div class="product-card" id="product-${p.no}">
     <div class="product-gallery">
       <div class="gallery-main">
-        <img data-src="images/classic/${mainPhoto}.webp" src="images/classic/${mainPhoto}_thumb.webp" class="lazy-img main-img" alt="${p.cn}" id="main-${p.no}">
+        <img src="images/classic/${mainPhoto}.webp" class="main-img" alt="${p.cn}" id="main-${p.no}">
       </div>
       <div class="gallery-thumbs">
         ${thumbs.map((t,i)=>`
@@ -270,12 +270,7 @@ container.addEventListener("click",e=>{
   const gallery=btn.closest(".product-gallery");
   const mainImg=gallery.querySelector(".main-img");
   const imgSrc=btn.dataset.img;
-  const thumbSrc=btn.dataset.thumb;
-  mainImg.src=thumbSrc;
-  mainImg.setAttribute("data-src",imgSrc);
-  const fullImg=new Image();
-  fullImg.onload=()=>{mainImg.src=imgSrc;mainImg.classList.add("loaded")};
-  fullImg.src=imgSrc;
+  mainImg.src=imgSrc;
   gallery.querySelectorAll("button").forEach(b=>b.classList.remove("active"));
   btn.classList.add("active");
 });
