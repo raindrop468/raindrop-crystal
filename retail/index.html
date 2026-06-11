@@ -107,6 +107,11 @@ a{color:inherit;text-decoration:none}
 .gallery-item .overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.45) 0%,transparent 60%);opacity:0;transition:opacity .3s;display:flex;align-items:flex-end;padding:12px}
 .gallery-item:hover .overlay{opacity:1}
 .gallery-item .overlay span{color:#fff;font-size:11px;font-weight:600;letter-spacing:.3px}
+.gallery-load-more-wrapper{text-align:center;margin-top:28px}
+.load-more-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 32px;background:#fff;border:1.5px solid #b4935e;border-radius:50px;color:#b4935e;font-size:14px;font-weight:600;cursor:pointer;transition:all .25s;letter-spacing:.5px}
+.load-more-btn:hover{background:#b4935e;color:#fff}
+.load-more-btn svg{width:16px;height:16px;transition:transform .3s}
+.load-more-btn:hover svg{transform:translateY(2px)}
 /* ===== LIGHTBOX ===== */
 .lightbox{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
 .lightbox.active{opacity:1;visibility:visible}
@@ -301,6 +306,12 @@ a{color:inherit;text-decoration:none}
     <p>Real moments shared by our lovely customers · Every photo tells a story of love<br><small>大切なペットとの素敵な瞬間 · 一枚一枚が愛の証</small></p>
   </div>
   <div class="gallery-grid" id="galleryGrid"></div>
+  <div class="gallery-load-more-wrapper">
+    <button id="loadMoreBtn" class="load-more-btn" onclick="loadGalleryBatch()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
+      Load More Photos · もっと見る
+    </button>
+  </div>
 </section>
 
 <!-- Lightbox -->
@@ -387,12 +398,36 @@ const lightboxImg = document.getElementById("lightboxImg");
 const lightboxCounter = document.getElementById("lightboxCounter");
 let currentIndex = 0;
 
-// Render gallery grid
-galleryGrid.innerHTML = PHOTO_IDS.map((id, i) => `
-    <div class="gallery-item" data-index="${i}" onclick="openLightbox(${i})">
-      <img src="../images/reviews/${id}_thumb.webp" alt="Customer Photo #${id}" loading="lazy">
-      <div class="overlay"><span>Photo #${id}</span></div>
-    </div>`).join("");
+const BATCH_SIZE = 12;
+let loadedCount = 0;
+
+function loadGalleryBatch() {
+  const batch = PHOTO_IDS.slice(loadedCount, loadedCount + BATCH_SIZE);
+  const startIndex = loadedCount;
+  
+  batch.forEach((id, i) => {
+    const item = document.createElement("div");
+    item.className = "gallery-item";
+    item.setAttribute("data-index", startIndex + i);
+    item.setAttribute("onclick", `openLightbox(${startIndex + i})`);
+    item.innerHTML = `<img src="../images/reviews/${id}_thumb.webp" alt="Customer Photo #${id}" loading="lazy"><div class="overlay"><span>Photo #${id}</span></div>`;
+    galleryGrid.appendChild(item);
+  });
+  
+  loadedCount += batch.length;
+  
+  // Update button state
+  const btn = document.getElementById("loadMoreBtn");
+  if (loadedCount >= TOTAL_PHOTOS) {
+    btn.style.display = "none";
+  } else {
+    const remaining = TOTAL_PHOTOS - loadedCount;
+    btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>Load ${remaining} More Photos · さらに${remaining}枚を表示`;
+  }
+}
+
+// Load first batch immediately
+loadGalleryBatch();
 
 // Lightbox functions
 function openLightbox(index) {
