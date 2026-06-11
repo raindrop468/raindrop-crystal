@@ -258,7 +258,7 @@ a{color:inherit;text-decoration:none}
 <section class="collections">
   <a href="classic.html" class="col-card">
     <div class="col-card-img">
-      <img src="images/classic/9-_thumb.webp" alt="Classic Crystal Collection" loading="lazy">
+      <img src="../images/classic/9-_thumb.webp" alt="Classic Crystal Collection" loading="lazy">
     </div>
     <div class="col-card-body">
       <div class="tag">Classic Collection</div>
@@ -269,7 +269,7 @@ a{color:inherit;text-decoration:none}
   </a>
   <a href="zodiac.html" class="col-card">
     <div class="col-card-img">
-      <img src="images/zodiac/1_thumb.webp" alt="Zodiac Guardian Collection" loading="lazy">
+      <img src="../images/zodiac/1_thumb.webp" alt="Zodiac Guardian Collection" loading="lazy">
     </div>
     <div class="col-card-body">
       <div class="tag">New · Zodiac Series</div>
@@ -390,7 +390,7 @@ let currentIndex = 0;
 // Render gallery grid
 galleryGrid.innerHTML = PHOTO_IDS.map((id, i) => `
     <div class="gallery-item" data-index="${i}" onclick="openLightbox(${i})">
-      <img src="images/reviews/${id}_thumb.webp" alt="Customer Photo #${id}" loading="lazy">
+      <img src="../images/reviews/${id}_thumb.webp" alt="Customer Photo #${id}" loading="lazy">
       <div class="overlay"><span>Photo #${id}</span></div>
     </div>`).join("");
 
@@ -409,7 +409,7 @@ function closeLightbox() {
 
 function updateLightbox() {
   const id = PHOTO_IDS[currentIndex];
-  lightboxImg.src = `images/reviews/${id}.webp`;
+  lightboxImg.src = `../images/reviews/${id}.webp`;
   lightboxImg.alt = `Customer Photo #${id}`;
   lightboxCounter.textContent = `${id} / ${PHOTO_IDS[PHOTO_IDS.length-1]}`;
 }

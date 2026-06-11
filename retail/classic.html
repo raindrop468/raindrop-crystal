@@ -267,13 +267,13 @@ container.innerHTML=products.map(p=>{
   <div class="product-card" id="product-${p.no}">
     <div class="product-gallery">
       <div class="gallery-main-wrap">
-        <img src="images/classic/${mainPhoto}.webp" class="main-img" alt="${p.cnShort}" id="main-${p.no}">
+        <img src="../images/classic/${mainPhoto}.webp" class="main-img" alt="${p.cnShort}" id="main-${p.no}">
         <span class="gallery-label" id="label-${p.no}">${PHOTO_LABELS[0]}</span>
       </div>
       <div class="gallery-thumbs">
         ${thumbs.map((t,i)=>`
-          <button class="${i===0?'active':''}" data-img="images/classic/${t}.webp" data-label="${PHOTO_LABELS[i]}">
-            <img src="images/classic/${t}_thumb.webp" alt="${PHOTO_LABELS[i]}" loading="lazy">
+          <button class="${i===0?'active':''}" data-img="../images/classic/${t}.webp" data-label="${PHOTO_LABELS[i]}">
+            <img src="../images/classic/${t}_thumb.webp" alt="${PHOTO_LABELS[i]}" loading="lazy">
             <span class="thumb-label">${PHOTO_LABELS[i]}</span>
           </button>
         `).join("")}

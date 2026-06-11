@@ -343,20 +343,20 @@ container.innerHTML=zodiacProducts.map(p=>{
   <div class="product-card" data-id="${p.id}" id="product-${p.id}">
     <div class="product-gallery">
       <div class="gallery-main-wrap">
-        <img src="images/zodiac/${n}.webp" class="main-img" alt="${p.name} - ${p.crystal}" id="main-${p.id}">
+        <img src="../images/zodiac/${n}.webp" class="main-img" alt="${p.name} - ${p.crystal}" id="main-${p.id}">
         <span class="gallery-label" id="label-${p.id}">${PHOTO_LABELS[0]}</span>
       </div>
       <div class="gallery-thumbs">
-        <button class="active" data-img="images/zodiac/${n}.webp" data-label="${PHOTO_LABELS[0]}">
-          <img src="images/zodiac/${n}_thumb.webp" alt="${PHOTO_LABELS[0]}" loading="lazy">
+        <button class="active" data-img="../images/zodiac/${n}.webp" data-label="${PHOTO_LABELS[0]}">
+          <img src="../images/zodiac/${n}_thumb.webp" alt="${PHOTO_LABELS[0]}" loading="lazy">
           <span class="thumb-label">${PHOTO_LABELS[0]}</span>
         </button>
-        <button data-img="images/zodiac/${n}-.webp" data-label="${PHOTO_LABELS[1]}">
-          <img src="images/zodiac/${n}-_thumb.webp" alt="${PHOTO_LABELS[1]}" loading="lazy">
+        <button data-img="../images/zodiac/${n}-.webp" data-label="${PHOTO_LABELS[1]}">
+          <img src="../images/zodiac/${n}-_thumb.webp" alt="${PHOTO_LABELS[1]}" loading="lazy">
           <span class="thumb-label">${PHOTO_LABELS[1]}</span>
         </button>
-        <button data-img="images/zodiac/${n}--.webp" data-label="${PHOTO_LABELS[2]}">
-          <img src="images/zodiac/${n}--_thumb.webp" alt="${PHOTO_LABELS[2]}" loading="lazy">
+        <button data-img="../images/zodiac/${n}--.webp" data-label="${PHOTO_LABELS[2]}">
+          <img src="../images/zodiac/${n}--_thumb.webp" alt="${PHOTO_LABELS[2]}" loading="lazy">
           <span class="thumb-label">${PHOTO_LABELS[2]}</span>
         </button>
       </div>
