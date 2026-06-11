@@ -194,6 +194,13 @@ a{color:inherit;text-decoration:none}
     </div>
   </div>
   <div class="footer-bottom">
+    <div style="margin-bottom:12px;display:flex;flex-wrap:wrap;justify-content:center;gap:16px">
+      <a href="../shipping.html">Shipping Policy</a>
+      <a href="../refund.html">30-Day Refund</a>
+      <a href="../contact.html">Contact Us</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms of Service</a>
+    </div>
     &copy; 2026 <a href="index.html">Raindrop Crystal</a>. All rights reserved.
   </div>
 </footer>
@@ -219,11 +226,11 @@ const zodiacProducts = [
    story:"Pisces is gentle, romantic, and deeply imaginative. Green Crystal's soft luster ripples like gentle waves. Dream Ripple turns every day into a fairy tale stroll.",
    storyCN:"双鱼座温柔浪漫、富有想象力，绿水晶的柔和光泽如水波般轻漾。让毛孩子的每一天都像在童话中漫步。"},
   {id:"z10",imgIndex:10,zodiac:"♈️",zodiacName:"Aries",name:"Vital Spark",crystal:"Garnet",
-   story:"Aries is bold, passionate, and bursting with energy. Garnet's deep red blazes like fire. Vital Spark ignites Aries' vibrant spirit — for your unstoppable pet.",
-   storyCN:"白羊座热情勇敢、活力四射，石榴石的深红色泽如火焰般热烈。让毛孩子的每一天都充满能量与热情。"},
+   story:"Aries is bold, passionate, and bursting with vitality. Garnet's deep red blazes like fire. Vital Spark ignites Aries' vibrant spirit — for your unstoppable pet.",
+   storyCN:"白羊座热情勇敢、活力四射，石榴石的深红色泽如火焰般热烈。让毛孩子的每一天都充满活力与热情。"},
   {id:"z02",imgIndex:2,zodiac:"♉️",zodiacName:"Taurus",name:"Gilded Earth",crystal:"Citrine",
    story:"Taurus stands firm upon the earth, steady and abundant. Citrine's golden glow mirrors autumn harvests, symbolizing prosperity and peace.",
-   storyCN:"金牛座扎根大地，稳重而丰饶。黄水晶的金色光泽如秋日麦浪，为毛孩子带来一份踏实而温暖的能量。"},
+   storyCN:"金牛座扎根大地，稳重而丰饶。黄水晶的金色光泽如秋日麦浪，为毛孩子带来一份踏实而温暖的光彩。"},
   {id:"z12",imgIndex:12,zodiac:"♊️",zodiacName:"Gemini",name:"Mercurial Mind",crystal:"Aquamarine",
    story:"Gemini is witty, agile, and quick-thinking. Aquamarine's clear blue shines like a bright sky. Mercurial Mind makes your pet seem just a bit smarter and more charming.",
    storyCN:"双子座机智灵动、思维敏捷，海蓝宝的清澈蔚蓝如晴空般明朗。戴上它，毛孩子仿佛也变得更加机灵可爱。"},
@@ -240,8 +247,8 @@ const zodiacProducts = [
    story:"Libra seeks harmony and elegance. Amethyst's noble purple embodies balanced beauty — a collar where elegance and vitality meet in perfect equilibrium.",
    storyCN:"天秤座追求和谐与优雅，紫水晶的高贵紫韵正是平衡之美的化身。"},
   {id:"z11",imgIndex:11,zodiac:"♏️",zodiacName:"Scorpio",name:"Abyssal Light",crystal:"Obsidian",
-   story:"Scorpio is deep, mysterious, and inwardly powerful. Obsidian's darkness holds hidden light within — beneath the darkness lies unmatched protective force.",
-   storyCN:"天蝎座深邃神秘、力量内敛，黑曜石如深渊般漆黑却蕴藏光芒。暗色之下，是无可匹敌的守护之力。"},
+   story:"Scorpio is deep, mysterious, and inwardly powerful. Obsidian's darkness holds hidden light within — beneath the darkness lies unmatched striking presence.",
+   storyCN:"天蝎座深邃神秘、力量内敛，黑曜石如深渊般漆黑却蕴藏光芒。暗色之下，是无可匹敌的守护之美。"},
   {id:"z04",imgIndex:4,zodiac:"♐️",zodiacName:"Sagittarius",name:"Stellar Voyage",crystal:"Sapphirine",
    story:"Sagittarius yearns for distant horizons, and Sapphirine echoes the deep blue cosmos. Every walk becomes a new adventure for your born explorer.",
    storyCN:"射手座向往远方与自由，青晶石如深邃星空般幽蓝神秘。戴上它，每一程都是新的冒险。"},
@@ -322,7 +329,7 @@ container.innerHTML=zodiacProducts.map(p=>{
       <div class="zodiac"><span class="emoji">${p.zodiac}</span> ${p.zodiacName} Guardian</div>
       <h2>${p.name}</h2>
       <h3>${p.crystal} · Pet Crystal Collar</h3>
-      <div class="crystal-tag">💎 Crystal Energy: ${p.crystal}</div>
+      <div class="crystal-tag">💎 Crystal Type: ${p.crystal}</div>
       <div class="leather-tag">🐂 Genuine Leather · 全真皮</div>
       <div class="divider"></div>
       <div class="info-block">

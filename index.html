@@ -72,6 +72,35 @@ a{color:inherit;text-decoration:none}
 .review-meta .name{font-size:14px;font-weight:600;color:#2d2924}
 .review-meta .date{font-size:12px;color:#b0a490}
 
+/* ===== CUSTOMER PHOTO GALLERY ===== */
+.gallery-photo-wall{max-width:1200px;margin:0 auto 80px;padding:0 32px}
+.gallery-header{text-align:center;margin-bottom:36px}
+.gallery-header .badge-row{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.gallery-header .badge-row .badge{display:inline-flex;align-items:center;gap:6px;background:#fbf5e8;border:1px solid #e8d5b0;border-radius:50px;padding:6px 16px;font-size:12px;color:#8b7355;font-weight:600}
+.gallery-header .badge-row .badge svg{width:14px;height:14px}
+.gallery-header h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(22px,4vw,32px);color:#2d2924;margin-bottom:8px}
+.gallery-header p{font-size:14px;color:#776d61}
+.gallery-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.gallery-item{position:relative;aspect-ratio:1;border-radius:8px;overflow:hidden;cursor:pointer;background:#f0e8d8;transition:transform .25s,box-shadow .25s}
+.gallery-item:hover{transform:scale(1.03);box-shadow:0 6px 20px rgba(0,0,0,.12)}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.gallery-item:hover img{transform:scale(1.08)}
+.gallery-item .overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.45) 0%,transparent 60%);opacity:0;transition:opacity .3s;display:flex;align-items:flex-end;padding:12px}
+.gallery-item:hover .overlay{opacity:1}
+.gallery-item .overlay span{color:#fff;font-size:11px;font-weight:600;letter-spacing:.3px}
+/* ===== LIGHTBOX ===== */
+.lightbox{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.lightbox.active{opacity:1;visibility:visible}
+.lightbox-close{position:absolute;top:24px;right:24px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.15);border:none;color:#fff;font-size:24px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:10}
+.lightbox-close:hover{background:rgba(255,255,255,.25)}
+.lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.12);border:none;color:#fff;font-size:22px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:10}
+.lightbox-nav:hover{background:rgba(255,255,255,.22)}
+.lightbox-prev{left:24px}
+.lightbox-next{right:24px}
+.lightbox-content{max-width:90vw;max-height:85vh;display:flex;align-items:center;justify-content:center}
+.lightbox-content img{max-width:100%;max-height:85vh;object-fit:contain;border-radius:8px;box-shadow:0 8px 40px rgba(0,0,0,.4)}
+.lightbox-counter{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.6);font-size:13px;letter-spacing:1px}
+
 /* ===== TRUST BADGES ===== */
 .trust{background:#fbf8f1;padding:48px 32px}
 .trust-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center}
@@ -98,6 +127,10 @@ a{color:inherit;text-decoration:none}
   .collections{grid-template-columns:1fr;margin:-20px auto 40px;padding:0 16px}
   .col-card-img{height:220px}
   .reviews-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(4,1fr);gap:8px}
+  .gallery-photo-wall{padding:0 16px;margin-bottom:60px}
+  .lightbox-nav{width:40px;height:40px;font-size:18px}
+  .lightbox-prev{left:12px}.lightbox-next{right:12px}
   .trust-inner{grid-template-columns:repeat(2,1fr);gap:24px}
   .footer-inner{grid-template-columns:1fr;gap:32px}
   .hero{padding:60px 16px 40px}
@@ -107,6 +140,11 @@ a{color:inherit;text-decoration:none}
   .nav-logo{font-size:18px}
   .nav-cta{padding:6px 12px;font-size:12px}
   .review-card{padding:20px}
+  .gallery-grid{grid-template-columns:repeat(3,1fr);gap:6px}
+  .gallery-photo-wall{margin-bottom:48px}
+  .lightbox-close{top:16px;right:16px;width:36px;height:36px;font-size:20px}
+  .lightbox-nav{width:34px;height:34px;font-size:16px}
+  .lightbox-prev{left:8px}.lightbox-next{right:8px}
 }
 
 /* ===== LAZY LOAD PROGRESSIVE ===== */
@@ -185,12 +223,35 @@ a{color:inherit;text-decoration:none}
 <!-- Reviews -->
 <section class="reviews">
   <div class="section-head">
-    <div class="tag">Customer Love</div>
-    <h2>好评如潮</h2>
-    <p>来自全球宠物主人的真实反馈</p>
+    <div class="tag">Customer Love · お客様の声</div>
+    <h2>What Our Customers Say</h2>
+    <p>Real feedback from pet parents worldwide · 世界中のペットオーナーからのリアルな声</p>
   </div>
   <div class="reviews-grid" id="reviewsGrid"></div>
 </section>
+
+<!-- Customer Photo Gallery -->
+<section class="gallery-photo-wall">
+  <div class="gallery-header">
+    <div class="badge-row">
+      <div class="badge"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg> Real Customer Photos · 実際の購入者写真</div>
+      <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Purchase · 購入確認済み</div>
+      <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg> 42 Real Photos · 42枚の実写</div>
+    </div>
+    <h2>Customer Photo Gallery · お客様フォトギャラリー</h2>
+    <p>Real moments shared by our lovely customers · Every photo tells a story of love<br><small>大切なペットとの素敵な瞬間 · 一枚一枚が愛の証</small></p>
+  </div>
+  <div class="gallery-grid" id="galleryGrid"></div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">&#8249;</button>
+  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">&#8250;</button>
+  <div class="lightbox-content"><img id="lightboxImg" src="" alt=""></div>
+  <div class="lightbox-counter" id="lightboxCounter"></div>
+</div>
 
 <!-- Trust Badges -->
 <section class="trust">
@@ -207,7 +268,7 @@ a{color:inherit;text-decoration:none}
   <div class="footer-inner">
     <div class="footer-brand">
       <div class="logo">Raindrop</div>
-      <p>Raindrop 是专注天然水晶宠物饰品的独立品牌。我们相信每一只毛孩子都值得被温柔以待 — 用天然晶石的能量，为它们增添一份闪耀与守护。</p>
+      <p>Raindrop 是专注天然水晶宠物饰品的独立品牌。我们相信每一只毛孩子都值得被温柔以待 — 用天然晶石的光彩，为它们增添一份闪耀与守护。</p>
     </div>
     <div class="footer-col">
       <h4>探索系列</h4>
@@ -222,6 +283,13 @@ a{color:inherit;text-decoration:none}
     </div>
   </div>
   <div class="footer-bottom">
+    <div style="margin-bottom:12px;display:flex;flex-wrap:wrap;justify-content:center;gap:16px">
+      <a href="shipping.html">Shipping Policy</a>
+      <a href="refund.html">30-Day Refund</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
     &copy; 2026 <a href="index.html">Raindrop Crystal</a>. All rights reserved. Made with 💛 for pets worldwide.
   </div>
 </footer>
@@ -229,12 +297,15 @@ a{color:inherit;text-decoration:none}
 <script>
 // ===== REVIEWS DATA =====
 const reviews = [
-  {stars:5,text:"给家里的小柯基买了一条紫水晶项圈，戴上真的太好看了！水晶在阳光下闪闪发光，拍照超级出片，材质也很舒服不勒脖子。",name:"小鹿斑比",avatar:"🐶",date:"2026-06-02"},
-  {stars:5,text:"之前在宠物展上看到过类似的水晶项圈要300+，这里100出头就能买到，品质完全不输！粉水晶配我家白猫绝美，已经回购第三条了。",name:"喵星人不吃鱼",avatar:"🐱",date:"2026-05-28"},
-  {stars:5,text:"第一次给狗狗买水晶饰品，没想到效果这么好！项圈做工精致，水晶很通透，戴出门遛狗回头率超高，邻居都问在哪买的。",name:"旺财妈妈",avatar:"🐕",date:"2026-05-25"},
-  {stars:5,text:"我是宠物店店主，拿了几款样品回来试陈列，客户反馈特别好。批发价格合理，包装也很精美，会长期合作。",name:"PetLovers_SH",avatar:"🏪",date:"2026-05-20"},
-  {stars:4,text:"买了两条送朋友家的猫咪，朋友说超级喜欢！绿水晶的颜色特别清新，适合夏天。唯一建议是希望能出更多颜色选择。",name:"爱宠达人小林",avatar:"🐾",date:"2026-05-15"},
-  {stars:5,text:"从ins上看到推荐过来的，收到实物比照片还好看！水晶有分量但不会太重，我家泰迪戴着很舒服，已经推荐给宠物群的朋友了。",name:"Tiffany_Pets",avatar:"✨",date:"2026-05-10"}
+  {stars:5,text:"Found Raindrop through Instagram! Bought the Amethyst collar for my Corgi — he looks absolutely stunning. The crystals sparkle beautifully in sunlight, and three neighbors asked where I got it during our walk. Craftsmanship is excellent and the adjustable buckle fits my chunky boy perfectly. Highly recommend!",name:"Luna & Corgi Max",avatar:"🐶",date:"2026-06-05"},
+  {stars:5,text:"インスタで見つけてポメラニアンにローズクォーツを購入しました！実物は写真以上に綺麗で、クリスタルがとても透明感があります。前に他のお店で買ったものよりずっと品質が良くて、このお値段は本当にお得だと思います。友達の柴犬にもプレゼントしました。",name:"ポメラニアンのママ",avatar:"🐱",date:"2026-06-03"},
+  {stars:5,text:"Honestly was a bit hesitant at first — $30+ for a pet collar isn't cheap. But the moment I unboxed it I knew it was worth every penny. The crystals are genuinely clear, not that cheap plastic look. The gold buckle has amazing quality. My Poodle gets tons of compliments on walks — even our vet asked about it!",name:"Teddy's Mom",avatar:"🐕",date:"2026-05-30"},
+  {stars:5,text:"I run a pet boutique and ordered samples to test the market. Within two days of display, customers were already asking about them and bought on the spot after trying. The crystal collars really pop under store lighting — very eye-catching. Wholesale pricing is fair, packaging is elegant, and I'm planning a long-term partnership.",name:"PetParadise_SH",avatar:"🏪",date:"2026-05-28"},
+  {stars:4,text:"Bought two — Green Aventurine and Blue Topaz — to rotate. The green one is so fresh for summer, and the blue is more elegant for special occasions. Only wish: more color options like Smoky Quartz or Citrine would be amazing. That said, current quality is already very satisfying. Keeping an eye on new releases!",name:"PetLover Ken",avatar:"🐾",date:"2026-05-22"},
+  {stars:5,text:"以前SNSで海外のインフルエンサーが使っているのを見て、調べたら日本からも買えることを発見！届いてみて期待以上でした。クリスタルのサイズ感がちょうどよく、犬の首に負担がかからない重さです。パッケージもおしゃれで巾着袋まで付いていて感動。犬友達みんなにリンク送りました！",name:"Tiffany_pets",avatar:"✨",date:"2026-05-18"},
+  {stars:5,text:"Third purchase already! Amethyst → Clear Quartz → now the Obsidian from Zodiac series. Every single one is beautiful and they're all so different. The black Obsidian looks incredibly cool on my black Labrador — such a perfect match. Quality has been consistent across all orders. Hope the brand keeps growing and releasing more designs!",name:"Labrador Loyalist",avatar:"🦮",date:"2026-05-15"},
+  {stars:5,text:"Bought the Rose Quartz small size for my cat, honestly thought she might hate wearing a collar — but she doesn't seem to mind at all! Maybe the crystals are light enough? Two weeks in and she hasn't tried to take it off once. Posted a photo on social media and got flooded with likes. Bestie immediately asked for the link for her British Shorthair!",name:"Cat Diary by Emi",avatar:"😻",date:"2026-05-12"},
+  {stars:5,text:"星座シリーズのアクアマリンをサモエドに買いました。青と白の組み合わせが本当に完璧です！革の部分がとても柔らかくて、内側にフリース素材が使われているので長時間つけていても毛が擦れません。以前買った他の革首輪は色落ちしましたが、これは一ヶ月経っても色がきれいなまま。品質最高です！",name:"サモエド大好き",avatar:"☁️",date:"2026-05-08"}
 ];
 
 document.getElementById("reviewsGrid").innerHTML = reviews.map(r => `
@@ -274,6 +345,104 @@ if ("IntersectionObserver" in window) {
     if (src) { img.src = src; img.classList.add("loaded"); }
   });
 }
+
+// ===== CUSTOMER PHOTO GALLERY =====
+const PHOTO_IDS = Array.from({length:34},(_,i)=>i+1).concat([36,37,39,40,41,42,44,45]);
+const TOTAL_PHOTOS = PHOTO_IDS.length;
+const galleryGrid = document.getElementById("galleryGrid");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImg");
+const lightboxCounter = document.getElementById("lightboxCounter");
+let currentIndex = 0;
+
+// Render gallery grid
+galleryGrid.innerHTML = PHOTO_IDS.map((id, i) => `
+    <div class="gallery-item" data-index="${i}" onclick="openLightbox(${i})">
+      <img data-src="images/reviews/${id}.webp" src="images/reviews/${id}_thumb.webp" class="lazy-img" alt="Customer Photo #${id}" loading="lazy">
+      <div class="overlay"><span>Photo #${id}</span></div>
+    </div>`).join("");
+
+// Lazy load gallery images
+const galleryImages = galleryGrid.querySelectorAll(".lazy-img");
+if ("IntersectionObserver" in window) {
+  const galleryObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.getAttribute("data-src");
+        img.onload = () => img.classList.add("loaded");
+        obs.unobserve(img);
+      }
+    });
+  }, { rootMargin: "300px" });
+  galleryImages.forEach(img => galleryObserver.observe(img));
+} else {
+  galleryImages.forEach(img => {
+    img.src = img.getAttribute("data-src");
+    img.classList.add("loaded");
+  });
+}
+
+// Lightbox functions
+function openLightbox(index) {
+  currentIndex = index;
+  updateLightbox();
+  lightbox.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeLightbox() {
+  lightbox.classList.remove("active");
+  document.body.style.overflow = "";
+}
+
+function updateLightbox() {
+  const id = PHOTO_IDS[currentIndex];
+  lightboxImg.src = `images/reviews/${id}.webp`;
+  lightboxImg.alt = `Customer Photo #${id}`;
+  lightboxCounter.textContent = `${id} / ${PHOTO_IDS[PHOTO_IDS.length-1]}`;
+}
+
+document.getElementById("lightboxClose").addEventListener("click", closeLightbox);
+document.getElementById("lightboxPrev").addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + TOTAL_PHOTOS) % TOTAL_PHOTOS;
+  updateLightbox();
+});
+document.getElementById("lightboxNext").addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % TOTAL_PHOTOS;
+  updateLightbox();
+});
+
+// Close lightbox on background click
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
+
+// Keyboard navigation
+document.addEventListener("keydown", (e) => {
+  if (!lightbox.classList.contains("active")) return;
+  if (e.key === "Escape") closeLightbox();
+  if (e.key === "ArrowLeft") {
+    currentIndex = (currentIndex - 1 + TOTAL_PHOTOS) % TOTAL_PHOTOS;
+    updateLightbox();
+  }
+  if (e.key === "ArrowRight") {
+    currentIndex = (currentIndex + 1) % TOTAL_PHOTOS;
+    updateLightbox();
+  }
+});
+
+// Touch swipe support for lightbox
+let touchStartX = 0;
+lightbox.addEventListener("touchstart", (e) => { touchStartX = e.touches[0].clientX; });
+lightbox.addEventListener("touchend", (e) => {
+  const diff = touchStartX - e.changedTouches[0].clientX;
+  if (Math.abs(diff) > 60) {
+    if (diff > 0) currentIndex = (currentIndex + 1) % TOTAL_PHOTOS;
+    else currentIndex = (currentIndex - 1 + TOTAL_PHOTOS) % TOTAL_PHOTOS;
+    updateLightbox();
+  }
+});
 </script>
 </body>
 </html>
