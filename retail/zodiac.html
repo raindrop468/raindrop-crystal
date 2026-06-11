@@ -363,7 +363,7 @@ container.addEventListener("click",e=>{
 // ===== PAYPAL INTEGRATION =====
 (function(){
   const script = document.createElement('script');
-  script.src = 'https://www.sandbox.paypal.com/sdk/js?client-id=AcUyOaOF-ok7SXEkKdqo51LceybPLhc_Hfw0DI62EVJ5L&currency=USD';
+  script.src = 'https://www.paypal.com/sdk/js?client-id=AbuhPoOeEsNEvryLw7bTOeG2ry6AseOqhH7c7DOvP9F2SX8tuz6VNHL0cS3J1BTae9z9XWRBs8jS2hJa&currency=USD';
   script.onload = function(){
     zodiacProducts.forEach(function(p){
       var el = document.getElementById('paypal-btn-' + p.id);
