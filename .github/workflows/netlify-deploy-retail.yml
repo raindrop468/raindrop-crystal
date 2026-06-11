@@ -3,8 +3,6 @@ name: Deploy Retail Site to Netlify
 on:
   push:
     branches: [main]
-    paths:
-      - 'retail/**'
   workflow_dispatch:
 
 jobs:
