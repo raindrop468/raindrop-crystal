@@ -39,18 +39,48 @@ a{color:inherit;text-decoration:none}
 
 /* Gallery */
 .product-gallery{position:sticky;top:140px}
-.gallery-main{aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:#f4eadb;margin-bottom:12px}
-.gallery-main img{width:100%;height:100%;object-fit:cover}
-.gallery-thumbs{display:flex;gap:8px}
-.gallery-thumbs button{flex:1;aspect-ratio:4/3;border-radius:8px;overflow:hidden;border:2px solid transparent;cursor:pointer;padding:0;background:#f4eadb;transition:border-color .2s;opacity:.6}
-.gallery-thumbs button.active{border-color:#b4935e;opacity:1}
-.gallery-thumbs button img{width:100%;height:100%;object-fit:cover}
 
 /* Info */
 .product-info .product-no{display:inline-block;font-size:11px;letter-spacing:2px;color:#b4935e;font-weight:700;text-transform:uppercase;margin-bottom:8px}
 .product-info h2{font-size:clamp(22px,3vw,30px);font-weight:700;color:#2d2924;margin-bottom:4px}
-.product-info h3{font-size:16px;color:#776d61;font-weight:400;margin-bottom:20px}
+.product-info h3{font-size:16px;color:#776d61;font-weight:400;margin-bottom:12px}
 .product-info .divider{height:1px;background:#f0e8d8;margin:20px 0}
+
+/* Quick Specs Bar */
+.quick-specs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.quick-specs .spec-chip{display:inline-flex;align-items:center;gap:5px;background:#fbf5e8;border:1px solid #e8d5b0;border-radius:50px;padding:5px 14px;font-size:11px;color:#8b7355;font-weight:600;letter-spacing:.3px}
+.quick-specs .spec-chip svg{width:13px;height:13px;flex-shrink:0}
+
+/* Size Selector */
+.size-section{margin-bottom:20px}
+.size-section h4{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:#b4935e;margin-bottom:10px}
+.size-options{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.size-opt{background:#fdfaf5;border:2px solid #f0e8d8;border-radius:10px;padding:12px 10px;text-align:center;cursor:pointer;transition:border-color .2s,background .2s;user-select:none}
+.size-opt:hover{border-color:#dcc9a0;background:#fbf5e8}
+.size-opt.selected{border-color:#b4935e;background:#fdf6ee}
+.size-opt .size-label{font-size:16px;font-weight:700;color:#2d2924;margin-bottom:2px}
+.size-opt .size-range{font-size:11px;color:#b4935e;font-weight:600;margin-bottom:2px}
+.size-opt .size-fit{font-size:10px;color:#b0a490;line-height:1.3}
+
+/* Material Specs */
+.material-specs{margin-bottom:20px}
+.material-specs h4{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:#b4935e;margin-bottom:10px}
+.material-list{display:flex;flex-direction:column;gap:6px}
+.material-row{display:flex;align-items:center;gap:10px;font-size:13px;color:#2d2924}
+.material-row .mat-icon{width:18px;height:18px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:14px}
+.material-row .mat-label{color:#b4935e;font-weight:600;min-width:70px;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+.material-row .mat-value{color:#4a4540}
+.material-row .mat-value-en{color:#b0a490;font-size:11px;margin-left:6px}
+
+/* Gallery Labels */
+.gallery-main-wrap{position:relative;aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:#f4eadb;margin-bottom:12px}
+.gallery-main-wrap img{width:100%;height:100%;object-fit:cover}
+.gallery-label{position:absolute;bottom:12px;left:12px;background:rgba(0,0,0,.55);color:#fff;font-size:11px;padding:4px 10px;border-radius:50px;letter-spacing:.4px;pointer-events:none;transition:opacity .25s}
+.gallery-thumbs{display:flex;gap:8px}
+.gallery-thumbs button{flex:1;aspect-ratio:4/3;border-radius:8px;overflow:hidden;border:2px solid transparent;cursor:pointer;padding:0;background:#f4eadb;transition:border-color .2s;opacity:.6;position:relative}
+.gallery-thumbs button.active{border-color:#b4935e;opacity:1}
+.gallery-thumbs button img{width:100%;height:100%;object-fit:cover}
+.gallery-thumbs button .thumb-label{position:absolute;bottom:4px;left:4px;right:4px;background:rgba(0,0,0,.5);color:#fff;font-size:9px;padding:2px 6px;border-radius:4px;text-align:center;letter-spacing:.3px;pointer-events:none}
 
 .product-info .info-block{margin-bottom:20px}
 .product-info .info-block h4{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:#b4935e;margin-bottom:8px}
@@ -67,10 +97,6 @@ a{color:inherit;text-decoration:none}
 .price-box .sub{font-size:11px;color:#b0a490;margin-top:2px}
 .price-box .cta{display:inline-block;margin-top:12px;padding:10px 24px;background:#b4935e;color:#fff;border-radius:8px;font-size:14px;font-weight:600;transition:background .2s}
 .price-box .cta:hover{background:#9a7d4e}
-
-/* Sizes */
-.sizes-row{display:flex;gap:8px;margin-top:8px}
-.sizes-row span{background:#f4eadb;padding:4px 12px;border-radius:50px;font-size:12px}
 
 /* Back to top */
 .back-top{text-align:center;padding:32px}
@@ -170,38 +196,47 @@ a{color:inherit;text-decoration:none}
 // ===== PRODUCT DATA (添加新产品只需在此数组追加对象) =====
 const products = [
   {no:"01",cn:"紫水晶宠物项圈",en:"Amethyst Crystal Pet Collar",retailUSD:"$32",dropshipUSD:"$9",
+   crystal:"Natural Amethyst · 天然紫水晶",
    photos:["1","1--","1-"],
    story:["紫水晶以优雅的紫色光泽闻名，象征平静、守护与温柔光彩。适合追求优雅气质的毛孩子，让它们在人群中脱颖而出。","Amethyst is known for its elegant purple glow, symbolizing calmness, protection, and gentle radiance."],
    use:["适合猫咪、小型犬及中型犬日常拍照、节日造型、精品宠物店陈列。","Suitable for cats, small dogs, and medium dogs for daily photos, seasonal styling, and boutique pet-store display."]},
   {no:"02",cn:"白水晶宠物项圈",en:"Clear Quartz Pet Collar",retailUSD:"$37",dropshipUSD:"$12",
+   crystal:"Natural Clear Quartz · 天然白水晶",
    photos:["2-","2--","2"],
    story:["白水晶通透纯净，象征清澈、平衡与祝福。适合喜欢简约风格的宠物主人，百搭任何毛色。","Clear quartz is transparent and pure, symbolizing clarity, balance, and blessings."],
    use:["尤其适合白色、奶油色、灰色与浅色系宠物，清新百搭。","Especially suited for white, cream, gray, and light-colored pets."]},
   {no:"03",cn:"粉水晶宠物项圈",en:"Rose Quartz Pet Collar",retailUSD:"$29",dropshipUSD:"$8",
+   crystal:"Natural Rose Quartz · 天然粉水晶",
    photos:["3-","3--","3"],
    story:["粉水晶色泽柔和甜美，常被视为爱与温柔的象征。戴上它，毛孩子瞬间甜度满分。","Rose quartz has a soft and sweet tone and is often seen as a symbol of love and tenderness."],
    use:["适合日常穿搭、生日造型、宠物摄影与礼品销售。","Suitable for daily styling, birthday looks, pet photography, and gift sales."]},
   {no:"04",cn:"多宝宠物项圈",en:"Multi-Gemstone Pet Collar",retailUSD:"$32",dropshipUSD:"$9",
+   crystal:"Mixed Natural Crystals · 天然多宝晶石",
    photos:["4","4--","4-"],
    story:["多宝款融合多种天然晶石色彩，层次丰富、视觉活泼。一条项圈汇聚多种晶石之美。","The multi-gemstone design combines several natural crystal colors for a rich and lively visual effect."],
    use:["适合活泼风格宠物、节日搭配、精品宠物店爆款陈列。","Suitable for playful styling, seasonal looks, and boutique bestseller display."]},
   {no:"05",cn:"绿水晶宠物项圈",en:"Green Crystal Pet Collar",retailUSD:"$40",dropshipUSD:"$13",
+   crystal:"Natural Green Aventurine · 天然绿水晶",
    photos:["5","5-","5--"],
    story:["绿水晶带有清新自然的色调，象征生机、舒展与好运。夏日最佳搭配之选。","Green crystal carries a fresh natural tone, symbolizing vitality, ease, and good fortune."],
    use:["适合自然系、户外系、清新风格宠物造型。","Suitable for natural, outdoor, and fresh styling concepts."]},
   {no:"06",cn:"粉水晶加珍珠宠物项圈",en:"Rose Quartz & Pearl Pet Collar",retailUSD:"$32",dropshipUSD:"$9",
+   crystal:"Rose Quartz & Freshwater Pearl · 粉水晶+淡水珍珠",
    photos:["6","6--","6-"],
    story:["粉水晶的柔和色泽搭配珍珠的温润光感，呈现甜美、优雅、精致的珠宝氛围。","Soft rose quartz paired with the warm luster of pearls creates a sweet, elegant, and refined jewelry mood."],
    use:["适合公主风、婚礼风、节日拍摄和宠物礼盒搭配。","Suitable for princess styling, wedding looks, holiday photos, and pet gift sets."]},
   {no:"07",cn:"紫黄水晶宠物项圈",en:"Amethyst & Citrine Pet Collar",retailUSD:"$41",dropshipUSD:"$13",
+   crystal:"Amethyst & Citrine · 紫水晶+黄水晶",
    photos:["7","7--","7-"],
    story:["紫色与金黄色晶石相互映衬，寓意幸运、活力与美好祝福。高端品质之选。","Purple and golden crystals complement each other, symbolizing luck, vitality, and meaningful blessings."],
    use:["适合高端陈列、节日上新、礼品套装与跨境平台主图展示。","Suitable for premium display, seasonal launches, gift sets, and cross-border listing images."]},
   {no:"08",cn:"紫水晶宠物项圈 II",en:"Amethyst Crystal Pet Collar II",retailUSD:"$37",dropshipUSD:"$12",
+   crystal:"Natural Amethyst · 天然紫水晶",
    photos:["8","8--","8--","8-"],
    story:["此款紫水晶层次更轻盈，晶石垂坠感明显，整体风格优雅灵动。适合追求精致感的宠物主人。","This amethyst design feels lighter in layers, with a clear crystal drape and an elegant, fluid style."],
    use:["适合高级宠物摄影、精品门店陈列和礼品销售。","Suitable for premium pet photography, boutique display, and gift sales."]},
   {no:"09",cn:"蓝托帕宠物项圈",en:"Blue Topaz Pet Collar",retailUSD:"$41",dropshipUSD:"$14",
+   crystal:"Natural Blue Topaz · 天然蓝托帕",
    photos:["9-","9--","9"],
    story:["蓝托帕呈现清澈明亮的蓝色光感，象征清新、从容与幸运。海洋般的蓝色令人心旷神怡。","Blue topaz has a clear and bright blue glow, symbolizing freshness, calmness, and good fortune."],
    use:["适合清爽风格宠物、夏季主题陈列、跨境平台高客单展示。","Suitable for fresh styling, summer-themed display, and premium cross-border listings."]}
@@ -214,19 +249,30 @@ document.getElementById("footerDesc").textContent = `Raindrop 是专注天然水
 
 // ===== BUILD PRODUCTS =====
 const container=document.getElementById("productsContainer");
+
+// Global constants
+const SIZES = [
+  {label:"S", range:"20–30 cm", fit:"Cats & Tiny Dogs · 猫咪/小型犬"},
+  {label:"M", range:"30–40 cm", fit:"Small-Medium Dogs · 中小型犬"},
+  {label:"L", range:"40–50 cm", fit:"Medium-Large Dogs · 中大型犬"}
+];
+const PHOTO_LABELS = ["Front · 正面", "Detail · 细节", "On-Dog · 佩戴", "Close-up · 近景"];
+
 container.innerHTML=products.map(p=>{
   const mainPhoto=p.photos[0];
   const thumbs=p.photos.slice(0,4);
   return `
   <div class="product-card" id="product-${p.no}">
     <div class="product-gallery">
-      <div class="gallery-main">
+      <div class="gallery-main-wrap">
         <img src="images/classic/${mainPhoto}.webp" class="main-img" alt="${p.cn}" id="main-${p.no}">
+        <span class="gallery-label" id="label-${p.no}">${PHOTO_LABELS[0]}</span>
       </div>
       <div class="gallery-thumbs">
         ${thumbs.map((t,i)=>`
-          <button class="${i===0?'active':''}" data-img="images/classic/${t}.webp">
-            <img src="images/classic/${t}_thumb.webp" alt="${i===0?'主图':i===1?'佩戴图':'细节图'}" loading="lazy">
+          <button class="${i===0?'active':''}" data-img="images/classic/${t}.webp" data-label="${PHOTO_LABELS[i]}">
+            <img src="images/classic/${t}_thumb.webp" alt="${PHOTO_LABELS[i]}" loading="lazy">
+            <span class="thumb-label">${PHOTO_LABELS[i]}</span>
           </button>
         `).join("")}
       </div>
@@ -235,17 +281,62 @@ container.innerHTML=products.map(p=>{
       <div class="product-no">Product ${p.no}</div>
       <h2>${p.cn}</h2>
       <h3>${p.en}</h3>
+
+      <div class="quick-specs">
+        <span class="spec-chip"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 2l1.5 4.5H14l-3.8 2.7 1.5 4.5L8 11l-3.7 2.7 1.5-4.5L2 6.5h4.5z"/></svg> Handmade · 手工制作</span>
+        <span class="spec-chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="12" height="9" rx="1"/><circle cx="8" cy="8" r="2"/></svg> Natural Crystal · 天然晶石</span>
+        <span class="spec-chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="4"/></svg> Genuine Leather · 真皮</span>
+      </div>
       <div class="divider"></div>
+
+      <div class="size-section">
+        <h4>Size · 尺寸选择</h4>
+        <div class="size-options">
+          ${SIZES.map((s,i)=>`
+            <div class="size-opt${i===1?' selected':''}" data-size="${s.label}">
+              <div class="size-label">${s.label}</div>
+              <div class="size-range">${s.range}</div>
+              <div class="size-fit">${s.fit}</div>
+            </div>
+          `).join("")}
+        </div>
+      </div>
+
+      <div class="material-specs">
+        <h4>Materials · 材质规格</h4>
+        <div class="material-list">
+          <div class="material-row">
+            <span class="mat-icon">💎</span>
+            <span class="mat-label">Crystal</span>
+            <span class="mat-value">${p.crystal||'Natural Crystal'}</span>
+          </div>
+          <div class="material-row">
+            <span class="mat-icon">🔗</span>
+            <span class="mat-label">Hardware</span>
+            <span class="mat-value">Stainless Steel<span class="mat-value-en">不锈钢</span></span>
+          </div>
+          <div class="material-row">
+            <span class="mat-icon">🧵</span>
+            <span class="mat-label">Collar</span>
+            <span class="mat-value">Genuine Leather<span class="mat-value-en">真皮</span></span>
+          </div>
+          <div class="material-row">
+            <span class="mat-icon">✋</span>
+            <span class="mat-label">Craft</span>
+            <span class="mat-value">Handmade<span class="mat-value-en">手工制作</span></span>
+          </div>
+        </div>
+      </div>
+
       <div class="info-block">
-        <h4>水晶介绍 / Crystal Story</h4>
+        <h4>Crystal Story · 水晶故事</h4>
         <p>${p.story[0]}</p>
         <p class="en">${p.story[1]}</p>
       </div>
       <div class="info-block">
-        <h4>适合宠物 / Suitable Pets</h4>
+        <h4>Perfect For · 适用场景</h4>
         <p>${p.use[0]}</p>
         <p class="en">${p.use[1]}</p>
-        <div class="sizes-row"><span>S</span><span>M</span><span>L</span></div>
       </div>
       <div class="price-row">
         <div class="price-box retail">
@@ -277,9 +368,20 @@ container.addEventListener("click",e=>{
   if(!btn)return;
   const gallery=btn.closest(".product-gallery");
   const mainImg=gallery.querySelector(".main-img");
+  const labelEl=gallery.querySelector(".gallery-label");
   mainImg.src=btn.dataset.img;
+  if(labelEl) labelEl.textContent=btn.dataset.label;
   gallery.querySelectorAll("button").forEach(b=>b.classList.remove("active"));
   btn.classList.add("active");
+});
+
+// ===== SIZE SELECTOR =====
+container.addEventListener("click",e=>{
+  const opt=e.target.closest(".size-opt");
+  if(!opt)return;
+  const opts=opt.parentElement.querySelectorAll(".size-opt");
+  opts.forEach(o=>o.classList.remove("selected"));
+  opt.classList.add("selected");
 });
 </script>
 </body>
