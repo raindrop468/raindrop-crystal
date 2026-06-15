@@ -19,52 +19,55 @@ a{color:inherit;text-decoration:none}
 .promo-bar span{padding:0 40px;flex-shrink:0;font-weight:500}
 @keyframes promo-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
-/* Nav (FunnyFuzzy-style centered brand) */
+/* Nav (3-column: search | brand | cart+whatsapp) */
 .nav{position:sticky;top:0;z-index:99;background:rgba(255,253,248,.97);backdrop-filter:blur(14px);border-bottom:1px solid #e8dfd3;padding:0 32px}
 .nav-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:68px}
-.nav-left{display:flex;gap:22px;align-items:center;flex:1}
-.nav-left a{font-size:13px;color:#776d61;transition:color .2s;letter-spacing:.3px;font-weight:500}
-.nav-left a:hover{color:#c4956a}
+.nav-left{flex:1;display:flex;align-items:center}
+.nav-search{display:flex;align-items:center;background:#f5f0ea;border-radius:30px;padding:0 16px;height:42px;width:220px;transition:all .3s;border:1.5px solid transparent}
+.nav-search:focus-within{border-color:#c4956a;background:#fff;width:260px}
+.nav-search svg{width:18px;height:18px;color:#999;flex-shrink:0}
+.nav-search input{background:none;border:none;outline:none;font-size:14px;color:#2d2924;width:100%;margin-left:10px}
+.nav-search input::placeholder{color:#aaa}
 .nav-center{flex:0 0 auto;text-align:center}
 .nav-logo{font-family:Georgia,"Times New Roman",serif;font-size:24px;font-weight:700;color:#2d2924;letter-spacing:1.5px;text-decoration:none}
 .nav-logo .brand-accent{color:#c4956a}
-.nav-right{display:flex;gap:18px;align-items:center;flex:1;justify-content:flex-end}
-.nav-cta{background:#25d366;color:#fff!important;padding:8px 18px;border-radius:6px;font-weight:600;transition:background .2s!important;font-size:13px}
+.nav-right{flex:1;display:flex;gap:16px;align-items:center;justify-content:flex-end}
+.nav-icon{display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:#f5f0ea;transition:all .25s;cursor:pointer;position:relative;border:none;color:#776d61}
+.nav-icon:hover{background:#c4956a;color:#fff}
+.nav-icon svg{width:20px;height:20px}
+.nav-cart-count{position:absolute;top:-4px;right:-4px;background:#c4956a;color:#fff;font-size:10px;font-weight:700;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid #fffdf8}
+.nav-cta{background:#25d366;color:#fff!important;padding:8px 16px;border-radius:6px;font-weight:600;font-size:13px;transition:background .2s!important;display:flex;align-items:center;gap:6px}
 .nav-cta:hover{background:#1fb855!important;color:#fff!important}
+.nav-cta svg{width:16px;height:16px}
 
-/* ===== HERO (FunnyFuzzy pure image banner — no overlay) ===== */
-.hero{width:100%;overflow:hidden;position:relative}
+/* ===== HERO (Pure image banner) ===== */
+.hero{width:100%;overflow:hidden}
 .hero-bg{width:100%;display:block}
 .hero-bg img{width:100%;height:auto;object-fit:cover;display:block}
 
-/* ===== CATEGORY QUICK LINKS (FunnyFuzzy-style icon row) ===== */
-.cat-quick{padding:48px 32px 44px;background:#fff}
-.cat-inner{max-width:1200px;margin:0 auto}
-.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:16px}
-.cat-item{text-align:center;text-decoration:none;display:block;padding:18px 10px;border-radius:14px;transition:all .25s;background:#faf8f5;border:1.5px solid #f0e8d8}
-.cat-item:hover{background:#fff;border-color:#c4956a;transform:translateY(-3px);box-shadow:0 6px 20px rgba(180,147,94,.12)}
-.cat-icon{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#fdf6ed,#f5ede0);margin:0 auto 10px;display:flex;align-items:center;justify-content:center;font-size:26px}
-.cat-name{font-size:11.5px;color:#666;font-weight:600;letter-spacing:.2px}
-
-/* ===== COLLECTION CARDS ===== */
-.collections{max-width:1200px;margin:0 auto 64px;padding:0 32px}
-.collections-header{text-align:center;margin-bottom:42px}
-.collections-header .tag{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:2.5px;color:#c4956a;font-weight:700;margin-bottom:10px;border:1px solid #dcc9a0;padding:5px 18px;border-radius:30px}
-.collections-header h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(24px,4vw,36px);color:#2d2924;margin-bottom:8px}
-.col-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.col-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.05);transition:all .35s;cursor:pointer;display:block;border:1px solid #f0ebe3}
-.col-card:hover{transform:translateY(-6px);box-shadow:0 14px 40px rgba(0,0,0,.1);border-color:#e0d5c5}
-.col-card-img{height:260px;overflow:hidden;position:relative;background:#f5f0ea}
-.col-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.col-card:hover .col-card-img img{transform:scale(1.06)}
-.col-card-badge{position:absolute;top:14px;left:14px;background:rgba(196,149,106,.88);color:#fff;font-size:10px;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;text-transform:uppercase}
-.col-card-body{padding:24px 22px}
-.col-card-body h3{font-size:19px;font-weight:700;margin-bottom:6px;color:#2d2924}
-.col-card-body p{font-size:13.5px;color:#888;line-height:1.6;margin-bottom:14px}
-.col-card-price{display:inline-flex;align-items:center;gap:6px;font-size:17px;font-weight:700;color:#c4956a}
-.col-card-arrow{display:inline-flex;align-items:center;gap:5px;margin-top:12px;font-size:13px;font-weight:600;color:#c4956a}
-.col-card-arrow svg{width:16px;height:16px;transition:transform .3s}
-.col-card:hover .col-card-arrow svg{transform:translateX(4px)}
+/* ===== PRODUCT CAROUSEL ===== */
+.carousel-section{padding:56px 0 64px;background:#fff}
+.carousel-header{text-align:center;margin-bottom:32px}
+.carousel-header .tag{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:2.5px;color:#c4956a;font-weight:700;margin-bottom:10px;border:1px solid #dcc9a0;padding:5px 18px;border-radius:30px}
+.carousel-header h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(24px,4vw,34px);color:#2d2924;margin-bottom:6px}
+.carousel-wrapper{position:relative;max-width:1280px;margin:0 auto;padding:0 60px}
+.carousel-track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;padding:8px 0 16px; scrollbar-width:none}
+.carousel-track::-webkit-scrollbar{display:none}
+.carousel-card{flex:0 0 280px;scroll-snap-align:start;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.06);transition:all .3s;cursor:pointer;border:1px solid #f0ebe3;text-decoration:none}
+.carousel-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.1);border-color:#e0d5c5}
+.carousel-card-img{height:240px;overflow:hidden;position:relative;background:#f5f0ea}
+.carousel-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.carousel-card:hover .carousel-card-img img{transform:scale(1.06)}
+.carousel-card-badge{position:absolute;top:12px;left:12px;background:rgba(196,149,106,.88);color:#fff;font-size:9.5px;font-weight:700;letter-spacing:1px;padding:4px 10px;border-radius:20px;text-transform:uppercase}
+.carousel-card-body{padding:20px 18px}
+.carousel-card-body h3{font-size:16px;font-weight:700;color:#2d2924;margin-bottom:4px}
+.carousel-card-body p{font-size:12.5px;color:#888;line-height:1.5;margin-bottom:10px}
+.carousel-card-price{font-size:16px;font-weight:700;color:#c4956a}
+.carousel-arrow{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#fff;border:1.5px solid #e8dfd3;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .25s;z-index:5;color:#776d61}
+.carousel-arrow:hover{background:#c4956a;color:#fff;border-color:#c4956a}
+.carousel-arrow svg{width:18px;height:18px}
+.carousel-prev{left:10px}
+.carousel-next{right:10px}
 
 /* ===== REVIEWS ===== */
 .reviews{max-width:1200px;margin:0 auto 72px;padding:0 32px}
@@ -126,10 +129,14 @@ a{color:inherit;text-decoration:none}
 
 /* Footer */
 .footer{background:#2d2924;color:#c4beb4;padding:48px 32px 24px}
-.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
 .footer-brand .logo{font-family:Georgia,"Times New Roman",serif;font-size:22px;color:#2d2924;font-weight:700;margin-bottom:12px;letter-spacing:1.5px}
 .footer-brand .logo span{color:#c4956a}
 .footer-brand p{font-size:13px;line-height:1.8}
+.footer-social{display:flex;gap:14px;margin-top:16px}
+.footer-social a{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);transition:all .25s;color:#c4beb4}
+.footer-social a:hover{background:#c4956a;color:#fff}
+.footer-social svg{width:18px;height:18px}
 .footer-col h4{font-size:13px;text-transform:uppercase;letter-spacing:1.5px;color:#fff;margin-bottom:16px;font-weight:600}
 .footer-col a{display:block;font-size:13px;color:#c4beb4;margin-bottom:10px;transition:color .2s}
 .footer-col a:hover{color:#c4956a}
@@ -138,20 +145,20 @@ a{color:inherit;text-decoration:none}
 
 /* Responsive */
 @media(max-width:1024px){
-  .col-grid{grid-template-columns:repeat(2,1fr)}
-  .cat-grid{grid-template-columns:repeat(auto-fill,minmax(95px,1fr))}
+  .footer-inner{grid-template-columns:1fr 1fr}
 }
 @media(max-width:768px){
   .nav{padding:0 16px}.nav-inner{height:60px}
-  .nav-left,.nav-right{gap:10px}
-  .nav-left a,.nav-right a{font-size:11.5px}
-  .nav-logo{font-size:18px}
+  .nav-search{width:160px;height:36px;padding:0 12px}
+  .nav-search:focus-within{width:180px}
+  .nav-logo{font-size:20px}
+  .nav-icon{width:38px;height:38px}
   .nav-cta{padding:6px 12px;font-size:12px}
-  .cat-grid{grid-template-columns:repeat(4,1fr);gap:12px}
-  .cat-icon{width:44px;height:44px;font-size:22px}
-  .collections{padding:0 16px;margin:0 auto 48px}
-  .col-grid{grid-template-columns:1fr;gap:18px}.col-card-img{height:220px}
-  .reviews-grid{grid-template-columns:1fr}.trust-inner{grid-template-columns:repeat(2,1fr);gap:24px}
+  .carousel-card{flex:0 0 240px}
+  .carousel-card-img{height:200px}
+  .carousel-wrapper{padding:0 40px}
+  .reviews-grid{grid-template-columns:1fr}
+  .trust-inner{grid-template-columns:repeat(2,1fr);gap:24px}
   .footer-inner{grid-template-columns:1fr;gap:32px}
   .gallery-grid{grid-template-columns:repeat(4,1fr);gap:6px}
   .gallery-photo-wall{padding:0 16px;margin-bottom:56px}
@@ -159,10 +166,15 @@ a{color:inherit;text-decoration:none}
 @media(max-width:480px){
   .nav-inner{height:52px}
   .nav-logo{font-size:16px;letter-spacing:1px}
-  .nav-left,.nav-right{gap:6px}
-  .nav-left a,.nav-right a{font-size:10px}
+  .nav-search{width:120px;height:34px;font-size:12px}
+  .nav-icon{width:34px;height:34px}
+  .nav-icon svg{width:16px;height:16px}
   .nav-cta{padding:5px 10px;font-size:11px}
-  .cat-grid{grid-template-columns:repeat(3,1fr)}
+  .carousel-card{flex:0 0 200px}
+  .carousel-card-img{height:170px}
+  .carousel-wrapper{padding:0 30px}
+  .carousel-arrow{width:36px;height:36px}
+  .carousel-arrow svg{width:14px;height:14px}
   .review-card{padding:18px}
   .gallery-grid{grid-template-columns:repeat(3,1fr);gap:5px}
   .gallery-photo-wall{margin-bottom:44px}
@@ -186,29 +198,35 @@ a{color:inherit;text-decoration:none}
   </div>
 </div>
 
-<!-- Nav (FunnyFuzzy-style: centered brand) -->
+<!-- Nav (Search | Brand | Cart + WhatsApp) -->
 <nav class="nav">
   <div class="nav-inner">
     <div class="nav-left">
-      <a href="classic.html">Classic</a>
-      <a href="zodiac.html">Zodiac</a>
-      <a href="pet-urn.html">Memorial</a>
-      <a href="pet-keychain.html">Acrylic</a>
+      <div class="nav-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input type="text" placeholder="Search products..." id="searchInput" onkeydown="if(event.key==='Enter')handleSearch()">
+      </div>
     </div>
     <div class="nav-center">
       <a href="index.html" class="nav-logo">Raindrop <span class="brand-accent">Pet</span></a>
     </div>
     <div class="nav-right">
-      <a href="pet-leather.html">Leather</a>
-      <a href="pet-fridge.html">Portrait</a>
-      <a href="pet-ring.html">Ring</a>
-      <a href="pet-patches.html">Patches</a>
-      <a href="https://wa.me/8618271425419" target="_blank" rel="noopener" class="nav-cta">💬 WhatsApp</a>
+      <button class="nav-icon" onclick="handleSearch()" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      </button>
+      <button class="nav-icon" id="cartBtn" aria-label="Shopping Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="nav-cart-count" id="cartCount">0</span>
+      </button>
+      <a href="https://wa.me/8618271425419" target="_blank" rel="noopener" class="nav-cta">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.46.251-.611.27-.149.94-.347 1.286-.496.347-.148.596-.223.844-.149.297.099 1.653.743 2.03.967.273.099.47.149.67.15.197-.15.37-.447.544-.745.173-.297.148-.347-.075-.596-.223-.247-.447-.496-.596-.743-.149-.247-.347-.223-.596-.099-.247.099-1.286.596-1.855.844-.596.247-1.017.297-1.286.149-.273-.15-.596-.496-.844-.743-.247-.247-.596-.496-.844-.743-.149-.099-.347-.247-.596-.347-.247-.099-.596-.099-.844.099-.247.149-.743.496-.94.596-.198.099-.347.223-.596.247-.247.099-.596.099-.844-.099-.247-.15-.743-.496-1.286-.596-.596-.247-1.017-.347-1.286-.247-.273.099-.596.496-.844.743-.247.247-.596.496-.844.743-.149.099-.347.223-.596.247-.247.099-.596.099-.844-.099-.273-.15-1.758-.867-2.03-.967-.273-.099-.47-.149-.67-.15-.197.15-.37.447-.544.745-.173.297-.148.347.075.596.223.247.447.496.596.743.149.247.347.223.596.099.247-.099.94-.347 1.286-.496.347-.148.596-.223.844-.149.297.099 1.653.743 2.03.967.273.099.47.149.67.15.197-.15.37-.447.544-.745.173-.297.148-.347-.075-.596-.223-.247-.447-.496-.596-.743-.149-.247-.347-.223-.596-.099-.247.099-1.286.596-1.855.844-.596.247-1.017.297-1.286.149-.273-.15-.596-.496-.844-.743-.247-.247-.596-.496-.844-.743-.149-.099-.347-.247-.596-.347-.247-.099-.596-.099-.844.099zM12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+        WhatsApp
+      </a>
     </div>
   </div>
 </nav>
 
-<!-- Hero (Pure image banner — no text overlay, like FunnyFuzzy) -->
+<!-- Hero (Pure image banner) -->
 <section class="hero">
   <div class="hero-bg">
     <picture>
@@ -218,140 +236,113 @@ a{color:inherit;text-decoration:none}
   </div>
 </section>
 
-<!-- Category Quick Links -->
-<section class="cat-quick" id="shopDogs">
-  <div class="cat-inner">
-    <div class="cat-grid">
-      <a href="classic.html" class="cat-item"><div class="cat-icon">💎</div><div class="cat-name">Classic Crystal</div></a>
-      <a href="zodiac.html" class="cat-item"><div class="cat-icon">⭐</div><div class="cat-name">Zodiac Guardian</div></a>
-      <a href="pet-urn.html" class="cat-item"><div class="cat-icon">🏺</div><div class="cat-name">Pet Memorial</div></a>
-      <a href="pet-keychain.html" class="cat-item"><div class="cat-icon">🔑</div><div class="cat-name">Acrylic Keychain</div></a>
-      <a href="pet-leather.html" class="cat-item"><div class="cat-icon">👜</div><div class="cat-name">Leather Keychain</div></a>
-      <a href="pet-fridge.html" class="cat-item"><div class="cat-icon">❄️</div><div class="cat-name">3D Portrait</div></a>
-      <a href="pet-plush.html" class="cat-item" id="shopCats"><div class="cat-icon">🧸</div><div class="cat-name">Plush Toys</div></a>
-      <a href="pet-ring.html" class="cat-item"><div class="cat-icon">💍</div><div class="cat-name">Alloy Ring</div></a>
-      <a href="pet-patches.html" class="cat-item"><div class="cat-icon">🧵</div><div class="cat-name">Embroidery Patches</div></a>
-    </div>
-  </div>
-</section>
-
-<!-- Collection Cards -->
-<section class="collections">
-  <div class="collections-header">
+<!-- Product Carousel (Scrollable) -->
+<section class="carousel-section">
+  <div class="carousel-header">
     <div class="tag">Our Collections</div>
     <h2>Find the Perfect Gift for Your Pet</h2>
   </div>
-  <div class="col-grid">
-    <!-- Classic Crystal -->
-    <a href="classic.html" class="col-card">
-      <div class="col-card-img">
-        <span class="col-card-badge">Best Seller</span>
-        <img src="./images/classic/9-_thumb.webp" alt="Classic Crystal Collection" loading="lazy">
-      </div>
-      <div class="col-card-body">
-        <h3>Classic Crystal Collar</h3>
-        <p>Natural amethyst, rose quartz, clear quartz & more. Timeless elegance for your pet. 9 styles available.</p>
-        <div class="col-card-price">$29 – $41</div>
-        <div class="col-card-arrow">Shop Collection <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-    </a>
-    <!-- Zodiac Guardian -->
-    <a href="zodiac.html" class="col-card">
-      <div class="col-card-img">
-        <span class="col-card-badge">New</span>
-        <img src="./images/zodiac/1_thumb.webp" alt="Zodiac Guardian Collection" loading="lazy">
-      </div>
-      <div class="col-card-body">
-        <h3>Zodiac Guardian Crystal</h3>
-        <p>12 exclusive zodiac crystals — Amazonite, Garnet, Citrine, Aquamarine & more. Each matches a birth month.</p>
-        <div class="col-card-price">$41 each</div>
-        <div class="col-card-arrow">Shop Collection <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-    </a>
-    <!-- Pet Memorial Urn -->
-    <a href="pet-urn.html" class="col-card">
-      <div class="col-card-img" style="background:linear-gradient(135deg,#f5ede0,#e8d5ba)">
-        <img src="./images/urns/1_thumb.webp" alt="Pet Memorial Urn" loading="lazy">
-      </div>
-      <div class="col-card-body">
-        <h3>Pet Memorial Urn</h3>
-        <p>Handcrafted keepsake box for your beloved companion. 20×15×14 cm · White / Black / Red.</p>
-        <div class="col-card-price">$22.00</div>
-        <div class="col-card-arrow">Shop Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-    </a>
-    <!-- Acrylic Keychain -->
-    <a href="pet-keychain.html" class="col-card">
-      <div class="col-card-img" style="background:linear-gradient(135deg,#f0e5ff,#e4d0f5)">
-        <img src="./images/keychains/1_thumb.webp" alt="Acrylic Pet Keychain" loading="lazy">
-      </div>
-      <div class="col-card-body">
-        <h3>Acrylic Pet Keychain</h3>
-        <p>Custom photo keychain — dog, cat or anime character. ~6 cm · Acrylic material. 4 style options.</p>
-        <div class="col-card-price">$4.90</div>
-        <div class="col-card-arrow">Shop Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-    </a>
-    <!-- Leather Fur Keychain -->
-    <a href="pet-leather.html" class="col-card">
-      <div class="col-card-img" style="background:linear-gradient(135deg,#fdf6ed,#eeddcc)">
-        <img src="./images/leather/1_thumb.webp" alt="Leather Pet Fur Keychain" loading="lazy">
-      </div>
-      <div class="col-card-body">
-        <h3>Leather Fur Keychain</h3>
-        <p>Genuine leather keepsake for storing your pet's fur. 7 colors · Blank $4.90 / Custom Photo $9.80.</p>
-        <div class="col-card-price">$4.90 – $9.80</div>
-        <div class="col-card-arrow">Shop Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-    </a>
-    <!-- 3D Pet Portrait -->
-    <a href="pet-fridge.html" class="col-card">
-      <div class="col-card-img" style="background:linear-gradient(135deg,#f5f0ff,#e8ddf5)">
-        <img src="./images/fridge/1b_thumb.webp" alt="3D Pet Portrait Fridge Magnet" loading="lazy">
-      </div>
-      <div class="col-card-body">
-        <h3>3D Pet Portrait</h3>
-        <p>Custom plaster portrait — fridge magnet, full-body statue, or car air freshener.</p>
-        <div class="col-card-price">$19.80 – $36.80</div>
-        <div class="col-card-arrow">Shop Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-    </a>
-    <!-- Dog Plush Toy -->
-    <a href="pet-plush.html" class="col-card">
-      <div class="col-card-img" style="background:linear-gradient(135deg,#fff5f0,#fde8dc)">
-        <img src="./images/plush/1_thumb.webp" alt="Dog Squeaky Plush Chew Toy" loading="lazy">
-      </div>
-      <div class="col-card-body">
-        <h3>Dog Plush Chew Toy</h3>
-        <p>Squeaky plush toy for medium to large dogs. Durable & interactive fun. 4 styles.</p>
-        <div class="col-card-price">$9.80</div>
-        <div class="col-card-arrow">Shop Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-    </a>
-    <!-- Alloy Adjustable Ring -->
-    <a href="pet-ring.html" class="col-card">
-      <div class="col-card-img" style="background:linear-gradient(135deg,#fff8f5,#ffe8dc)">
-        <img src="./images/rings/1_thumb.webp" alt="Sweet Style Alloy Adjustable Ring" loading="lazy">
-      </div>
-      <div class="col-card-body">
-        <h3>Alloy Adjustable Ring</h3>
-        <p>Sweet bichon & cat design alloy ring. 3 adorable styles · One size fits most.</p>
-        <div class="col-card-price">$8.80</div>
-        <div class="col-card-arrow">Shop Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-    </a>
-    <!-- Embroidery Patch Set -->
-    <a href="pet-patches.html" class="col-card">
-      <div class="col-card-img" style="background:linear-gradient(135deg,#fff8f5,#ffe0d0)">
-        <img src="./images/patches/1_thumb.webp" alt="Cute Dog Embroidery Patch Set" loading="lazy">
-      </div>
-      <div class="col-card-body">
-        <h3>Embroidery Patch Set</h3>
-        <p>Cute dog embroidery iron-on patches. Corgi, Dalmatian, Beagle designs. Set of 9.</p>
-        <div class="col-card-price">$8.80</div>
-        <div class="col-card-arrow">Shop Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-    </a>
+  <div class="carousel-wrapper">
+    <button class="carousel-arrow carousel-prev" onclick="scrollCarousel(-1)" aria-label="Previous">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <div class="carousel-track" id="carouselTrack">
+      <a href="classic.html" class="carousel-card">
+        <div class="carousel-card-img">
+          <span class="carousel-card-badge">Best Seller</span>
+          <img src="./images/classic/9-_thumb.webp" alt="Classic Crystal Collar" loading="lazy">
+        </div>
+        <div class="carousel-card-body">
+          <h3>Classic Crystal Collar</h3>
+          <p>9 natural crystal styles · Amethyst, Rose Quartz & more</p>
+          <div class="carousel-card-price">$29 – $41</div>
+        </div>
+      </a>
+      <a href="zodiac.html" class="carousel-card">
+        <div class="carousel-card-img">
+          <span class="carousel-card-badge">New</span>
+          <img src="./images/zodiac/1_thumb.webp" alt="Zodiac Guardian Crystal" loading="lazy">
+        </div>
+        <div class="carousel-card-body">
+          <h3>Zodiac Guardian Crystal</h3>
+          <p>12 birth-month crystals · Amazonite, Garnet & more</p>
+          <div class="carousel-card-price">$41 each</div>
+        </div>
+      </a>
+      <a href="pet-urn.html" class="carousel-card">
+        <div class="carousel-card-img" style="background:linear-gradient(135deg,#f5ede0,#e8d5ba)">
+          <img src="./images/urns/1_thumb.webp" alt="Pet Memorial Urn" loading="lazy">
+        </div>
+        <div class="carousel-card-body">
+          <h3>Pet Memorial Urn</h3>
+          <p>20×15×14 cm · White / Black / Red</p>
+          <div class="carousel-card-price">$22.00</div>
+        </div>
+      </a>
+      <a href="pet-keychain.html" class="carousel-card">
+        <div class="carousel-card-img" style="background:linear-gradient(135deg,#f0e5ff,#e4d0f5)">
+          <img src="./images/keychains/1_thumb.webp" alt="Acrylic Pet Keychain" loading="lazy">
+        </div>
+        <div class="carousel-card-body">
+          <h3>Acrylic Pet Keychain</h3>
+          <p>Custom photo · ~6 cm · 4 style options</p>
+          <div class="carousel-card-price">$4.90</div>
+        </div>
+      </a>
+      <a href="pet-leather.html" class="carousel-card">
+        <div class="carousel-card-img" style="background:linear-gradient(135deg,#fdf6ed,#eeddcc)">
+          <img src="./images/leather/1_thumb.webp" alt="Leather Pet Fur Keychain" loading="lazy">
+        </div>
+        <div class="carousel-card-body">
+          <h3>Leather Fur Keychain</h3>
+          <p>7 colors · Blank $4.90 / Custom Photo $9.80</p>
+          <div class="carousel-card-price">$4.90 – $9.80</div>
+        </div>
+      </a>
+      <a href="pet-fridge.html" class="carousel-card">
+        <div class="carousel-card-img" style="background:linear-gradient(135deg,#f5f0ff,#e8ddf5)">
+          <img src="./images/fridge/1b_thumb.webp" alt="3D Pet Portrait" loading="lazy">
+        </div>
+        <div class="carousel-card-body">
+          <h3>3D Pet Portrait</h3>
+          <p>Fridge magnet / Full body / Car aromatherapy</p>
+          <div class="carousel-card-price">$19.80 – $36.80</div>
+        </div>
+      </a>
+      <a href="pet-plush.html" class="carousel-card">
+        <div class="carousel-card-img" style="background:linear-gradient(135deg,#fff5f0,#fde8dc)">
+          <img src="./images/plush/1_thumb.webp" alt="Dog Plush Chew Toy" loading="lazy">
+        </div>
+        <div class="carousel-card-body">
+          <h3>Dog Plush Chew Toy</h3>
+          <p>Squeaky & durable · 4 styles · Medium to large dogs</p>
+          <div class="carousel-card-price">$9.80</div>
+        </div>
+      </a>
+      <a href="pet-ring.html" class="carousel-card">
+        <div class="carousel-card-img" style="background:linear-gradient(135deg,#fff8f5,#ffe8dc)">
+          <img src="./images/rings/1_thumb.webp" alt="Alloy Adjustable Ring" loading="lazy">
+        </div>
+        <div class="carousel-card-body">
+          <h3>Alloy Adjustable Ring</h3>
+          <p>Sweet bichon & cat design · 3 styles · Adjustable</p>
+          <div class="carousel-card-price">$8.80</div>
+        </div>
+      </a>
+      <a href="pet-patches.html" class="carousel-card">
+        <div class="carousel-card-img" style="background:linear-gradient(135deg,#fff8f5,#ffe0d0)">
+          <img src="./images/patches/1_thumb.webp" alt="Embroidery Patch Set" loading="lazy">
+        </div>
+        <div class="carousel-card-body">
+          <h3>Embroidery Patch Set</h3>
+          <p>Corgi, Dalmatian, Beagle · Set of 9 · Iron-on</p>
+          <div class="carousel-card-price">$8.80</div>
+        </div>
+      </a>
+    </div>
+    <button class="carousel-arrow carousel-next" onclick="scrollCarousel(1)" aria-label="Next">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
   </div>
 </section>
 
@@ -369,18 +360,18 @@ a{color:inherit;text-decoration:none}
 <section class="gallery-photo-wall">
   <div class="gallery-header">
     <div class="badge-row">
-      <div class="badge"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg> Real Customer Photos · 実際の購入者写真</div>
-      <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Purchase · 購入確認済み</div>
-      <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg> 42 Real Photos · 42枚の実写</div>
+      <div class="badge"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg> Real Customer Photos</div>
+      <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Purchase</div>
+      <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg> 42 Real Photos</div>
     </div>
-    <h2>Customer Photo Gallery · お客様フォトギャラリー</h2>
-    <p>Real moments shared by our lovely customers<br><small>大切なペットとの素敵な瞬間 · 一枚一枚が愛の証</small></p>
+    <h2>Customer Photo Gallery</h2>
+    <p>Real moments shared by our lovely customers</p>
   </div>
   <div class="gallery-grid" id="galleryGrid"></div>
   <div class="gallery-load-more-wrapper">
     <button id="loadMoreBtn" class="load-more-btn" onclick="loadGalleryBatch()">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
-      Load More Photos · もっと見る
+      Load More Photos
     </button>
   </div>
 </section>
@@ -410,6 +401,17 @@ a{color:inherit;text-decoration:none}
     <div class="footer-brand">
       <div class="logo">Raindrop <span>Pet</span></div>
       <p>Raindrop Pet — handmade crystal pet accessories crafted with love. A meaningful gift for your beloved companion.</p>
+      <div class="footer-social">
+        <a href="https://www.tiktok.com/@raindrop446688" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.73a8.19 8.19 0 004.76 1.52v-3.4a4.85 4.85 0 01-1-.16z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/raindrop_6688" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://wa.me/8618271425419" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.46.251-.611.27-.149.94-.347 1.286-.496.347-.148.596-.223.844-.149.297.099 1.653.743 2.03.967.273.099.47.149.67.15.197-.15.37-.447.544-.745.173-.297.148-.347-.075-.596-.223-.247-.447-.496-.596-.743-.149-.247-.347-.223-.596-.099-.247.099-1.286.596-1.855.844-.596.247-1.017.297-1.286.149-.273-.15-.596-.496-.844-.743-.247-.247-.596-.496-.844-.743-.149-.099-.347-.247-.596-.347-.247-.099-.596-.099-.844.099-.247.149-.743.496-.94.596-.198.099-.347.223-.596.247-.247.099-.596.099-.844-.099-.247-.15-.743-.496-1.286-.596-.596-.247-1.017-.347-1.286-.247-.273.099-.596.496-.844.743-.247.247-.596.496-.844.743-.149.099-.347.223-.596.247-.247.099-.596.099-.844-.099-.273-.15-1.758-.867-2.03-.967-.273-.099-.47-.149-.67-.15-.197.15-.37.447-.544.745-.173.297-.148.347.075.596.223.247.447.496.596.743.149.247.347.223.596.099.247-.099.94-.347 1.286-.496.347-.148.596-.223.844-.149.297.099 1.653.743 2.03.967.273.099.47.149.67.15.197-.15.37-.447.544-.745.173-.297.148-.347-.075-.596-.223-.247-.447-.496-.596-.743-.149-.247-.347-.223-.596-.099-.247.099-1.286.596-1.855.844-.596.247-1.017.297-1.286.149-.273-.15-.596-.496-.844-.743-.247-.247-.596-.496-.844-.743-.149-.099-.347-.247-.596-.347-.247-.099-.596-.099-.844.099zM12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+        </a>
+      </div>
     </div>
     <div class="footer-col">
       <h4>Collections</h4>
@@ -424,25 +426,52 @@ a{color:inherit;text-decoration:none}
       <a href="pet-patches.html">Embroidery Patches</a>
     </div>
     <div class="footer-col">
-      <h4>Contact</h4>
+      <h4>Customer Service</h4>
+      <a href="shipping.html">Shipping Policy</a>
+      <a href="refund.html">Refund & Return</a>
+      <a href="mailto:raindrop446688@gmali.com">raindrop446688@gmali.com</a>
+    </div>
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <a href="https://www.tiktok.com/@raindrop446688" target="_blank" rel="noopener">TikTok: @raindrop446688</a>
+      <a href="https://www.instagram.com/raindrop_6688" target="_blank" rel="noopener">Instagram: @raindrop_6688</a>
       <a href="https://wa.me/8618271425419" target="_blank" rel="noopener">WhatsApp: +86 182 7142 5419</a>
-      <a href="mailto:support@raindropwyx.com">support@raindropwyx.com</a>
     </div>
   </div>
   <div class="footer-bottom">
-    <div style="margin-bottom:12px;display:flex;flex-wrap:wrap;justify-content:center;gap:16px">
-      <a href="../shipping.html">Shipping Policy</a>
-      <a href="../refund.html">30-Day Refund</a>
-      <a href="../contact.html">Contact Us</a>
-      <a href="../privacy.html">Privacy Policy</a>
-      <a href="../terms.html">Terms of Service</a>
-    </div>
-    &copy; 2026 <a href="index.html">Raindrop</a>. All rights reserved. Made with 💛 for pets worldwide.
+    &copy; 2026 Raindrop Pet. All rights reserved. Made with 💛 for pets worldwide.
   </div>
 </footer>
 
 <script>
-// ===== REVIEWS DATA (EN + JP) =====
+// ===== CAROUSEL =====
+function scrollCarousel(dir) {
+  const track = document.getElementById('carouselTrack');
+  const cardWidth = track.querySelector('.carousel-card').offsetWidth + 20;
+  track.scrollBy({ left: dir * cardWidth * 2, behavior: 'smooth' });
+}
+
+// ===== SEARCH =====
+function handleSearch() {
+  const q = document.getElementById('searchInput').value.trim().toLowerCase();
+  if (!q) return;
+  const products = [
+    {name:'classic crystal collar',url:'classic.html'},
+    {name:'zodiac guardian crystal',url:'zodiac.html'},
+    {name:'pet memorial urn',url:'pet-urn.html'},
+    {name:'acrylic pet keychain',url:'pet-keychain.html'},
+    {name:'leather fur keychain',url:'pet-leather.html'},
+    {name:'3d pet portrait fridge magnet',url:'pet-fridge.html'},
+    {name:'dog plush chew toy',url:'pet-plush.html'},
+    {name:'alloy adjustable ring',url:'pet-ring.html'},
+    {name:'embroidery patch set',url:'pet-patches.html'}
+  ];
+  const match = products.find(p => p.name.includes(q));
+  if (match) window.location.href = match.url;
+  else alert('No product found for "' + q + '". Try searching for crystal, urn, keychain, ring, etc.');
+}
+
+// ===== REVIEWS DATA =====
 const reviews = [
   {stars:5,text:"Found Raindrop through Instagram! Bought the Amethyst collar for my Corgi — he looks absolutely stunning. The crystals sparkle beautifully in sunlight, and three neighbors asked where I got it during our walk. Craftsmanship is excellent!",name:"Luna & Corgi Max",avatar:"🐶",date:"2026-06-05"},
   {stars:5,text:"インスタで見つけてポメラニアンにローズクォーツを購入しました！実物は写真以上に綺麗で、クリスタルがとても透明感があります。品質は最高です！",name:"ポメラニアンのママ",avatar:"🐱",date:"2026-06-03"},
@@ -483,7 +512,6 @@ let loadedCount = 0;
 function loadGalleryBatch() {
   const batch = PHOTO_IDS.slice(loadedCount, loadedCount + BATCH_SIZE);
   const startIndex = loadedCount;
-
   batch.forEach((id, i) => {
     const item = document.createElement("div");
     item.className = "gallery-item";
@@ -492,18 +520,11 @@ function loadGalleryBatch() {
     item.innerHTML = `<img src="./images/reviews/${id}_thumb.webp" alt="Customer Photo #${id}" loading="lazy"><div class="overlay"><span>Photo #${id}</span></div>`;
     galleryGrid.appendChild(item);
   });
-
   loadedCount += batch.length;
-
   const btn = document.getElementById("loadMoreBtn");
-  if (loadedCount >= TOTAL_PHOTOS) {
-    btn.style.display = "none";
-  } else {
-    const remaining = TOTAL_PHOTOS - loadedCount;
-    btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>Load ${remaining} More Photos · さらに${remaining}枚を表示`;
-  }
+  if (loadedCount >= TOTAL_PHOTOS) btn.style.display = "none";
+  else btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>Load ${TOTAL_PHOTOS - loadedCount} More Photos`;
 }
-
 loadGalleryBatch();
 
 function openLightbox(index) {
@@ -512,49 +533,30 @@ function openLightbox(index) {
   lightbox.classList.add("active");
   document.body.style.overflow = "hidden";
 }
-
 function closeLightbox() {
   lightbox.classList.remove("active");
   document.body.style.overflow = "";
 }
-
 function updateLightbox() {
   const id = PHOTO_IDS[currentIndex];
   lightboxImg.src = `./images/reviews/${id}.webp`;
-  lightboxAlt = `Customer Photo #${id}`;
   lightboxCounter.textContent = `${id} / ${PHOTO_IDS[PHOTO_IDS.length-1]}`;
 }
-
 document.getElementById("lightboxClose").addEventListener("click", closeLightbox);
-document.getElementById("lightboxPrev").addEventListener("click", () => {
-  currentIndex = (currentIndex - 1 + TOTAL_PHOTOS) % TOTAL_PHOTOS;
-  updateLightbox();
-});
-document.getElementById("lightboxNext").addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % TOTAL_PHOTOS;
-  updateLightbox();
-});
-
-lightbox.addEventListener("click", (e) => {
-  if (e.target === lightbox) closeLightbox();
-});
-
+document.getElementById("lightboxPrev").addEventListener("click", () => { currentIndex = (currentIndex - 1 + TOTAL_PHOTOS) % TOTAL_PHOTOS; updateLightbox(); });
+document.getElementById("lightboxNext").addEventListener("click", () => { currentIndex = (currentIndex + 1) % TOTAL_PHOTOS; updateLightbox(); });
+lightbox.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox(); });
 document.addEventListener("keydown", (e) => {
   if (!lightbox.classList.contains("active")) return;
   if (e.key === "Escape") closeLightbox();
   if (e.key === "ArrowLeft") { currentIndex = (currentIndex - 1 + TOTAL_PHOTOS) % TOTAL_PHOTOS; updateLightbox(); }
   if (e.key === "ArrowRight") { currentIndex = (currentIndex + 1) % TOTAL_PHOTOS; updateLightbox(); }
 });
-
 let touchStartX = 0;
 lightbox.addEventListener("touchstart", (e) => { touchStartX = e.touches[0].clientX; });
 lightbox.addEventListener("touchend", (e) => {
   const diff = touchStartX - e.changedTouches[0].clientX;
-  if (Math.abs(diff) > 60) {
-    if (diff > 0) currentIndex = (currentIndex + 1) % TOTAL_PHOTOS;
-    else currentIndex = (currentIndex - 1 + TOTAL_PHOTOS) % TOTAL_PHOTOS;
-    updateLightbox();
-  }
+  if (Math.abs(diff) > 60) { if (diff > 0) currentIndex = (currentIndex + 1) % TOTAL_PHOTOS; else currentIndex = (currentIndex - 1 + TOTAL_PHOTOS) % TOTAL_PHOTOS; updateLightbox(); }
 });
 </script>
 </body>
