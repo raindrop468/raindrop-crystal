@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>3D Pet Custom Fridge Magnet & Car Air Freshener — Raindrop Crystal</title>
-<meta name="description" content="Custom 3D pet portrait fridge magnet, full-body plaster statue, and car air vent aromatherapy. Personalized cat & dog memorial keepsake.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+<title>Dog Squeaky Plush Chew Toy — Raindrop Crystal</title>
+<meta name="description" content="Squeaky plush chew toy for medium to large dogs. Durable, interactive, and perfect for teething. 4 cute styles, $9.80 each. Free shipping over $49.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧸</text></svg>">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#faf8f5;color:#2d2d2d;line-height:1.6}
@@ -53,18 +53,17 @@ img{max-width:100%;display:block}
 .price{font-size:2.2rem;font-weight:700;color:#c4956a}
 .price-note{font-size:.85rem;color:#999}
 
-/* Type Selector */
-.type-selector{margin-bottom:24px}
-.type-selector h3{font-size:.9rem;font-weight:600;margin-bottom:10px;text-transform:uppercase;letter-spacing:.05em;color:#888}
-.type-options{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
-.type-opt{border:2px solid #e8e2d9;border-radius:12px;padding:12px 10px;text-align:center;cursor:pointer;transition:all .25s;position:relative;overflow:hidden}
-.type-opt:hover{border-color:#c4956a}
-.type-opt.selected{border-color:#c4956a;background:#fdf6ed}
-.type-opt .type-img{width:80px;height:80px;border-radius:8px;object-fit:cover;margin:0 auto 8px}
-.type-opt .type-name{font-size:.8rem;font-weight:600;margin-bottom:2px}
-.type-opt .type-price{font-size:.9rem;font-weight:700;color:#c4956a}
-.type-opt .check{position:absolute;top:6px;right:6px;width:20px;height:20px;border-radius:50%;background:#c4956a;color:#fff;display:none;align-items:center;justify-content:center;font-size:12px}
-.type-opt.selected .check{display:flex}
+/* Style Selector */
+.style-selector{margin-bottom:24px}
+.style-selector h3{font-size:.9rem;font-weight:600;margin-bottom:10px;text-transform:uppercase;letter-spacing:.05em;color:#888}
+.style-options{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.style-opt{border:2px solid #e8e2d9;border-radius:12px;padding:10px;text-align:center;cursor:pointer;transition:all .25s;position:relative}
+.style-opt:hover{border-color:#c4956a}
+.style-opt.selected{border-color:#c4956a;background:#fdf6ed}
+.style-opt .style-img{width:100%;aspect-ratio:1/1;border-radius:8px;object-fit:cover;margin-bottom:6px}
+.style-opt .style-name{font-size:.78rem;font-weight:600;color:#555}
+.style-opt .check{position:absolute;top:6px;right:6px;width:20px;height:20px;border-radius:50%;background:#c4956a;color:#fff;display:none;align-items:center;justify-content:center;font-size:12px}
+.style-opt.selected .check{display:flex}
 
 /* Specs */
 .specs{margin-bottom:24px;padding:16px;background:#f5f0ea;border-radius:12px}
@@ -109,7 +108,7 @@ footer{background:#2d2d2d;color:#ccc;padding:48px 32px 24px}
   .gallery{position:static}
   .gallery-thumbs{grid-template-columns:repeat(5,1fr)}
   .info h1{font-size:1.3rem}
-  .type-options{grid-template-columns:1fr}
+  .style-options{grid-template-columns:repeat(2,1fr)}
   .detail-grid{grid-template-columns:1fr}
   .trust{grid-template-columns:1fr 1fr;gap:16px;padding:20px}
   .footer-inner{grid-template-columns:1fr}
@@ -140,8 +139,8 @@ footer{background:#2d2d2d;color:#ccc;padding:48px 32px 24px}
       <a href="pet-urn.html">Memorial</a>
       <a href="pet-keychain.html">Acrylic</a>
       <a href="pet-leather.html">Leather</a>
-      <a href="pet-fridge.html" class="active">Fridge</a>
-      <a href="pet-plush.html">Plush</a>
+      <a href="pet-fridge.html">Fridge</a>
+      <a href="pet-plush.html" class="active">Plush</a>
       <a href="https://wa.me/8618271425419" target="_blank" rel="noopener" class="nav-cta">💬 WhatsApp</a>
     </div>
   </div>
@@ -149,52 +148,50 @@ footer{background:#2d2d2d;color:#ccc;padding:48px 32px 24px}
 
 <!-- Breadcrumb -->
 <div class="breadcrumb">
-  <a href="index.html">Home</a> / <a href="pet-fridge.html">3D Pet Fridge Magnet & Car Air Freshener</a>
+  <a href="index.html">Home</a> / <a href="pet-plush.html">Dog Squeaky Plush Chew Toy</a>
 </div>
 
 <!-- Product -->
 <section class="product">
   <div class="gallery">
     <div class="gallery-main">
-      <img id="mainImg" src="./images/fridge/1b.webp" alt="3D Pet Custom Fridge Magnet">
+      <img id="mainImg" src="./images/plush/1.webp" alt="Dog Squeaky Plush Chew Toy">
     </div>
-    <div class="gallery-thumbs" id="thumbs">
-      <!-- 9 main images: 1b, 2-9 -->
-      <!-- 7 detail images: 11-17 -->
-      <!-- 3 type images: 18, 19, 20 -->
-    </div>
+    <div class="gallery-thumbs" id="thumbs"></div>
   </div>
 
   <div class="info">
-    <h1>3D Pet Custom Fridge Magnet & Car Air Freshener — Cat Dog Memorial Plaster Portrait</h1>
-    <p class="subtitle">Handcrafted 3D plaster portrait of your beloved cat or dog. Turn your pet into a cute fridge magnet, a full-body desktop statue, or a car air vent aromatherapy clip. A unique memorial keepsake to keep them close forever.</p>
+    <h1>Dog Squeaky Plush Chew Toy — Interactive Durable Teething Companion for Medium to Large Dogs</h1>
+    <p class="subtitle">Soft yet durable plush squeaky chew toy designed for medium to large dogs. Built-in squeaker for interactive play, tough stitching to withstand chewing, and adorable designs your pup will love. Great for teething, boredom relief, and bonding time.</p>
 
     <div class="price-row">
-      <span class="price" id="priceDisplay">$19.80</span>
-      <span class="price-note" id="priceNote">Fridge Magnet</span>
+      <span class="price">$9.80</span>
+      <span class="price-note">USD · Each</span>
     </div>
 
-    <!-- Product Type Selector -->
-    <div class="type-selector">
-      <h3>Select Product Type</h3>
-      <div class="type-options">
-        <div class="type-opt selected" data-type="fridge" data-price="19.80" data-name="Fridge Magnet" onclick="selectType(this)">
+    <!-- Style Selector -->
+    <div class="style-selector">
+      <h3>Select Style</h3>
+      <div class="style-options">
+        <div class="style-opt selected" data-style="2" data-name="Style A — Crocodile" onclick="selectStyle(this)">
           <div class="check">✓</div>
-          <img class="type-img" src="./images/fridge/18_thumb.webp" alt="Fridge Magnet">
-          <div class="type-name">Fridge Magnet</div>
-          <div class="type-price">$19.80</div>
+          <img class="style-img" src="./images/plush/2_thumb.webp" alt="Style A">
+          <div class="style-name">Style A</div>
         </div>
-        <div class="type-opt" data-type="portrait" data-price="28.80" data-name="Full Body 3D Portrait" onclick="selectType(this)">
+        <div class="style-opt" data-style="3" data-name="Style B" onclick="selectStyle(this)">
           <div class="check">✓</div>
-          <img class="type-img" src="./images/fridge/19_thumb.webp" alt="Full Body 3D Portrait">
-          <div class="type-name">Full Body 3D Portrait</div>
-          <div class="type-price">$28.80</div>
+          <img class="style-img" src="./images/plush/3_thumb.webp" alt="Style B">
+          <div class="style-name">Style B</div>
         </div>
-        <div class="type-opt" data-type="aromatherapy" data-price="36.80" data-name="Car Air Vent Aromatherapy" onclick="selectType(this)">
+        <div class="style-opt" data-style="4" data-name="Style C" onclick="selectStyle(this)">
           <div class="check">✓</div>
-          <img class="type-img" src="./images/fridge/20_thumb.webp" alt="Car Air Vent Aromatherapy">
-          <div class="type-name">Car Air Vent Aromatherapy</div>
-          <div class="type-price">$36.80</div>
+          <img class="style-img" src="./images/plush/4_thumb.webp" alt="Style C">
+          <div class="style-name">Style C</div>
+        </div>
+        <div class="style-opt" data-style="5" data-name="Style D" onclick="selectStyle(this)">
+          <div class="check">✓</div>
+          <img class="style-img" src="./images/plush/5_thumb.webp" alt="Style D">
+          <div class="style-name">Style D</div>
         </div>
       </div>
     </div>
@@ -203,12 +200,12 @@ footer{background:#2d2d2d;color:#ccc;padding:48px 32px 24px}
     <div class="specs">
       <h3>Specifications</h3>
       <dl class="specs-grid">
-        <dt>Material</dt><dd>Plaster / Gypsum</dd>
-        <dt>Style</dt><dd>3D Pet Portrait</dd>
-        <dt>Customization</dt><dd>Photo-based custom</dd>
-        <dt>Use</dt><dd>Fridge / Desk / Car</dd>
+        <dt>Material</dt><dd>Soft Plush + Squeaker</dd>
+        <dt>Type</dt><dd>Chew Toy / Interactive</dd>
+        <dt>Suitable For</dt><dd>Medium to Large Dogs</dd>
+        <dt>Feature</dt><dd>Squeaky / Durable</dd>
         <dt>Free Shipping</dt><dd>Orders over $49</dd>
-        <dt>Processing</dt><dd>5–10 business days</dd>
+        <dt>Colors/Styles</dt><dd>4 Styles</dd>
       </dl>
     </div>
 
@@ -220,7 +217,7 @@ footer{background:#2d2d2d;color:#ccc;padding:48px 32px 24px}
 
     <!-- Buttons -->
     <div class="btn-group">
-      <button class="btn-wa" id="waBtn" onclick="openWhatsApp()">
+      <button class="btn-wa" onclick="openWhatsApp()">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         Order via WhatsApp
       </button>
@@ -233,20 +230,17 @@ footer{background:#2d2d2d;color:#ccc;padding:48px 32px 24px}
 <section class="detail-section">
   <h2>Product Details</h2>
   <div class="detail-grid">
-    <img src="./images/fridge/11.webp" alt="Detail 1" loading="lazy">
-    <img src="./images/fridge/12.webp" alt="Detail 2" loading="lazy">
-    <img src="./images/fridge/13.webp" alt="Detail 3" loading="lazy">
-    <img src="./images/fridge/14.webp" alt="Detail 4" loading="lazy">
-    <img src="./images/fridge/15.webp" alt="Detail 5" loading="lazy">
-    <img src="./images/fridge/16.webp" alt="Detail 6" loading="lazy">
-    <img src="./images/fridge/17.webp" alt="Detail 7" loading="lazy">
+    <img src="./images/plush/6.webp" alt="Detail 1" loading="lazy">
+    <img src="./images/plush/7.webp" alt="Detail 2" loading="lazy">
+    <img src="./images/plush/8.webp" alt="Detail 3" loading="lazy">
+    <img src="./images/plush/9.webp" alt="Detail 4" loading="lazy">
   </div>
 </section>
 
 <!-- Trust -->
 <section class="trust">
-  <div class="trust-item"><div class="icon">💎</div><h4>Natural Materials</h4><p>Plaster & Gypsum</p></div>
-  <div class="trust-item"><div class="icon">🤲</div><h4>Handcrafted</h4><p>Made with Love & Care</p></div>
+  <div class="trust-item"><div class="icon">🧸</div><h4>Soft & Durable</h4><p>Built to Last</p></div>
+  <div class="trust-item"><div class="icon">🔊</div><h4>Squeaky Fun</h4><p>Built-in Squeaker</p></div>
   <div class="trust-item"><div class="icon">🔄</div><h4>7-Day Returns</h4><p>Easy & Hassle-Free</p></div>
   <div class="trust-item"><div class="icon">🌍</div><h4>Worldwide</h4><p>Free Shipping Over $49</p></div>
 </section>
@@ -283,18 +277,14 @@ footer{background:#2d2d2d;color:#ccc;padding:48px 32px 24px}
 
 <script>
 // Gallery
-const mainPhotos = ['1b','2','3','4','5','6','7','8','9'];
-const detailPhotos = ['11','12','13','14','15','16','17'];
-const typePhotos = ['18','19','20'];
-const allPhotos = [...mainPhotos, ...detailPhotos, ...typePhotos];
-
+const allPhotos = ['1','2','3','4','5','6','7','8','9'];
 let currentIdx = 0;
 const thumbsEl = document.getElementById('thumbs');
 const mainImg = document.getElementById('mainImg');
 
 allPhotos.forEach((id, i) => {
   const img = document.createElement('img');
-  img.src = `./images/fridge/${id}_thumb.webp`;
+  img.src = `./images/plush/${id}_thumb.webp`;
   img.alt = `Photo ${id}`;
   img.onclick = () => showImage(i);
   if (i === 0) img.classList.add('active');
@@ -303,35 +293,29 @@ allPhotos.forEach((id, i) => {
 
 function showImage(idx) {
   currentIdx = idx;
-  mainImg.src = `./images/fridge/${allPhotos[idx]}.webp`;
+  mainImg.src = `./images/plush/${allPhotos[idx]}.webp`;
   document.querySelectorAll('.gallery-thumbs img').forEach((t, i) => {
     t.classList.toggle('active', i === idx);
   });
 }
 
-// Type selector
-let selectedType = 'fridge';
-let selectedPrice = 19.80;
-let selectedName = 'Fridge Magnet';
+// Style selector
+let selectedStyle = '2';
+let selectedName = 'Style A — Crocodile';
 
-function selectType(el) {
-  document.querySelectorAll('.type-opt').forEach(o => o.classList.remove('selected'));
+function selectStyle(el) {
+  document.querySelectorAll('.style-opt').forEach(o => o.classList.remove('selected'));
   el.classList.add('selected');
-  selectedType = el.dataset.type;
-  selectedPrice = parseFloat(el.dataset.price);
+  selectedStyle = el.dataset.style;
   selectedName = el.dataset.name;
-  document.getElementById('priceDisplay').textContent = `$${selectedPrice.toFixed(2)}`;
-  document.getElementById('priceNote').textContent = selectedName;
-  renderPayPal();
 }
 
 // WhatsApp
 function openWhatsApp() {
   const msg = encodeURIComponent(
     `Hi! I'd like to order:\n` +
-    `🐾 3D Pet ${selectedName}\n` +
-    `💰 Price: $${selectedPrice.toFixed(2)} USD\n` +
-    `📦 I'll send my pet photo for customization.\n` +
+    `🧸 Dog Squeaky Plush Toy — ${selectedName}\n` +
+    `💰 Price: $9.80 USD\n` +
     `Thank you!`
   );
   window.open(`https://wa.me/8618271425419?text=${msg}`, '_blank');
@@ -348,12 +332,12 @@ function renderPayPal() {
       style: { layout: 'vertical', color: 'gold', shape: 'pill', label: 'pay', height: 45 },
       createOrder: (data, actions) => actions.order.create({
         purchase_units: [{
-          description: `3D Pet ${selectedName} — Custom Portrait`,
-          amount: { value: selectedPrice.toFixed(2), currency_code: 'USD' }
+          description: 'Dog Squeaky Plush Chew Toy — ' + selectedName,
+          amount: { value: '9.80', currency_code: 'USD' }
         }]
       }),
       onApprove: (data, actions) => actions.order.capture().then(details => {
-        alert(`Thank you, ${details.payer.name.given_name}! Your order for ${selectedName} has been received. Please send your pet photo via WhatsApp for customization.`);
+        alert(`Thank you, ${details.payer.name.given_name}! Your order for Dog Plush Toy (${selectedName}) has been received.`);
       })
     }).render('#paypalContainer');
   };
