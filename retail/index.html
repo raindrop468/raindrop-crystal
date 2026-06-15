@@ -40,15 +40,10 @@ a{color:inherit;text-decoration:none}
 .nav-cta:hover{background:#1fb855!important;color:#fff!important}
 .nav-cta svg{width:16px;height:16px}
 
-/* ===== HERO (Image banner with Shop Now button) ===== */
+/* ===== HERO (Pure image banner) ===== */
 .hero{width:100%;overflow:hidden;position:relative}
 .hero-bg{width:100%;display:block}
 .hero-bg img{width:100%;height:auto;object-fit:cover;display:block}
-.hero-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(to bottom,rgba(0,0,0,.08),rgba(0,0,0,.15))}
-.hero-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 40px;background:rgba(255,255,255,.92);color:#2d2924;font-size:16px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;border:none;border-radius:50px;cursor:pointer;transition:all .3s;backdrop-filter:blur(8px);box-shadow:0 4px 24px rgba(0,0,0,.12);text-decoration:none}
-.hero-btn:hover{background:#fff;transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.18)}
-.hero-btn svg{width:20px;height:20px;transition:transform .3s}
-.hero-btn:hover svg{transform:translateX(4px)}
 
 /* ===== BEST SELLERS CAROUSEL ===== */
 .bestsellers-section{padding:56px 0 64px;background:#fff}
@@ -193,7 +188,6 @@ a{color:inherit;text-decoration:none}
   .footer-inner{grid-template-columns:1fr;gap:32px}
   .gallery-grid{grid-template-columns:repeat(4,1fr);gap:6px}
   .gallery-photo-wall{padding:0 16px;margin-bottom:56px}
-  .hero-btn{padding:12px 28px;font-size:14px}
   .philosophy{padding:56px 20px}
   .selling-points{padding:48px 20px}
 }
@@ -216,7 +210,6 @@ a{color:inherit;text-decoration:none}
   .lightbox-nav{width:36px;height:36px;font-size:16px}
   .lightbox-prev{left:8px}.lightbox-next{right:8px}
   .selling-points-inner{grid-template-columns:1fr 1fr}
-  .hero-btn{padding:10px 24px;font-size:13px;letter-spacing:1px}
 }
 </style>
 </head>
@@ -262,19 +255,13 @@ a{color:inherit;text-decoration:none}
   </div>
 </nav>
 
-<!-- Hero (Image banner with Shop Now button) -->
+<!-- Hero (Pure image banner) -->
 <section class="hero" id="hero">
   <div class="hero-bg">
     <picture>
       <source media="(max-width:767px)" srcset="./images/hero_mobile.webp">
       <img src="./images/hero.webp" alt="Raindrop Pet — Handmade crystal pet accessories" loading="eager">
     </picture>
-  </div>
-  <div class="hero-overlay">
-    <a href="#bestsellers" class="hero-btn">
-      Shop Now
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
   </div>
 </section>
 
@@ -498,18 +485,6 @@ a{color:inherit;text-decoration:none}
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.46.251-.611.27-.149.94-.347 1.286-.496.347-.148.596-.223.844-.149.297.099 1.653.743 2.03.967.273.099.47.149.67.15.197-.15.37-.447.544-.745.173-.297.148-.347-.075-.596-.223-.247-.447-.496-.596-.743-.149-.247-.347-.223-.596-.099-.247.099-1.286.596-1.855.844-.596.247-1.017.297-1.286.149-.273-.15-.596-.496-.844-.743-.247-.247-.596-.496-.844-.743-.149-.099-.347-.247-.596-.347-.247-.099-.596-.099-.844.099-.247.149-.743.496-.94.596-.198.099-.347.223-.596.247-.247.099-.596.099-.844-.099-.247-.15-.743-.496-1.286-.596-.596-.247-1.017-.347-1.286-.247-.273.099-.596.496-.844.743-.247.247-.596.496-.844.743-.149.099-.347.223-.596.247-.247.099-.596.099-.844-.099zM12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
         </a>
       </div>
-    </div>
-    <div class="footer-col">
-      <h4>Collections</h4>
-      <a href="classic.html">Classic Crystal</a>
-      <a href="zodiac.html">Zodiac Guardian</a>
-      <a href="pet-urn.html">Pet Memorial Urn</a>
-      <a href="pet-keychain.html">Acrylic Keychain</a>
-      <a href="pet-leather.html">Leather Keychain</a>
-      <a href="pet-fridge.html">3D Pet Portrait</a>
-      <a href="pet-plush.html">Dog Plush Toy</a>
-      <a href="pet-ring.html">Alloy Ring</a>
-      <a href="pet-patches.html">Embroidery Patches</a>
     </div>
     <div class="footer-col">
       <h4>Customer Service</h4>
