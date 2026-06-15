@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Raindrop | Natural Crystal Pet Jewelry · Handcrafted Crystal Pet Collars</title>
-<meta name="description" content="Raindrop — Natural crystal pet jewelry brand. Classic & Zodiac Guardian collections. 100% natural crystals, handcrafted, worldwide shipping. Shop now via WhatsApp.">
+<title>Raindrop | A Meaningful Gift For Your Beloved Pet — Crystal Pet Jewelry</title>
+<meta name="description" content="Raindrop — Handmade crystal pet collars and accessories. A meaningful gift for your beloved dog or cat. Shop crystal collars, memorial urns, keychains, 3D portraits & more. Free shipping over $49.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -12,185 +13,186 @@ body{font-family:"Segoe UI","Microsoft YaHei",system-ui,-apple-system,sans-serif
 img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
 
-/* Promo */
-.promo-bar{background:#b4935e;color:#fff;text-align:center;padding:8px 16px;font-size:13px;letter-spacing:.5px;overflow:hidden;position:relative;z-index:100}
-.promo-bar .inner{display:flex;animation:promo-scroll 12s linear infinite;white-space:nowrap}
-.promo-bar span{padding:0 40px;flex-shrink:0}
+/* Promo Bar */
+.promo-bar{background:linear-gradient(90deg,#c4956a,#d4a574);color:#fff;text-align:center;padding:9px 16px;font-size:13px;letter-spacing:.3px;overflow:hidden;position:relative;z-index:100}
+.promo-bar .inner{display:flex;animation:promo-scroll 20s linear infinite;white-space:nowrap}
+.promo-bar span{padding:0 40px;flex-shrink:0;font-weight:500}
 @keyframes promo-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
 /* Nav */
-.nav{position:sticky;top:0;z-index:99;background:rgba(255,253,248,.95);backdrop-filter:blur(12px);border-bottom:1px solid #ded0ba;padding:0 32px}
+.nav{position:sticky;top:0;z-index:99;background:rgba(255,253,248,.96);backdrop-filter:blur(14px);border-bottom:1px solid #e8dfd3;padding:0 32px}
 .nav-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
-.nav-logo{font-family:Georgia,"Times New Roman",serif;font-size:22px;font-weight:700;color:#b4935e;letter-spacing:1px}
-.nav-links{display:flex;gap:32px;align-items:center}
-.nav-links a{font-size:14px;color:#776d61;transition:color .2s;letter-spacing:.3px}
-.nav-links a:hover{color:#b4935e}
-.nav-cta{background:#b4935e;color:#fff!important;padding:8px 18px;border-radius:6px;font-weight:600;transition:background .2s!important}
-.nav-cta:hover{background:#9a7d4e!important;color:#fff!important}
+.nav-logo{font-family:Georgia,"Times New Roman",serif;font-size:22px;font-weight:700;color:#c4956a;letter-spacing:1px}
+.nav-logo span{color:#2d2924}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{font-size:13.5px;color:#776d61;transition:color .2s;letter-spacing:.3px;font-weight:500}
+.nav-links a:hover,.nav-links a.active{color:#c4956a}
+.nav-cta{background:#25d366;color:#fff!important;padding:8px 18px;border-radius:6px;font-weight:600;transition:background .2s!important}
+.nav-cta:hover{background:#1fb855!important;color:#fff!important}
 
-/* Hero */
-.hero{position:relative;background:linear-gradient(135deg,#fbf8f1 0%,#f4eadb 50%,#efe2cc 100%);padding:80px 32px 60px;text-align:center;overflow:hidden}
-.hero::before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 30% 50%,rgba(180,147,94,.08) 0%,transparent 60%);pointer-events:none}
-.hero-badge{display:inline-block;background:#fff;border:1px solid #ded0ba;border-radius:50px;padding:6px 20px;font-size:13px;color:#776d61;margin-bottom:24px;letter-spacing:.5px}
-.hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(36px,7vw,64px);font-weight:700;color:#2d2924;line-height:1.15;margin-bottom:12px;letter-spacing:2px}
-.hero h1 span{color:#b4935e}
-.hero p.sub{font-size:clamp(15px,2vw,18px);color:#776d61;margin-bottom:8px;letter-spacing:.5px}
-.hero .stars{margin:16px 0 32px;display:flex;justify-content:center;align-items:center;gap:6px}
-.hero .stars svg{width:20px;height:20px;fill:#b4935e}
-.hero .stars .label{font-size:13px;color:#776d61;margin-left:8px}
+/* ===== HERO (FunnyFuzzy-style full-image banner) ===== */
+.hero{position:relative;width:100%;min-height:680px;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.15) 0%,rgba(0,0,0,.35) 50%,rgba(0,0,0,.5) 100%);z-index:1}
+.hero-content{position:relative;z-index:2;max-width:700px;padding:40px 32px;color:#fff}
+.hero-badge{display:inline-block;background:rgba(196,149,106,.85);backdrop-filter:blur(8px);border-radius:30px;padding:7px 22px;font-size:12.5px;margin-bottom:24px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600}
+.hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(34px,6vw,58px);font-weight:700;line-height:1.15;margin-bottom:16px;letter-spacing:-.02em;text-shadow:0 2px 20px rgba(0,0,0,.3)}
+.hero .sub{font-size:clamp(15px,2.2vw,19px);margin-bottom:36px;line-height:1.65;opacity:.92;font-weight:300;max-width:560px;margin-left:auto;margin-right:auto}
+.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-hero{display:inline-flex;align-items:center;gap:10px;padding:16px 38px;border-radius:8px;font-size:15.5px;font-weight:700;cursor:pointer;transition:all .3s;border:none;letter-spacing:.3px;text-transform:uppercase}
+.btn-hero-dogs{background:#fff;color:#2d2924;box-shadow:0 4px 20px rgba(0,0,0,.2)}
+.btn-hero-dogs:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.28)}
+.btn-hero-cats{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.75);backdrop-filter:blur(4px)}
+.btn-hero-cats:hover{background:rgba(255,255,255,.12);border-color:#fff;transform:translateY(-2px)}
 
-/* ===== OUR STORY ===== */
-.story-section{padding:80px 32px 60px;background:linear-gradient(180deg,#fbf7f0 0%,#fffdf8 100%);overflow:hidden}
-.story-inner{max-width:1100px;margin:0 auto}
-.story-intro{text-align:center;margin-bottom:56px}
-.story-intro .tag{display:inline-block;font-size:12px;text-transform:uppercase;letter-spacing:3px;color:#b4935e;border:1px solid #dcc9a0;padding:6px 20px;border-radius:50px;margin-bottom:20px;font-weight:600}
-.story-intro h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(26px,4.5vw,40px);color:#2d2924;margin-bottom:16px;line-height:1.3}
-.story-intro .byline{max-width:640px;margin:0 auto;font-size:16px;color:#776d61;line-height:1.8}
-.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:40px}
-.story-card{background:#fff;border-radius:16px;padding:36px;box-shadow:0 2px 16px rgba(0,0,0,.04);border:1px solid #f0e8d8;transition:box-shadow .3s,transform .3s;position:relative;overflow:hidden}
-.story-card::before{content:"";position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,#b4935e 0%,#c9a96e 100%);border-radius:4px 0 0 4px}
-.story-card:hover{box-shadow:0 6px 28px rgba(0,0,0,.08);transform:translateY(-2px)}
-.story-card .num{font-family:Georgia,"Times New Roman",serif;font-size:48px;color:#ede3d0;line-height:1;margin-bottom:16px}
-.story-card h3{font-family:Georgia,"Times New Roman",serif;font-size:20px;color:#2d2924;margin-bottom:12px;line-height:1.4}
-.story-card p{font-size:14px;color:#776d61;line-height:1.8;margin-bottom:0}
-.story-card .highlight{color:#b4935e;font-weight:600}
-.story-footer{text-align:center;padding-top:32px;border-top:1px solid #ede3d0;max-width:640px;margin:0 auto}
-.story-footer p{font-size:15px;color:#776d61;line-height:1.8;font-style:italic}
-.story-footer .signature{font-family:Georgia,"Times New Roman",serif;font-size:18px;color:#b4935e;margin-top:16px;letter-spacing:.5px}
-.story-pet-icon{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:#fbf5e8;font-size:24px;margin-bottom:16px}
+/* ===== CATEGORY QUICK LINKS (FunnyFuzzy-style icon row) ===== */
+.cat-quick{padding:48px 32px 44px;background:#fff}
+.cat-inner{max-width:1200px;margin:0 auto}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:16px}
+.cat-item{text-align:center;text-decoration:none;display:block;padding:18px 10px;border-radius:14px;transition:all .25s;background:#faf8f5;border:1.5px solid #f0e8d8}
+.cat-item:hover{background:#fff;border-color:#c4956a;transform:translateY(-3px);box-shadow:0 6px 20px rgba(180,147,94,.12)}
+.cat-icon{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#fdf6ed,#f5ede0);margin:0 auto 10px;display:flex;align-items:center;justify-content:center;font-size:26px}
+.cat-name{font-size:11.5px;color:#666;font-weight:600;letter-spacing:.2px}
 
-/* Collection Cards */
-.collections{max-width:1200px;margin:-40px auto 60px;padding:0 32px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative;z-index:2}
-.col-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.06);transition:transform .3s,box-shadow .3s;cursor:pointer;display:block}
-.col-card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,0,0,.1)}
-.col-card-img{height:320px;overflow:hidden;position:relative;background:#f4eadb}
+/* ===== COLLECTION CARDS ===== */
+.collections{max-width:1200px;margin:0 auto 64px;padding:0 32px}
+.collections-header{text-align:center;margin-bottom:42px}
+.collections-header .tag{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:2.5px;color:#c4956a;font-weight:700;margin-bottom:10px;border:1px solid #dcc9a0;padding:5px 18px;border-radius:30px}
+.collections-header h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(24px,4vw,36px);color:#2d2924;margin-bottom:8px}
+.col-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.col-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.05);transition:all .35s;cursor:pointer;display:block;border:1px solid #f0ebe3}
+.col-card:hover{transform:translateY(-6px);box-shadow:0 14px 40px rgba(0,0,0,.1);border-color:#e0d5c5}
+.col-card-img{height:260px;overflow:hidden;position:relative;background:#f5f0ea}
 .col-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.col-card:hover .col-card-img img{transform:scale(1.05)}
-.col-card-body{padding:28px 24px}
-.col-card-body .tag{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:#b4935e;font-weight:700;margin-bottom:8px}
-.col-card-body h3{font-size:22px;font-weight:700;margin-bottom:6px;color:#2d2924}
-.col-card-body p{font-size:14px;color:#776d61;line-height:1.7}
-.col-card-body .arrow{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:14px;font-weight:600;color:#b4935e}
-.col-card-body .arrow svg{width:16px;height:16px;transition:transform .3s}
-.col-card:hover .arrow svg{transform:translateX(4px)}
+.col-card:hover .col-card-img img{transform:scale(1.06)}
+.col-card-badge{position:absolute;top:14px;left:14px;background:rgba(196,149,106,.88);color:#fff;font-size:10px;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;text-transform:uppercase}
+.col-card-body{padding:24px 22px}
+.col-card-body h3{font-size:19px;font-weight:700;margin-bottom:6px;color:#2d2924}
+.col-card-body p{font-size:13.5px;color:#888;line-height:1.6;margin-bottom:14px}
+.col-card-price{display:inline-flex;align-items:center;gap:6px;font-size:17px;font-weight:700;color:#c4956a}
+.col-card-arrow{display:inline-flex;align-items:center;gap:5px;margin-top:12px;font-size:13px;font-weight:600;color:#c4956a}
+.col-card-arrow svg{width:16px;height:16px;transition:transform .3s}
+.col-card:hover .col-card-arrow svg{transform:translateX(4px)}
 
-/* Reviews */
-.reviews{max-width:1200px;margin:0 auto 80px;padding:0 32px}
-.section-head{text-align:center;margin-bottom:48px}
-.section-head .tag{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:#b4935e;font-weight:700;margin-bottom:8px}
-.section-head h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(24px,4vw,36px);color:#2d2924;margin-bottom:8px}
-.section-head p{font-size:15px;color:#776d61}
-.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.review-card{background:#fff;border:1px solid #f0e8d8;border-radius:12px;padding:24px;transition:box-shadow .3s}
-.review-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.06)}
+/* ===== REVIEWS ===== */
+.reviews{max-width:1200px;margin:0 auto 72px;padding:0 32px}
+.section-head{text-align:center;margin-bottom:42px}
+.section-head .tag{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:#c4956a;font-weight:700;margin-bottom:8px}
+.section-head h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(23px,3.8vw,34px);color:#2d2924;margin-bottom:8px}
+.section-head p{font-size:14.5px;color:#888}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.review-card{background:#fff;border:1px solid #f0ebe3;border-radius:14px;padding:24px;transition:box-shadow .3s}
+.review-card:hover{box-shadow:0 6px 24px rgba(0,0,0,.07)}
 .review-stars{display:flex;gap:2px;margin-bottom:12px}
-.review-stars svg{width:16px;height:16px;fill:#b4935e}
-.review-text{font-size:14px;color:#2d2924;line-height:1.7;margin-bottom:16px;font-style:italic}
+.review-stars svg{width:16px;height:16px;fill:#c4956a}
+.review-text{font-size:13.5px;color:#333;line-height:1.7;margin-bottom:16px;font-style:italic}
 .review-author{display:flex;align-items:center;gap:10px}
-.review-avatar{width:40px;height:40px;border-radius:50%;background:#f4eadb;display:flex;align-items:center;justify-content:center;font-size:18px}
-.review-meta .name{font-size:14px;font-weight:600;color:#2d2924}
+.review-avatar{width:40px;height:40px;border-radius:50%;background:#f5f0ea;display:flex;align-items:center;justify-content:center;font-size:18px}
+.review-meta .name{font-size:13.5px;font-weight:600;color:#2d2924}
 .review-meta .date{font-size:12px;color:#b0a490}
 
-/* ===== CUSTOMER PHOTO GALLERY ===== */
-.gallery-photo-wall{max-width:1200px;margin:0 auto 80px;padding:0 32px}
-.gallery-header{text-align:center;margin-bottom:36px}
-.gallery-header .badge-row{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
-.gallery-header .badge-row .badge{display:inline-flex;align-items:center;gap:6px;background:#fbf5e8;border:1px solid #e8d5b0;border-radius:50px;padding:6px 16px;font-size:12px;color:#8b7355;font-weight:600}
+/* ===== PHOTO GALLERY ===== */
+.gallery-photo-wall{max-width:1200px;margin:0 auto 72px;padding:0 32px}
+.gallery-header{text-align:center;margin-bottom:34px}
+.gallery-header .badge-row{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.gallery-header .badge-row .badge{display:inline-flex;align-items:center;gap:6px;background:#faf6ee;border:1px solid #e8d5b0;border-radius:30px;padding:6px 16px;font-size:11.5px;color:#8b7355;font-weight:600}
 .gallery-header .badge-row .badge svg{width:14px;height:14px}
-.gallery-header h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(22px,4vw,32px);color:#2d2924;margin-bottom:8px}
-.gallery-header p{font-size:14px;color:#776d61}
-.gallery-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
-.gallery-item{position:relative;aspect-ratio:1;border-radius:8px;overflow:hidden;cursor:pointer;background:#f0e8d8;transition:transform .25s,box-shadow .25s}
+.gallery-header h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(21px,3.8vw,30px);color:#2d2924;margin-bottom:8px}
+.gallery-header p{font-size:14px;color:#888}
+.gallery-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.gallery-item{position:relative;aspect-ratio:1;border-radius:10px;overflow:hidden;cursor:pointer;background:#f0ebe3;transition:all .25s}
 .gallery-item:hover{transform:scale(1.03);box-shadow:0 6px 20px rgba(0,0,0,.12)}
 .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
 .gallery-item:hover img{transform:scale(1.08)}
-.gallery-item .overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.45) 0%,transparent 60%);opacity:0;transition:opacity .3s;display:flex;align-items:flex-end;padding:12px}
+.gallery-item .overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.45) 0%,transparent 60%);opacity:0;transition:opacity .3s;display:flex;align-items:flex-end;padding:10px}
 .gallery-item:hover .overlay{opacity:1}
-.gallery-item .overlay span{color:#fff;font-size:11px;font-weight:600;letter-spacing:.3px}
-.gallery-load-more-wrapper{text-align:center;margin-top:28px}
-.load-more-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 32px;background:#fff;border:1.5px solid #b4935e;border-radius:50px;color:#b4935e;font-size:14px;font-weight:600;cursor:pointer;transition:all .25s;letter-spacing:.5px}
-.load-more-btn:hover{background:#b4935e;color:#fff}
+.gallery-item .overlay span{color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.3px}
+.gallery-load-more-wrapper{text-align:center;margin-top:24px}
+.load-more-btn{display:inline-flex;align-items:center;gap:8px;padding:11px 30px;background:#fff;border:1.5px solid #c4956a;border-radius:30px;color:#c4956a;font-size:13.5px;font-weight:600;cursor:pointer;transition:all .25s;letter-spacing:.3px}
+.load-more-btn:hover{background:#c4956a;color:#fff}
 .load-more-btn svg{width:16px;height:16px;transition:transform .3s}
 .load-more-btn:hover svg{transform:translateY(2px)}
-/* ===== LIGHTBOX ===== */
+
+/* Lightbox */
 .lightbox{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
 .lightbox.active{opacity:1;visibility:visible}
 .lightbox-close{position:absolute;top:24px;right:24px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.15);border:none;color:#fff;font-size:24px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:10}
 .lightbox-close:hover{background:rgba(255,255,255,.25)}
 .lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.12);border:none;color:#fff;font-size:22px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:10}
 .lightbox-nav:hover{background:rgba(255,255,255,.22)}
-.lightbox-prev{left:24px}
-.lightbox-next{right:24px}
+.lightbox-prev{left:24px}.lightbox-next{right:24px}
 .lightbox-content{max-width:90vw;max-height:85vh;display:flex;align-items:center;justify-content:center}
 .lightbox-content img{max-width:100%;max-height:85vh;object-fit:contain;border-radius:8px;box-shadow:0 8px 40px rgba(0,0,0,.4)}
 .lightbox-counter{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.6);font-size:13px;letter-spacing:1px}
 
 /* Trust */
-.trust{background:#fbf8f1;padding:48px 32px}
+.trust{background:#faf6ef;padding:48px 32px}
 .trust-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center}
-.trust-item .icon{font-size:32px;margin-bottom:12px}
+.trust-item .icon{font-size:32px;margin-bottom:10px}
 .trust-item h4{font-size:14px;font-weight:700;color:#2d2924;margin-bottom:4px}
-.trust-item p{font-size:12px;color:#776d61}
+.trust-item p{font-size:12px;color:#888}
 
 /* Footer */
 .footer{background:#2d2924;color:#c4beb4;padding:48px 32px 24px}
 .footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px}
-.footer-brand .logo{font-family:Georgia,"Times New Roman",serif;font-size:22px;color:#b4935e;font-weight:700;margin-bottom:12px}
+.footer-brand .logo{font-family:Georgia,"Times New Roman",serif;font-size:22px;color:#c4956a;font-weight:700;margin-bottom:12px}
 .footer-brand p{font-size:13px;line-height:1.8}
 .footer-col h4{font-size:13px;text-transform:uppercase;letter-spacing:1.5px;color:#fff;margin-bottom:16px;font-weight:600}
 .footer-col a{display:block;font-size:13px;color:#c4beb4;margin-bottom:10px;transition:color .2s}
-.footer-col a:hover{color:#b4935e}
+.footer-col a:hover{color:#c4956a}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding-top:24px;text-align:center;font-size:12px;color:#776d61}
-.footer-bottom a{color:#b4935e}
+.footer-bottom a{color:#c4956a}
 
+/* Responsive */
+@media(max-width:1024px){
+  .col-grid{grid-template-columns:repeat(2,1fr)}.cat-grid{grid-template-columns:repeat(auto-fill,minwidth:95px,1fr))}
 @media(max-width:768px){
-  .nav{padding:0 16px}.nav-links{gap:16px;font-size:12px}
-  .story-section{padding:56px 16px 40px}
-  .story-grid{grid-template-columns:1fr;gap:20px}
-  .story-card{padding:28px}
-  .collections{grid-template-columns:1fr;margin:-20px auto 40px;padding:0 16px}.col-card-img{height:220px}
+  .nav{padding:0 16px}.nav-links{gap:14px;font-size:12px}
+  .hero{min-height:560px}
+  .cat-grid{grid-template-columns:repeat(4,1fr);gap:12px}
+  .cat-icon{width:44px;height:44px;font-size:22px}
+  .collections{padding:0 16px;margin:0 auto 48px}
+  .col-grid{grid-template-columns:1fr;gap:18px}.col-card-img{height:220px}
   .reviews-grid{grid-template-columns:1fr}.trust-inner{grid-template-columns:repeat(2,1fr);gap:24px}
-  .footer-inner{grid-template-columns:1fr;gap:32px}.hero{padding:60px 16px 40px}
-  .gallery-grid{grid-template-columns:repeat(4,1fr);gap:8px}
-  .gallery-photo-wall{padding:0 16px;margin-bottom:60px}
-  .lightbox-nav{width:40px;height:40px;font-size:18px}
-  .lightbox-prev{left:12px}.lightbox-next{right:12px}
+  .footer-inner{grid-template-columns:1fr;gap:32px}
+  .gallery-grid{grid-template-columns:repeat(4,1fr);gap:6px}
+  .gallery-photo-wall{padding:0 16px;margin-bottom:56px}
+  .btns{flex-direction:column;gap:12px}
 }
 @media(max-width:480px){
   .nav-inner{height:56px}.nav-logo{font-size:18px}.nav-cta{padding:6px 12px;font-size:12px}
-  .story-section{padding:48px 12px 32px}
-  .story-card{padding:24px}
-  .story-card .num{font-size:38px}
-  .story-card h3{font-size:18px}
-  .review-card{padding:20px}
-  .gallery-grid{grid-template-columns:repeat(3,1fr);gap:6px}
-  .gallery-photo-wall{margin-bottom:48px}
+  .hero-content{padding:28px 18px}.hero h1{font-size:28px}
+  .hero-btns{flex-direction:column;align-items:center}
+  .btn-hero{padding:14px 32px;font-size:14px}
+  .cat-grid{grid-template-columns:repeat(3,1fr)}
+  .review-card{padding:18px}
+  .gallery-grid{grid-template-columns:repeat(3,1fr);gap:5px}
+  .gallery-photo-wall{margin-bottom:44px}
   .lightbox-close{top:16px;right:16px;width:36px;height:36px;font-size:20px}
-  .lightbox-nav{width:34px;height:34px;font-size:16px}
+  .lightbox-nav{width:36px;height:36px;font-size:16px}
   .lightbox-prev{left:8px}.lightbox-next{right:8px}
 }
-
-/* Lazy load */
-.lazy-img{filter:blur(10px);transition:filter .4s ease-out}
-.lazy-img.loaded{filter:blur(0)}
 </style>
 </head>
 <body>
 
+<!-- Promo Bar -->
 <div class="promo-bar">
   <div class="inner">
     <span>🛒 Free Shipping on Orders Over $49 · Shipping $6.99 Under $49</span>
-    <span>✨ 100% Natural Crystals · Handcrafted · 7-Day Easy Returns</span>
-    <span>🌍 Worldwide Shipping · Order via WhatsApp</span>
+    <span>✨ Handcrafted with Love · 7-Day Easy Returns</span>
+    <span>🌍 Worldwide Delivery · Order via WhatsApp</span>
     <span>🛒 Free Shipping on Orders Over $49 · Shipping $6.99 Under $49</span>
-    <span>✨ 100% Natural Crystals · Handcrafted · 7-Day Easy Returns</span>
-    <span>🌍 Worldwide Shipping · Order via WhatsApp</span>
+    <span>✨ Handcrafted with Love · 7-Day Easy Returns</span>
+    <span>🌍 Worldwide Delivery · Order via WhatsApp</span>
   </div>
 </div>
 
+<!-- Nav -->
 <nav class="nav">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">Raindrop</a>
+    <a href="index.html" class="nav-logo">Rain<span>drop</span></a>
     <div class="nav-links">
       <a href="classic.html">Classic</a>
       <a href="zodiac.html">Zodiac</a>
@@ -206,168 +208,168 @@ a{color:inherit;text-decoration:none}
   </div>
 </nav>
 
+<!-- Hero (Full Image Banner) -->
 <section class="hero">
-  <div class="hero-badge">✦ Natural Crystal Pet Jewelry</div>
-  <h1><span>Raindrop</span> Crystal</h1>
-  <p class="sub">Natural Crystal Pet Collars — Handcrafted with Care</p>
-  <p class="sub">A Sparkling Gift for Your Beloved Pet · Worldwide Shipping</p>
-  <div class="stars">
-    <svg viewBox="0 0 20 20"><path d="M10 1l2.4 4.9 5.3.8-3.9 3.8.9 5.3L10 13.5l-4.7 2.5.9-5.3-3.9-3.8 5.3-.8z"/></svg>
-    <svg viewBox="0 0 20 20"><path d="M10 1l2.4 4.9 5.3.8-3.9 3.8.9 5.3L10 13.5l-4.7 2.5.9-5.3-3.9-3.8 5.3-.8z"/></svg>
-    <svg viewBox="0 0 20 20"><path d="M10 1l2.4 4.9 5.3.8-3.9 3.8.9 5.3L10 13.5l-4.7 2.5.9-5.3-3.9-3.8 5.3-.8z"/></svg>
-    <svg viewBox="0 0 20 20"><path d="M10 1l2.4 4.9 5.3.8-3.9 3.8.9 5.3L10 13.5l-4.7 2.5.9-5.3-3.9-3.8 5.3-.8z"/></svg>
-    <svg viewBox="0 0 20 20"><path d="M10 1l2.4 4.9 5.3.8-3.9 3.8.9 5.3L10 13.5l-4.7 2.5.9-5.3-3.9-3.8 5.3-.8z"/></svg>
-    <span class="label">Trusted by 2,000+ Pet Parents</span>
+  <div class="hero-bg">
+    <picture>
+      <source media="(max-width:767px)" srcset="./images/hero_mobile.webp">
+      <img src="./images/hero.webp" alt="Happy dog on beach with Raindrop Pet accessories" loading="eager">
+    </picture>
   </div>
-</section>
-
-<!-- Our Story -->
-<section class="story-section">
-  <div class="story-inner">
-    <div class="story-intro">
-      <div class="tag">Our Story · 私たちの物語</div>
-      <h2>Every Crystal Has a Story to Tell</h2>
-      <p class="byline">Raindrop was born from a rescued dog, a broken collar, and a belief that our pets deserve something as beautiful as the love they give us.<br><span style="font-size:13px;color:#b0a490">一匹の保護犬と、一つの壊れた首輪から生まれたブランド</span></p>
-    </div>
-
-    <div class="story-grid">
-      <div class="story-card">
-        <div class="num">01</div>
-        <div class="story-pet-icon">🐾</div>
-        <h3>It Started With Luna</h3>
-        <p>Luna was a timid rescue dog who had been through three homes before she found her forever family. The day she was adopted, her new owner wanted to give her something special — a collar that said <span class="highlight">"You're home now. You're safe. You're loved."</span> But every collar in the pet store looked the same. Nothing felt meaningful enough for that moment.</p>
-      </div>
-
-      <div class="story-card">
-        <div class="num">02</div>
-        <div class="story-pet-icon">💎</div>
-        <h3>Why Natural Crystals?</h3>
-        <p>Crystals are nature's artwork — each one millions of years old, each one completely unique. Just like our pets. We chose natural crystals because <span class="highlight">no two are ever alike — just like the one-of-a-kind personality of every dog and cat</span>. A crystal collar isn't just an accessory; it's a reflection of the individuality your pet brings to your life.</p>
-      </div>
-
-      <div class="story-card">
-        <div class="num">03</div>
-        <div class="story-pet-icon">🕯️</div>
-        <h3>A Timeless Keepsake</h3>
-        <p>When a beloved pet crosses the rainbow bridge, we search for something to hold onto. Crystals, formed over millennia, carry a sense of permanence that flowers and photographs cannot match. <span class="highlight">A Raindrop crystal collar becomes a tangible memory — a beautiful reminder of the walks you shared, the quiet mornings, and the unconditional love.</span> Many of our customers keep their pet's collar as a memorial piece long after their companion has passed.</p>
-      </div>
-
-      <div class="story-card">
-        <div class="num">04</div>
-        <div class="story-pet-icon">💧</div>
-        <h3>Why the Name "Raindrop"?</h3>
-        <p>A single raindrop seems small and fleeting — yet it nourishes the earth, fills the rivers, and shapes entire landscapes over time. <span class="highlight">That's how we see the love between pets and their humans.</span> It's built from thousands of tiny moments: a wagging tail at the door, a purr on the couch, a walk in the rain. Raindrop is a tribute to those small, ordinary moments that, together, create something extraordinary.</p>
-      </div>
-    </div>
-
-    <div class="story-footer">
-      <p>"We don't just make collars. We make keepsakes that celebrate the most honest love you'll ever know — the love of a pet."</p>
-      <div class="signature">— The Raindrop Team</div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">✦ Handmade Pet Gifts Since 2024</div>
+    <h1>A Meaningful Gift For Your Beloved Pet</h1>
+    <p class="sub">Handmade crystal collars designed to celebrate the bond between you and your pet.</p>
+    <div class="hero-btns">
+      <a href="#shopDogs" class="btn-hero btn-hero-dogs">
+        🐕 Shop Dogs
+      </a>
+      <a href="#shopCats" class="btn-hero btn-hero-cats">
+        🐱 Shop Cats
+      </a>
     </div>
   </div>
 </section>
 
+<!-- Category Quick Links -->
+<section class="cat-quick" id="shopDogs">
+  <div class="cat-inner">
+    <div class="cat-grid">
+      <a href="classic.html" class="cat-item"><div class="cat-icon">💎</div><div class="cat-name">Classic Crystal</div></a>
+      <a href="zodiac.html" class="cat-item"><div class="cat-icon">⭐</div><div class="cat-name">Zodiac Guardian</div></a>
+      <a href="pet-urn.html" class="cat-item"><div class="cat-icon">🏺</div><div class="cat-name">Pet Memorial</div></a>
+      <a href="pet-keychain.html" class="cat-item"><div class="cat-icon">🔑</div><div class="cat-name">Acrylic Keychain</div></a>
+      <a href="pet-leather.html" class="cat-item"><div class="cat-icon">👜</div><div class="cat-name">Leather Keychain</div></a>
+      <a href="pet-fridge.html" class="cat-item"><div class="cat-icon">❄️</div><div class="cat-name">3D Portrait</div></a>
+      <a href="pet-plush.html" class="cat-item" id="shopCats"><div class="cat-icon">🧸</div><div class="cat-name">Plush Toys</div></a>
+      <a href="pet-ring.html" class="cat-item"><div class="cat-icon">💍</div><div class="cat-name">Alloy Ring</div></a>
+      <a href="pet-patches.html" class="cat-item"><div class="cat-icon">🧵</div><div class="cat-name">Embroidery Patches</div></a>
+    </div>
+  </div>
+</section>
+
+<!-- Collection Cards -->
 <section class="collections">
-  <a href="classic.html" class="col-card">
-    <div class="col-card-img">
-      <img src="./images/classic/9-_thumb.webp" alt="Classic Crystal Collection" loading="lazy">
-    </div>
-    <div class="col-card-body">
-      <div class="tag">Classic Collection</div>
-      <h3>Classic Crystal</h3>
-      <p>Amethyst · Clear Quartz · Rose Quartz · Green Crystal · Blue Topaz — 9 timeless natural crystal pet collars. From $29 USD.</p>
-      <div class="arrow">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-    </div>
-  </a>
-  <a href="zodiac.html" class="col-card">
-    <div class="col-card-img">
-      <img src="./images/zodiac/1_thumb.webp" alt="Zodiac Guardian Collection" loading="lazy">
-    </div>
-    <div class="col-card-body">
-      <div class="tag">New · Zodiac Series</div>
-      <h3>Zodiac Guardian</h3>
-      <p>12 exclusive zodiac guardian crystals — Amazonite · Garnet · Citrine · Aquamarine · Rose Quartz · Tiger's Eye. $41 USD each.</p>
-      <div class="arrow">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-    </div>
-  </a>
-  <a href="pet-urn.html" class="col-card">
-    <div class="col-card-img" style="background:linear-gradient(135deg,#f5ede0,#e8d5ba)">
-      <img src="./images/urns/1_thumb.webp" alt="Pet Memorial Urn" loading="lazy">
-    </div>
-    <div class="col-card-body">
-      <div class="tag">Memorial Series</div>
-      <h3>Pet Memorial Urn</h3>
-      <p>Handcrafted solid wood keepsake box for your beloved companion. 20×15×14 cm · White, Black & Red. $22 USD.</p>
-      <div class="arrow">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-    </div>
-  </a>
-  <a href="pet-keychain.html" class="col-card">
-    <div class="col-card-img" style="background:linear-gradient(135deg,#f0e5ff,#e4d0f5)">
-      <img src="./images/keychains/1_thumb.webp" alt="Acrylic Pet Keychain" loading="lazy">
-    </div>
-    <div class="col-card-body">
-      <div class="tag">Keychain Series</div>
-      <h3>Acrylic Pet Keychain</h3>
-      <p>Custom photo keychain for your dog, cat, or favorite character. 4 styles · ~6 cm · Acrylic. $4.90 USD.</p>
-      <div class="arrow">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-    </div>
-  <a href="pet-leather.html" class="col-card">
-    <div class="col-card-img" style="background:linear-gradient(135deg,#fdf6ed,#eeddcc)">
-      <img src="./images/leather/1_thumb.webp" alt="Leather Pet Fur Keychain" loading="lazy">
-    </div>
-    <div class="col-card-body">
-      <div class="tag">Leather Series</div>
-      <h3>Leather Fur Keychain</h3>
-      <p>Genuine leather keepsake for storing your dog's fur. 7 colors · Paw design · Blank $4.90 / Custom Photo $9.80.</p>
-      <div class="arrow">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-    </div>
-  </a>
-  <a href="pet-fridge.html" class="col-card">
-    <div class="col-card-img" style="background:linear-gradient(135deg,#f5f0ff,#e8ddf5)">
-      <img src="./images/fridge/1b_thumb.webp" alt="3D Pet Portrait Fridge Magnet" loading="lazy">
-    </div>
-    <div class="col-card-body">
-      <div class="tag">Portrait Series</div>
-      <h3>3D Pet Portrait</h3>
-      <p>Custom plaster portrait — fridge magnet, full-body statue, or car air freshener. $19.80 – $36.80.</p>
-      <div class="arrow">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-    </div>
-  </a>
-  <a href="pet-plush.html" class="col-card">
-    <div class="col-card-img" style="background:linear-gradient(135deg,#fff5f0,#fde8dc)">
-      <img src="./images/plush/1_thumb.webp" alt="Dog Squeaky Plush Chew Toy" loading="lazy">
-    </div>
-    <div class="col-card-body">
-      <div class="tag">Toy Series</div>
-      <h3>Dog Plush Chew Toy</h3>
-      <p>Squeaky plush toy for medium to large dogs. 4 styles · Durable & interactive. $9.80 each.</p>
-      <div class="arrow">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-    </div>
-  </a>
-  <a href="pet-ring.html" class="col-card">
-    <div class="col-card-img" style="background:linear-gradient(135deg,#fff8f5,#ffe8dc)">
-      <img src="./images/rings/1_thumb.webp" alt="Sweet Style Alloy Adjustable Ring" loading="lazy">
-    </div>
-    <div class="col-card-body">
-      <div class="tag">Jewelry Series</div>
-      <h3>Alloy Adjustable Ring</h3>
-      <p>Sweet bichon & cat design alloy ring. 3 styles · Adjustable fit. $8.80 each.</p>
-      <div class="arrow">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-    </div>
-  </a>
-  <a href="pet-patches.html" class="col-card">
-    <div class="col-card-img" style="background:linear-gradient(135deg,#fff8f5,#ffe0d0)">
-      <img src="./images/patches/1_thumb.webp" alt="Cute Dog Embroidery Patch Set" loading="lazy">
-    </div>
-    <div class="col-card-body">
-      <div class="tag">Craft Series</div>
-      <h3>Embroidery Patch Set</h3>
-      <p>Cute dog embroidery iron-on patches. Corgi, Dalmatian, Beagle & more. Set of 9 for $8.80.</p>
-      <div class="arrow">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-    </div>
-  </a>
+  <div class="collections-header">
+    <div class="tag">Our Collections</div>
+    <h2>Find the Perfect Gift for Your Pet</h2>
+  </div>
+  <div class="col-grid">
+    <!-- Classic Crystal -->
+    <a href="classic.html" class="col-card">
+      <div class="col-card-img">
+        <span class="col-card-badge">Best Seller</span>
+        <img src="./images/classic/9-_thumb.webp" alt="Classic Crystal Collection" loading="lazy">
+      </div>
+      <div class="col-card-body">
+        <h3>Classic Crystal Collar</h3>
+        <p>Natural amethyst, rose quartz, clear quartz & more. Timeless elegance for your pet. 9 styles available.</p>
+        <div class="col-card-price">$29 – $41</div>
+        <div class="col-card-arrow">Shop Collection <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+    </a>
+    <!-- Zodiac Guardian -->
+    <a href="zodiac.html" class="col-card">
+      <div class="col-card-img">
+        <span class="col-card-badge">New</span>
+        <img src="./images/zodiac/1_thumb.webp" alt="Zodiac Guardian Collection" loading="lazy">
+      </div>
+      <div class="col-card-body">
+        <h3>Zodiac Guardian Crystal</h3>
+        <p>12 exclusive zodiac crystals — Amazonite, Garnet, Citrine, Aquamarine & more. Each matches a birth month.</p>
+        <div class="col-card-price">$41 each</div>
+        <div class="col-card-arrow">Shop Collection <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+    </a>
+    <!-- Pet Memorial Urn -->
+    <a href="pet-urn.html" class="col-card">
+      <div class="col-card-img" style="background:linear-gradient(135deg,#f5ede0,#e8d5ba)">
+        <img src="./images/urns/1_thumb.webp" alt="Pet Memorial Urn" loading="lazy">
+      </div>
+      <div class="col-card-body">
+        <h3>Pet Memorial Urn</h3>
+        <p>Handcrafted keepsake box for your beloved companion. 20×15×14 cm · White / Black / Red.</p>
+        <div class="col-card-price">$22.00</div>
+        <div class="col-card-arrow">Shop Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+    </a>
+    <!-- Acrylic Keychain -->
+    <a href="pet-keychain.html" class="col-card">
+      <div class="col-card-img" style="background:linear-gradient(135deg,#f0e5ff,#e4d0f5)">
+        <img src="./images/keychains/1_thumb.webp" alt="Acrylic Pet Keychain" loading="lazy">
+      </div>
+      <div class="col-card-body">
+        <h3>Acrylic Pet Keychain</h3>
+        <p>Custom photo keychain — dog, cat or anime character. ~6 cm · Acrylic material. 4 style options.</p>
+        <div class="col-card-price">$4.90</div>
+        <div class="col-card-arrow">Shop Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+    </a>
+    <!-- Leather Fur Keychain -->
+    <a href="pet-leather.html" class="col-card">
+      <div class="col-card-img" style="background:linear-gradient(135deg,#fdf6ed,#eeddcc)">
+        <img src="./images/leather/1_thumb.webp" alt="Leather Pet Fur Keychain" loading="lazy">
+      </div>
+      <div class="col-card-body">
+        <h3>Leather Fur Keychain</h3>
+        <p>Genuine leather keepsake for storing your pet's fur. 7 colors · Blank $4.90 / Custom Photo $9.80.</p>
+        <div class="col-card-price">$4.90 – $9.80</div>
+        <div class="col-card-arrow">Shop Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+    </a>
+    <!-- 3D Pet Portrait -->
+    <a href="pet-fridge.html" class="col-card">
+      <div class="col-card-img" style="background:linear-gradient(135deg,#f5f0ff,#e8ddf5)">
+        <img src="./images/fridge/1b_thumb.webp" alt="3D Pet Portrait Fridge Magnet" loading="lazy">
+      </div>
+      <div class="col-card-body">
+        <h3>3D Pet Portrait</h3>
+        <p>Custom plaster portrait — fridge magnet, full-body statue, or car air freshener.</p>
+        <div class="col-card-price">$19.80 – $36.80</div>
+        <div class="col-card-arrow">Shop Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+    </a>
+    <!-- Dog Plush Toy -->
+    <a href="pet-plush.html" class="col-card">
+      <div class="col-card-img" style="background:linear-gradient(135deg,#fff5f0,#fde8dc)">
+        <img src="./images/plush/1_thumb.webp" alt="Dog Squeaky Plush Chew Toy" loading="lazy">
+      </div>
+      <div class="col-card-body">
+        <h3>Dog Plush Chew Toy</h3>
+        <p>Squeaky plush toy for medium to large dogs. Durable & interactive fun. 4 styles.</p>
+        <div class="col-card-price">$9.80</div>
+        <div class="col-card-arrow">Shop Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+    </a>
+    <!-- Alloy Adjustable Ring -->
+    <a href="pet-ring.html" class="col-card">
+      <div class="col-card-img" style="background:linear-gradient(135deg,#fff8f5,#ffe8dc)">
+        <img src="./images/rings/1_thumb.webp" alt="Sweet Style Alloy Adjustable Ring" loading="lazy">
+      </div>
+      <div class="col-card-body">
+        <h3>Alloy Adjustable Ring</h3>
+        <p>Sweet bichon & cat design alloy ring. 3 adorable styles · One size fits most.</p>
+        <div class="col-card-price">$8.80</div>
+        <div class="col-card-arrow">Shop Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+    </a>
+    <!-- Embroidery Patch Set -->
+    <a href="pet-patches.html" class="col-card">
+      <div class="col-card-img" style="background:linear-gradient(135deg,#fff8f5,#ffe0d0)">
+        <img src="./images/patches/1_thumb.webp" alt="Cute Dog Embroidery Patch Set" loading="lazy">
+      </div>
+      <div class="col-card-body">
+        <h3>Embroidery Patch Set</h3>
+        <p>Cute dog embroidery iron-on patches. Corgi, Dalmatian, Beagle designs. Set of 9.</p>
+        <div class="col-card-price">$8.80</div>
+        <div class="col-card-arrow">Shop Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+    </a>
+  </div>
 </section>
 
+<!-- Reviews -->
 <section class="reviews">
   <div class="section-head">
     <div class="tag">Customer Love · お客様の声</div>
@@ -386,7 +388,7 @@ a{color:inherit;text-decoration:none}
       <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg> 42 Real Photos · 42枚の実写</div>
     </div>
     <h2>Customer Photo Gallery · お客様フォトギャラリー</h2>
-    <p>Real moments shared by our lovely customers · Every photo tells a story of love<br><small>大切なペットとの素敵な瞬間 · 一枚一枚が愛の証</small></p>
+    <p>Real moments shared by our lovely customers<br><small>大切なペットとの素敵な瞬間 · 一枚一枚が愛の証</small></p>
   </div>
   <div class="gallery-grid" id="galleryGrid"></div>
   <div class="gallery-load-more-wrapper">
@@ -406,6 +408,7 @@ a{color:inherit;text-decoration:none}
   <div class="lightbox-counter" id="lightboxCounter"></div>
 </div>
 
+<!-- Trust -->
 <section class="trust">
   <div class="trust-inner">
     <div class="trust-item"><div class="icon">💎</div><h4>Natural Crystals</h4><p>100% Genuine Stones</p></div>
@@ -415,11 +418,12 @@ a{color:inherit;text-decoration:none}
   </div>
 </section>
 
+<!-- Footer -->
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">
-      <div class="logo">Raindrop</div>
-      <p>Raindrop is an independent brand specializing in natural crystal pet accessories. Each piece is hand-crafted with genuine crystals — a sparkling gift for your beloved pet.</p>
+      <div class="logo">Rain<span>drop</span></div>
+      <p>Raindrop is an independent brand specializing in handmade crystal pet accessories. Each piece is crafted with love — a meaningful gift for your beloved pet.</p>
     </div>
     <div class="footer-col">
       <h4>Collections</h4>
@@ -436,7 +440,7 @@ a{color:inherit;text-decoration:none}
     <div class="footer-col">
       <h4>Contact</h4>
       <a href="https://wa.me/8618271425419" target="_blank" rel="noopener">WhatsApp: +86 182 7142 5419</a>
-      <a href="mailto:raindrop468@outlook.com">raindrop468@outlook.com</a>
+      <a href="mailto:support@raindropwyx.com">support@raindropwyx.com</a>
     </div>
   </div>
   <div class="footer-bottom">
@@ -447,22 +451,22 @@ a{color:inherit;text-decoration:none}
       <a href="../privacy.html">Privacy Policy</a>
       <a href="../terms.html">Terms of Service</a>
     </div>
-    &copy; 2026 <a href="index.html">Raindrop Crystal</a>. All rights reserved. Made with 💛 for pets worldwide.
+    &copy; 2026 <a href="index.html">Raindrop</a>. All rights reserved. Made with 💛 for pets worldwide.
   </div>
 </footer>
 
 <script>
 // ===== REVIEWS DATA (EN + JP) =====
 const reviews = [
-  {stars:5,text:"Found Raindrop through Instagram! Bought the Amethyst collar for my Corgi — he looks absolutely stunning. The crystals sparkle beautifully in sunlight, and three neighbors asked where I got it during our walk. Craftsmanship is excellent and the adjustable buckle fits my chunky boy perfectly. Highly recommend!",name:"Luna & Corgi Max",avatar:"🐶",date:"2026-06-05"},
-  {stars:5,text:"インスタで見つけてポメラニアンにローズクォーツを購入しました！実物は写真以上に綺麗で、クリスタルがとても透明感があります。前に他のお店で買ったものよりずっと品質が良くて、このお値段は本当にお得だと思います。友達の柴犬にもプレゼントしました。",name:"ポメラニアンのママ",avatar:"🐱",date:"2026-06-03"},
-  {stars:5,text:"Honestly was a bit hesitant at first — $30+ for a pet collar isn't cheap. But the moment I unboxed it I knew it was worth every penny. The crystals are genuinely clear, not that cheap plastic look. The gold buckle has amazing quality. My Poodle gets tons of compliments on walks — even our vet asked about it!",name:"Teddy's Mom",avatar:"🐕",date:"2026-05-30"},
-  {stars:5,text:"I run a pet boutique and ordered samples to test the market. Within two days of display, customers were already asking about them and bought on the spot after trying. The crystal collars really pop under store lighting — very eye-catching. Wholesale pricing is fair, packaging is elegant, and I'm planning a long-term partnership.",name:"PetParadise_SH",avatar:"🏪",date:"2026-05-28"},
-  {stars:4,text:"Bought two — Green Aventurine and Blue Topaz — to rotate. The green one is so fresh for summer, and the blue is more elegant for special occasions. Only wish: more color options like Smoky Quartz or Citrine would be amazing. That said, current quality is already very satisfying. Keeping an eye on new releases!",name:"PetLover Ken",avatar:"🐾",date:"2026-05-22"},
-  {stars:5,text:"以前SNSで海外のインフルエンサーが使っているのを見て、調べたら日本からも買えることを発見！届いてみて期待以上でした。クリスタルのサイズ感がちょうどよく、犬の首に負担がかからない重さです。パッケージもおしゃれで巾着袋まで付いていて感動。犬友達みんなにリンク送りました！",name:"Tiffany_pets",avatar:"✨",date:"2026-05-18"},
-  {stars:5,text:"Third purchase already! Amethyst → Clear Quartz → now the Obsidian from Zodiac series. Every single one is beautiful and they're all so different. The black Obsidian looks incredibly cool on my black Labrador — such a perfect match. Quality has been consistent across all orders. Hope the brand keeps growing and releasing more designs!",name:"Labrador Loyalist",avatar:"🦮",date:"2026-05-15"},
-  {stars:5,text:"Bought the Rose Quartz small size for my cat, honestly thought she might hate wearing a collar — but she doesn't seem to mind at all! Maybe the crystals are light enough? Two weeks in and she hasn't tried to take it off once. Posted a photo on social media and got flooded with likes. Bestie immediately asked for the link for her British Shorthair!",name:"Cat Diary by Emi",avatar:"😻",date:"2026-05-12"},
-  {stars:5,text:"星座シリーズのアクアマリンをサモエドに買いました。青と白の組み合わせが本当に完璧です！革の部分がとても柔らかくて、内側にフリース素材が使われているので長時間つけていても毛が擦れません。以前買った他の革首輪は色落ちしましたが、これは一ヶ月経っても色がきれいなまま。品質最高です！",name:"サモエド大好き",avatar:"☁️",date:"2026-05-08"}
+  {stars:5,text:"Found Raindrop through Instagram! Bought the Amethyst collar for my Corgi — he looks absolutely stunning. The crystals sparkle beautifully in sunlight, and three neighbors asked where I got it during our walk. Craftsmanship is excellent!",name:"Luna & Corgi Max",avatar:"🐶",date:"2026-06-05"},
+  {stars:5,text:"インスタで見つけてポメラニアンにローズクォーツを購入しました！実物は写真以上に綺麗で、クリスタルがとても透明感があります。品質は最高です！",name:"ポメラニアンのママ",avatar:"🐱",date:"2026-06-03"},
+  {stars:5,text:"Honestly was hesitant at first — but the moment I unboxed it I knew it was worth every penny. The crystals are genuinely clear, not that cheap plastic look. My Poodle gets tons of compliments on walks.",name:"Teddy's Mom",avatar:"🐕",date:"2026-05-30"},
+  {stars:5,text:"I run a pet boutique and ordered samples to test the market. Within two days of display, customers were already asking about them and bought on the spot after trying. Very eye-catching!",name:"PetParadise_SH",avatar:"🏪",date:"2026-05-28"},
+  {stars:5,text:"Bought two — Green Aventurine and Blue Topaz — to rotate. The green one is so fresh for summer! Only wish there were more color options like Citrine.",name:"PetLover Ken",avatar:"🐾",date:"2026-05-22"},
+  {stars:5,text:"以前SNSで海外のインフルエンサーが使っているのを見て、日本からも買えることを発見！届いてみて期待以上でした。友達みんなにリンク送りました！",name:"Tiffany_pets",avatar:"✨",date:"2026-05-18"},
+  {stars:5,text:"Third purchase already! Amethyst → Clear Quartz → Obsidian from Zodiac series. Every single one is beautiful. Quality has been consistent across all orders.",name:"Labrador Loyalist",avatar:"🦮",date:"2026-05-15"},
+  {stars:5,text:"Bought the Rose Quartz small size for my cat — she doesn't seem to mind at all! Posted on social media and got flooded with likes. Bestie immediately asked for the link!",name:"Cat Diary by Emi",avatar:"😻",date:"2026-05-12"},
+  {stars:5,text:"星座シリーズのアクアマリンをサモエドに買いました。青と白の組み合わせが完璧です。革の部分がとても柔らかくて、長時間つけていても毛が擦れません！",name:"サモエド大好き",avatar:"☁️",date:"2026-05-08"}
 ];
 
 document.getElementById("reviewsGrid").innerHTML = reviews.map(r => `
@@ -487,14 +491,13 @@ const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightboxImg");
 const lightboxCounter = document.getElementById("lightboxCounter");
 let currentIndex = 0;
-
 const BATCH_SIZE = 12;
 let loadedCount = 0;
 
 function loadGalleryBatch() {
   const batch = PHOTO_IDS.slice(loadedCount, loadedCount + BATCH_SIZE);
   const startIndex = loadedCount;
-  
+
   batch.forEach((id, i) => {
     const item = document.createElement("div");
     item.className = "gallery-item";
@@ -503,10 +506,9 @@ function loadGalleryBatch() {
     item.innerHTML = `<img src="./images/reviews/${id}_thumb.webp" alt="Customer Photo #${id}" loading="lazy"><div class="overlay"><span>Photo #${id}</span></div>`;
     galleryGrid.appendChild(item);
   });
-  
+
   loadedCount += batch.length;
-  
-  // Update button state
+
   const btn = document.getElementById("loadMoreBtn");
   if (loadedCount >= TOTAL_PHOTOS) {
     btn.style.display = "none";
@@ -516,10 +518,8 @@ function loadGalleryBatch() {
   }
 }
 
-// Load first batch immediately
 loadGalleryBatch();
 
-// Lightbox functions
 function openLightbox(index) {
   currentIndex = index;
   updateLightbox();
@@ -535,7 +535,7 @@ function closeLightbox() {
 function updateLightbox() {
   const id = PHOTO_IDS[currentIndex];
   lightboxImg.src = `./images/reviews/${id}.webp`;
-  lightboxImg.alt = `Customer Photo #${id}`;
+  lightboxAlt = `Customer Photo #${id}`;
   lightboxCounter.textContent = `${id} / ${PHOTO_IDS[PHOTO_IDS.length-1]}`;
 }
 
@@ -549,26 +549,17 @@ document.getElementById("lightboxNext").addEventListener("click", () => {
   updateLightbox();
 });
 
-// Close lightbox on background click
 lightbox.addEventListener("click", (e) => {
   if (e.target === lightbox) closeLightbox();
 });
 
-// Keyboard navigation
 document.addEventListener("keydown", (e) => {
   if (!lightbox.classList.contains("active")) return;
   if (e.key === "Escape") closeLightbox();
-  if (e.key === "ArrowLeft") {
-    currentIndex = (currentIndex - 1 + TOTAL_PHOTOS) % TOTAL_PHOTOS;
-    updateLightbox();
-  }
-  if (e.key === "ArrowRight") {
-    currentIndex = (currentIndex + 1) % TOTAL_PHOTOS;
-    updateLightbox();
-  }
+  if (e.key === "ArrowLeft") { currentIndex = (currentIndex - 1 + TOTAL_PHOTOS) % TOTAL_PHOTOS; updateLightbox(); }
+  if (e.key === "ArrowRight") { currentIndex = (currentIndex + 1) % TOTAL_PHOTOS; updateLightbox(); }
 });
 
-// Touch swipe support for lightbox
 let touchStartX = 0;
 lightbox.addEventListener("touchstart", (e) => { touchStartX = e.touches[0].clientX; });
 lightbox.addEventListener("touchend", (e) => {
@@ -582,4 +573,3 @@ lightbox.addEventListener("touchend", (e) => {
 </script>
 </body>
 </html>
-<!-- retail deploy trigger 1781195077 -->
