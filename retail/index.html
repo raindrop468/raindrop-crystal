@@ -373,6 +373,22 @@ a{color:inherit;text-decoration:none}
           </div>
         </div>
       </a>
+      <!-- 7: Nepal Wool Felt Rabbit -->
+      <a href="pet-wool-felt.html" class="bestseller-card">
+        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#f5f0ff,#e8dfd5)">
+          <span class="bestseller-badge">New</span>
+          <img src="./images/wool-felt/1_thumb.webp" alt="Nepal Wool Felt Queen Rabbit" loading="lazy">
+        </div>
+        <div class="bestseller-card-body">
+          <h3>Wool Felt Rabbit Doll</h3>
+          <p>Nepal handmade · 16 styles · Bag charm &amp; keychain</p>
+          <div class="bestseller-price">
+            <span class="original">$53.60</span>
+            <span class="sale">$26.80</span>
+            <span class="discount-tag">50% OFF</span>
+          </div>
+        </div>
+      </a>
     </div>
     <button class="bestseller-arrow bestseller-next" onclick="scrollBestseller(1)" aria-label="Next">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
@@ -525,7 +541,9 @@ function handleSearch() {
     {name:'3d pet portrait fridge magnet',url:'pet-fridge.html'},
     {name:'dog plush chew toy',url:'pet-plush.html'},
     {name:'alloy adjustable ring',url:'pet-ring.html'},
-    {name:'embroidery patch set',url:'pet-patches.html'}
+    {name:'embroidery patch set',url:'pet-patches.html'},
+    {name:'nepal wool felt rabbit doll',url:'pet-wool-felt.html'},
+    {name:'wool felt keychain',url:'pet-wool-felt.html'}
   ];
   const match = products.find(p => p.name.includes(q));
   if (match) window.location.href = match.url;
