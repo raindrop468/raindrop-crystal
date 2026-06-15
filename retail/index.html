@@ -434,6 +434,22 @@ a{color:inherit;text-decoration:none}
           </div>
         </div>
       </a>
+      <!-- 10: Dog Rope Chew Toy -->
+      <a href="pet-rope-toys.html" class="bestseller-card">
+        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#f5f0e0,#e8e0c8)">
+          <span class="bestseller-badge">New</span>
+          <img src="./images/rope-toys/1_thumb.webp" alt="Dog Rope Chew Toy" loading="lazy">
+        </div>
+        <div class="bestseller-card-body">
+          <h3>Dog Rope Chew Toy</h3>
+          <p>Cotton rope knots · 6 styles · Teething & play</p>
+          <div class="bestseller-price">
+            <span class="original">$25.60 – $33.60</span>
+            <span class="sale">$12.80 – $16.80</span>
+            <span class="discount-tag">50% OFF</span>
+          </div>
+        </div>
+      </a>
     </div>
     <button class="bestseller-arrow bestseller-next" onclick="scrollBestseller(1)" aria-label="Next">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
@@ -594,7 +610,12 @@ function handleSearch() {
     {name:'photo crystal lamp',url:'pet-crystal-lamp.html'},
     {name:'pet portrait puzzle',url:'pet-puzzle.html'},
     {name:'jigsaw puzzle',url:'pet-puzzle.html'},
-    {name:'custom puzzle',url:'pet-puzzle.html'}
+    {name:'custom puzzle',url:'pet-puzzle.html'},
+    {name:'dog rope chew toy',url:'pet-rope-toys.html'},
+    {name:'rope toy',url:'pet-rope-toys.html'},
+    {name:'chew toy',url:'pet-rope-toys.html'},
+    {name:'teething toy',url:'pet-rope-toys.html'},
+    {name:'knot rope',url:'pet-rope-toys.html'}
   ];
   const match = products.find(p => p.name.includes(q));
   if (match) window.location.href = match.url;
