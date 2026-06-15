@@ -386,6 +386,22 @@ a{color:inherit;text-decoration:none}
           </div>
         </div>
       </a>
+      <!-- 7: Alloy Bracelet & Necklace -->
+      <a href="pet-bracelet.html" class="bestseller-card">
+        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#fff5ed,#fce4d6)">
+          <span class="bestseller-badge hot">🔥 Hot</span>
+          <img src="./images/bracelet/1_thumb.webp" alt="Alloy Bracelet & Necklace" loading="lazy">
+        </div>
+        <div class="bestseller-card-body">
+          <h3>Alloy Bracelet &amp; Necklace</h3>
+          <p>Adjustable fashion jewelry · 9 styles · Gift ready</p>
+          <div class="bestseller-price">
+            <span class="original">$39.60 – $45.60</span>
+            <span class="sale">$19.80 – $22.80</span>
+            <span class="discount-tag">50% OFF</span>
+          </div>
+        </div>
+      </a>
     </div>
     <button class="bestseller-arrow bestseller-next" onclick="scrollBestseller(1)" aria-label="Next">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
@@ -551,7 +567,15 @@ function handleSearch() {
     {name:'rope toy',url:'pet-rope-toys.html'},
     {name:'chew toy',url:'pet-rope-toys.html'},
     {name:'teething toy',url:'pet-rope-toys.html'},
-    {name:'knot rope',url:'pet-rope-toys.html'}
+    {name:'knot rope',url:'pet-rope-toys.html'},
+    {name:'bracelet',url:'pet-bracelet.html'},
+    {name:'necklace',url:'pet-bracelet.html'},
+    {name:'alloy bracelet',url:'pet-bracelet.html'},
+    {name:'alloy necklace',url:'pet-bracelet.html'},
+    {name:'pet bracelet',url:'pet-bracelet.html'},
+    {name:'pet necklace',url:'pet-bracelet.html'},
+    {name:'pet jewelry',url:'pet-bracelet.html'},
+    {name:'adjustable bracelet',url:'pet-bracelet.html'}
   ];
   const match = products.find(p => p.name.includes(q));
   if (match) window.location.href = match.url;
