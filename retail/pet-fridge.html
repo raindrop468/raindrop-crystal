@@ -184,19 +184,19 @@ footer{background:#2d2d2d;color:#ccc;padding:48px 32px 24px}
     <div class="type-selector">
       <h3>Select Product Type</h3>
       <div class="type-options">
-        <div class="type-opt selected" data-type="fridge" data-price="19.80" data-orig="39.60" data-name="Fridge Magnet" onclick="selectType(this)">
+        <div class="type-opt selected" data-type="fridge" data-price="19.80" data-name="Fridge Magnet" onclick="selectType(this)">
           <div class="check">✓</div>
           <img class="type-img" src="./images/fridge/18_thumb.webp" alt="Fridge Magnet">
           <div class="type-name">Fridge Magnet</div>
           <div class="type-price">$19.80</div>
         </div>
-        <div class="type-opt" data-type="portrait" data-price="28.80" data-orig="57.60" data-name="Full Body 3D Portrait" onclick="selectType(this)">
+        <div class="type-opt" data-type="portrait" data-price="28.80" data-name="Full Body 3D Portrait" onclick="selectType(this)">
           <div class="check">✓</div>
           <img class="type-img" src="./images/fridge/19_thumb.webp" alt="Full Body 3D Portrait">
           <div class="type-name">Full Body 3D Portrait</div>
           <div class="type-price">$28.80</div>
         </div>
-        <div class="type-opt" data-type="aromatherapy" data-price="36.80" data-orig="73.60" data-name="Car Air Vent Aromatherapy" onclick="selectType(this)">
+        <div class="type-opt" data-type="aromatherapy" data-price="36.80" data-name="Car Air Vent Aromatherapy" onclick="selectType(this)">
           <div class="check">✓</div>
           <img class="type-img" src="./images/fridge/20_thumb.webp" alt="Car Air Vent Aromatherapy">
           <div class="type-name">Car Air Vent Aromatherapy</div>
@@ -320,7 +320,6 @@ function showImage(idx) {
 // Type selector
 let selectedType = 'fridge';
 let selectedPrice = 19.80;
-let selectedOrig = 39.60;
 let selectedName = 'Fridge Magnet';
 
 function selectType(el) {
@@ -328,9 +327,8 @@ function selectType(el) {
   el.classList.add('selected');
   selectedType = el.dataset.type;
   selectedPrice = parseFloat(el.dataset.price);
-  selectedOrig = parseFloat(el.dataset.orig);
   selectedName = el.dataset.name;
-  document.getElementById('priceOrig').textContent = '$' + selectedOrig.toFixed(2);
+  document.getElementById('priceOrig').textContent = `$${(selectedPrice * 2).toFixed(2)}`;
   document.getElementById('priceDisplay').textContent = '$' + selectedPrice.toFixed(2);
   document.getElementById('priceOrig').textContent = `$${(selectedPrice * 2).toFixed(2)}`;
   document.getElementById('priceNote').textContent = selectedName;
