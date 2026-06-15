@@ -402,6 +402,22 @@ a{color:inherit;text-decoration:none}
           </div>
         </div>
       </a>
+      <!-- 8: Custom Pet Pillow -->
+      <a href="pet-bolster.html" class="bestseller-card">
+        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#fef3e7,#fde4cc)">
+          <span class="bestseller-badge hot">🔥 Hot</span>
+          <img src="./images/bolster/1_thumb.webp" alt="Custom Pet Photo Pillow" loading="lazy">
+        </div>
+        <div class="bestseller-card-body">
+          <h3>Custom Pet Pillow</h3>
+          <p>Photo upload · 3 sizes · Plush keepsake</p>
+          <div class="bestseller-price">
+            <span class="original">$37.60 – $49.60</span>
+            <span class="sale">$18.80 – $24.80</span>
+            <span class="discount-tag">50% OFF</span>
+          </div>
+        </div>
+      </a>
     </div>
     <button class="bestseller-arrow bestseller-next" onclick="scrollBestseller(1)" aria-label="Next">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
@@ -575,7 +591,15 @@ function handleSearch() {
     {name:'pet bracelet',url:'pet-bracelet.html'},
     {name:'pet necklace',url:'pet-bracelet.html'},
     {name:'pet jewelry',url:'pet-bracelet.html'},
-    {name:'adjustable bracelet',url:'pet-bracelet.html'}
+    {name:'adjustable bracelet',url:'pet-bracelet.html'},
+    {name:'pillow',url:'pet-bolster.html'},
+    {name:'bolster',url:'pet-bolster.html'},
+    {name:'pet pillow',url:'pet-bolster.html'},
+    {name:'photo pillow',url:'pet-bolster.html'},
+    {name:'custom pillow',url:'pet-bolster.html'},
+    {name:'plush pillow',url:'pet-bolster.html'},
+    {name:'cushion',url:'pet-bolster.html'},
+    {name:'抱枕',url:'pet-bolster.html'}
   ];
   const match = products.find(p => p.name.includes(q));
   if (match) window.location.href = match.url;
