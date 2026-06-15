@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3D Pet Custom Fridge Magnet & Car Air Freshener — Raindrop Crystal</title>
+<meta name="description" content="Custom 3D pet portrait fridge magnet, full-body plaster statue, and car air vent aromatherapy. Personalized cat & dog memorial keepsake.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#faf8f5;color:#2d2d2d;line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+
+/* Nav */
+.nav{position:sticky;top:0;z-index:100;background:rgba(250,248,245,.92);backdrop-filter:blur(12px);border-bottom:1px solid #e8e2d9;padding:0 32px}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}
+.nav-logo{font-size:1.25rem;font-weight:700;letter-spacing:-.02em}
+.nav-logo span{color:#c4956a}
+.nav-links{display:flex;gap:24px;align-items:center;font-size:.9rem;font-weight:500}
+.nav-links a{color:#666;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:#2d2d2d}
+.nav-cta{background:#25d366;color:#fff!important;padding:6px 16px;border-radius:20px;font-size:.85rem}
+.nav-cta:hover{background:#1fb855!important}
+
+/* Promo Bar */
+.promo{background:linear-gradient(90deg,#c4956a,#d4a574);color:#fff;text-align:center;padding:8px 16px;font-size:.8rem;overflow:hidden;white-space:nowrap}
+.promo span{display:inline-block;animation:marquee 20s linear infinite;padding-right:4rem}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* Breadcrumb */
+.breadcrumb{max-width:1200px;margin:0 auto;padding:16px 32px;font-size:.85rem;color:#999}
+.breadcrumb a{color:#999;transition:color .2s}
+.breadcrumb a:hover{color:#c4956a}
+
+/* Product Layout */
+.product{max-width:1200px;margin:0 auto;padding:0 32px 60px;display:grid;grid-template-columns:1fr 1fr;gap:48px}
+
+/* Gallery */
+.gallery{position:sticky;top:80px;align-self:start}
+.gallery-main{border-radius:16px;overflow:hidden;background:#f0ebe3;margin-bottom:12px;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center}
+.gallery-main img{width:100%;height:100%;object-fit:cover;cursor:zoom-in;transition:transform .3s}
+.gallery-thumbs{display:grid;grid-template-columns:repeat(9,1fr);gap:6px}
+.gallery-thumbs img{border-radius:8px;cursor:pointer;opacity:.6;transition:all .2s;aspect-ratio:1/1;object-fit:cover;border:2px solid transparent}
+.gallery-thumbs img:hover{opacity:.85}
+.gallery-thumbs img.active{opacity:1;border-color:#c4956a}
+
+/* Info */
+.info{padding-top:8px}
+.info h1{font-size:1.65rem;line-height:1.35;margin-bottom:8px;letter-spacing:-.02em}
+.info .subtitle{color:#888;font-size:.95rem;margin-bottom:16px;line-height:1.5}
+.price-row{display:flex;align-items:baseline;gap:12px;margin-bottom:20px}
+.price{font-size:2.2rem;font-weight:700;color:#c4956a}
+.price-note{font-size:.85rem;color:#999}
+
+/* Type Selector */
+.type-selector{margin-bottom:24px}
+.type-selector h3{font-size:.9rem;font-weight:600;margin-bottom:10px;text-transform:uppercase;letter-spacing:.05em;color:#888}
+.type-options{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.type-opt{border:2px solid #e8e2d9;border-radius:12px;padding:12px 10px;text-align:center;cursor:pointer;transition:all .25s;position:relative;overflow:hidden}
+.type-opt:hover{border-color:#c4956a}
+.type-opt.selected{border-color:#c4956a;background:#fdf6ed}
+.type-opt .type-img{width:80px;height:80px;border-radius:8px;object-fit:cover;margin:0 auto 8px}
+.type-opt .type-name{font-size:.8rem;font-weight:600;margin-bottom:2px}
+.type-opt .type-price{font-size:.9rem;font-weight:700;color:#c4956a}
+.type-opt .check{position:absolute;top:6px;right:6px;width:20px;height:20px;border-radius:50%;background:#c4956a;color:#fff;display:none;align-items:center;justify-content:center;font-size:12px}
+.type-opt.selected .check{display:flex}
+
+/* Specs */
+.specs{margin-bottom:24px;padding:16px;background:#f5f0ea;border-radius:12px}
+.specs h3{font-size:.9rem;font-weight:600;margin-bottom:10px;text-transform:uppercase;letter-spacing:.05em;color:#888}
+.specs-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;font-size:.88rem}
+.specs-grid dt{color:#999}
+.specs-grid dd{font-weight:500}
+
+/* Shipping Note */
+.shipping-note{display:flex;align-items:center;gap:8px;padding:12px 16px;background:linear-gradient(135deg,#fdf6ed,#f5ede0);border-radius:10px;margin-bottom:24px;font-size:.88rem}
+.shipping-note .icon{font-size:1.2rem}
+
+/* Buttons */
+.btn-group{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
+.btn-wa{display:flex;align-items:center;justify-content:center;gap:8px;background:#25d366;color:#fff;padding:14px;border-radius:12px;font-size:1rem;font-weight:600;transition:background .2s;cursor:pointer;border:none;width:100%}
+.btn-wa:hover{background:#1fb855}
+.btn-pp{width:100%}
+
+/* Detail Section */
+.detail-section{max-width:1200px;margin:0 auto;padding:0 32px 60px}
+.detail-section h2{font-size:1.3rem;margin-bottom:20px;position:relative;padding-bottom:12px}
+.detail-section h2::after{content:'';position:absolute;bottom:0;left:0;width:40px;height:3px;background:#c4956a;border-radius:2px}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.detail-grid img{border-radius:12px;width:100%}
+
+/* Trust */
+.trust{max-width:1200px;margin:0 auto 60px;padding:32px;background:#f5f0ea;border-radius:16px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.trust-item .icon{font-size:1.6rem;margin-bottom:6px}
+.trust-item h4{font-size:.85rem;font-weight:600;margin-bottom:2px}
+.trust-item p{font-size:.78rem;color:#888}
+
+/* Footer */
+footer{background:#2d2d2d;color:#ccc;padding:48px 32px 24px}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px}
+.footer-col h4{color:#fff;font-size:.9rem;margin-bottom:12px}
+.footer-col a{display:block;font-size:.85rem;color:#aaa;margin-bottom:6px;transition:color .2s}
+.footer-col a:hover{color:#c4956a}
+.footer-bottom{max-width:1200px;margin:24px auto 0;padding-top:24px;border-top:1px solid #444;font-size:.78rem;color:#777;text-align:center}
+
+@media(max-width:768px){
+  .product{grid-template-columns:1fr;gap:24px;padding:0 16px 40px}
+  .gallery{position:static}
+  .gallery-thumbs{grid-template-columns:repeat(5,1fr)}
+  .info h1{font-size:1.3rem}
+  .type-options{grid-template-columns:1fr}
+  .detail-grid{grid-template-columns:1fr}
+  .trust{grid-template-columns:1fr 1fr;gap:16px;padding:20px}
+  .footer-inner{grid-template-columns:1fr}
+  .nav-links{gap:12px;font-size:.8rem}
+  .specs-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- Promo Bar -->
+<div class="promo">
+    <span>🛒 Free Shipping on Orders Over $49 · Shipping $6.99 Under $49</span>
+    <span>✨ 100% Natural Crystals · Handcrafted · 7-Day Easy Returns</span>
+    <span>🌍 Worldwide Shipping · Order via WhatsApp</span>
+    <span>🛒 Free Shipping on Orders Over $49 · Shipping $6.99 Under $49</span>
+    <span>✨ 100% Natural Crystals · Handcrafted · 7-Day Easy Returns</span>
+    <span>🌍 Worldwide Shipping · Order via WhatsApp</span>
+</div>
+
+<!-- Nav -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Raindrop<span>Crystal</span></a>
+    <div class="nav-links">
+      <a href="classic.html">Classic</a>
+      <a href="zodiac.html">Zodiac</a>
+      <a href="pet-urn.html">Memorial</a>
+      <a href="pet-keychain.html">Acrylic</a>
+      <a href="pet-leather.html">Leather</a>
+      <a href="pet-fridge.html" class="active">Fridge</a>
+      <a href="https://wa.me/8618271425419" target="_blank" rel="noopener" class="nav-cta">💬 WhatsApp</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <a href="index.html">Home</a> / <a href="pet-fridge.html">3D Pet Fridge Magnet & Car Air Freshener</a>
+</div>
+
+<!-- Product -->
+<section class="product">
+  <div class="gallery">
+    <div class="gallery-main">
+      <img id="mainImg" src="./images/fridge/1b.webp" alt="3D Pet Custom Fridge Magnet">
+    </div>
+    <div class="gallery-thumbs" id="thumbs">
+      <!-- 9 main images: 1b, 2-9 -->
+      <!-- 7 detail images: 11-17 -->
+      <!-- 3 type images: 18, 19, 20 -->
+    </div>
+  </div>
+
+  <div class="info">
+    <h1>3D Pet Custom Fridge Magnet & Car Air Freshener — Cat Dog Memorial Plaster Portrait</h1>
+    <p class="subtitle">Handcrafted 3D plaster portrait of your beloved cat or dog. Turn your pet into a cute fridge magnet, a full-body desktop statue, or a car air vent aromatherapy clip. A unique memorial keepsake to keep them close forever.</p>
+
+    <div class="price-row">
+      <span class="price" id="priceDisplay">$19.80</span>
+      <span class="price-note" id="priceNote">Fridge Magnet</span>
+    </div>
+
+    <!-- Product Type Selector -->
+    <div class="type-selector">
+      <h3>Select Product Type</h3>
+      <div class="type-options">
+        <div class="type-opt selected" data-type="fridge" data-price="19.80" data-name="Fridge Magnet" onclick="selectType(this)">
+          <div class="check">✓</div>
+          <img class="type-img" src="./images/fridge/18_thumb.webp" alt="Fridge Magnet">
+          <div class="type-name">Fridge Magnet</div>
+          <div class="type-price">$19.80</div>
+        </div>
+        <div class="type-opt" data-type="portrait" data-price="28.80" data-name="Full Body 3D Portrait" onclick="selectType(this)">
+          <div class="check">✓</div>
+          <img class="type-img" src="./images/fridge/19_thumb.webp" alt="Full Body 3D Portrait">
+          <div class="type-name">Full Body 3D Portrait</div>
+          <div class="type-price">$28.80</div>
+        </div>
+        <div class="type-opt" data-type="aromatherapy" data-price="36.80" data-name="Car Air Vent Aromatherapy" onclick="selectType(this)">
+          <div class="check">✓</div>
+          <img class="type-img" src="./images/fridge/20_thumb.webp" alt="Car Air Vent Aromatherapy">
+          <div class="type-name">Car Air Vent Aromatherapy</div>
+          <div class="type-price">$36.80</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Specs -->
+    <div class="specs">
+      <h3>Specifications</h3>
+      <dl class="specs-grid">
+        <dt>Material</dt><dd>Plaster / Gypsum</dd>
+        <dt>Style</dt><dd>3D Pet Portrait</dd>
+        <dt>Customization</dt><dd>Photo-based custom</dd>
+        <dt>Use</dt><dd>Fridge / Desk / Car</dd>
+        <dt>Free Shipping</dt><dd>Orders over $49</dd>
+        <dt>Processing</dt><dd>5–10 business days</dd>
+      </dl>
+    </div>
+
+    <!-- Shipping Note -->
+    <div class="shipping-note">
+      <span class="icon">🚚</span>
+      <span>Free shipping on orders over <strong>$49</strong> · Standard shipping <strong>$6.99</strong> under $49</span>
+    </div>
+
+    <!-- Buttons -->
+    <div class="btn-group">
+      <button class="btn-wa" id="waBtn" onclick="openWhatsApp()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Order via WhatsApp
+      </button>
+      <div class="btn-pp" id="paypalContainer"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Detail Images -->
+<section class="detail-section">
+  <h2>Product Details</h2>
+  <div class="detail-grid">
+    <img src="./images/fridge/11.webp" alt="Detail 1" loading="lazy">
+    <img src="./images/fridge/12.webp" alt="Detail 2" loading="lazy">
+    <img src="./images/fridge/13.webp" alt="Detail 3" loading="lazy">
+    <img src="./images/fridge/14.webp" alt="Detail 4" loading="lazy">
+    <img src="./images/fridge/15.webp" alt="Detail 5" loading="lazy">
+    <img src="./images/fridge/16.webp" alt="Detail 6" loading="lazy">
+    <img src="./images/fridge/17.webp" alt="Detail 7" loading="lazy">
+  </div>
+</section>
+
+<!-- Trust -->
+<section class="trust">
+  <div class="trust-item"><div class="icon">💎</div><h4>Natural Materials</h4><p>Plaster & Gypsum</p></div>
+  <div class="trust-item"><div class="icon">🤲</div><h4>Handcrafted</h4><p>Made with Love & Care</p></div>
+  <div class="trust-item"><div class="icon">🔄</div><h4>7-Day Returns</h4><p>Easy & Hassle-Free</p></div>
+  <div class="trust-item"><div class="icon">🌍</div><h4>Worldwide</h4><p>Free Shipping Over $49</p></div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>Collections</h4>
+      <a href="classic.html">Classic Crystal</a>
+      <a href="zodiac.html">Zodiac Guardian</a>
+      <a href="pet-urn.html">Pet Memorial Urn</a>
+      <a href="pet-keychain.html">Acrylic Keychain</a>
+      <a href="pet-leather.html">Leather Keychain</a>
+      <a href="pet-fridge.html">3D Pet Portrait</a>
+    </div>
+    <div class="footer-col">
+      <h4>Help</h4>
+      <a href="../shipping.html">Shipping Policy</a>
+      <a href="../refund.html">Refund Policy</a>
+      <a href="../contact.html">Contact Us</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms of Service</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="https://wa.me/8618271425419" target="_blank" rel="noopener">WhatsApp: +86 182 7142 5419</a>
+      <a href="mailto:support@raindropwyx.com">support@raindropwyx.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2025 Raindrop Crystal. All rights reserved.</div>
+</footer>
+
+<script>
+// Gallery
+const mainPhotos = ['1b','2','3','4','5','6','7','8','9'];
+const detailPhotos = ['11','12','13','14','15','16','17'];
+const typePhotos = ['18','19','20'];
+const allPhotos = [...mainPhotos, ...detailPhotos, ...typePhotos];
+
+let currentIdx = 0;
+const thumbsEl = document.getElementById('thumbs');
+const mainImg = document.getElementById('mainImg');
+
+allPhotos.forEach((id, i) => {
+  const img = document.createElement('img');
+  img.src = `./images/fridge/${id}_thumb.webp`;
+  img.alt = `Photo ${id}`;
+  img.onclick = () => showImage(i);
+  if (i === 0) img.classList.add('active');
+  thumbsEl.appendChild(img);
+});
+
+function showImage(idx) {
+  currentIdx = idx;
+  mainImg.src = `./images/fridge/${allPhotos[idx]}.webp`;
+  document.querySelectorAll('.gallery-thumbs img').forEach((t, i) => {
+    t.classList.toggle('active', i === idx);
+  });
+}
+
+// Type selector
+let selectedType = 'fridge';
+let selectedPrice = 19.80;
+let selectedName = 'Fridge Magnet';
+
+function selectType(el) {
+  document.querySelectorAll('.type-opt').forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
+  selectedType = el.dataset.type;
+  selectedPrice = parseFloat(el.dataset.price);
+  selectedName = el.dataset.name;
+  document.getElementById('priceDisplay').textContent = `$${selectedPrice.toFixed(2)}`;
+  document.getElementById('priceNote').textContent = selectedName;
+  renderPayPal();
+}
+
+// WhatsApp
+function openWhatsApp() {
+  const msg = encodeURIComponent(
+    `Hi! I'd like to order:\n` +
+    `🐾 3D Pet ${selectedName}\n` +
+    `💰 Price: $${selectedPrice.toFixed(2)} USD\n` +
+    `📦 I'll send my pet photo for customization.\n` +
+    `Thank you!`
+  );
+  window.open(`https://wa.me/8618271425419?text=${msg}`, '_blank');
+}
+
+// PayPal
+function renderPayPal() {
+  const container = document.getElementById('paypalContainer');
+  container.innerHTML = '';
+  const script = document.createElement('script');
+  script.src = 'https://www.paypal.com/sdk/js?client-id=AWUqfXTh9h1pLcBS0LZmH9R4f1ySr9lcH-S5nBHVgEaWMIqFnADJ7mCMzBM5QbN6tUzJz3kJ3yGP4f&currency=USD&intent=capture';
+  script.onload = () => {
+    paypal.Buttons({
+      style: { layout: 'vertical', color: 'gold', shape: 'pill', label: 'pay', height: 45 },
+      createOrder: (data, actions) => actions.order.create({
+        purchase_units: [{
+          description: `3D Pet ${selectedName} — Custom Portrait`,
+          amount: { value: selectedPrice.toFixed(2), currency_code: 'USD' }
+        }]
+      }),
+      onApprove: (data, actions) => actions.order.capture().then(details => {
+        alert(`Thank you, ${details.payer.name.given_name}! Your order for ${selectedName} has been received. Please send your pet photo via WhatsApp for customization.`);
+      })
+    }).render('#paypalContainer');
+  };
+  document.head.appendChild(script);
+}
+
+renderPayPal();
+</script>
+</body>
+</html>
