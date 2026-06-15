@@ -49,8 +49,10 @@ img{max-width:100%;display:block}
 .info{padding-top:8px}
 .info h1{font-size:1.65rem;line-height:1.35;margin-bottom:8px;letter-spacing:-.02em}
 .info .subtitle{color:#888;font-size:.95rem;margin-bottom:16px;line-height:1.5}
-.price-row{display:flex;align-items:baseline;gap:12px;margin-bottom:20px}
+.price-row{display:flex;align-items:baseline;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+.price-original{font-size:1.8rem;color:#999;text-decoration:line-through;font-weight:400}
 .price{font-size:2.2rem;font-weight:700;color:#c4956a}
+.discount-tag{background:#fff0f0;color:#c0392b;font-size:12px;font-weight:700;padding:3px 10px;border-radius:50px;letter-spacing:.5px;align-self:center}
 .price-note{font-size:.85rem;color:#999}
 
 /* Type Selector */
@@ -172,7 +174,9 @@ footer{background:#2d2d2d;color:#ccc;padding:48px 32px 24px}
     <p class="subtitle">Handcrafted 3D plaster portrait of your beloved cat or dog. Turn your pet into a cute fridge magnet, a full-body desktop statue, or a car air vent aromatherapy clip. A unique memorial keepsake to keep them close forever.</p>
 
     <div class="price-row">
+      <span class="price-original" id="priceOrig">$39.60</span>
       <span class="price" id="priceDisplay">$19.80</span>
+      <span class="discount-tag">50% OFF</span>
       <span class="price-note" id="priceNote">Fridge Magnet</span>
     </div>
 
@@ -180,19 +184,19 @@ footer{background:#2d2d2d;color:#ccc;padding:48px 32px 24px}
     <div class="type-selector">
       <h3>Select Product Type</h3>
       <div class="type-options">
-        <div class="type-opt selected" data-type="fridge" data-price="19.80" data-name="Fridge Magnet" onclick="selectType(this)">
+        <div class="type-opt selected" data-type="fridge" data-price="19.80" data-orig="39.60" data-name="Fridge Magnet" onclick="selectType(this)">
           <div class="check">✓</div>
           <img class="type-img" src="./images/fridge/18_thumb.webp" alt="Fridge Magnet">
           <div class="type-name">Fridge Magnet</div>
           <div class="type-price">$19.80</div>
         </div>
-        <div class="type-opt" data-type="portrait" data-price="28.80" data-name="Full Body 3D Portrait" onclick="selectType(this)">
+        <div class="type-opt" data-type="portrait" data-price="28.80" data-orig="57.60" data-name="Full Body 3D Portrait" onclick="selectType(this)">
           <div class="check">✓</div>
           <img class="type-img" src="./images/fridge/19_thumb.webp" alt="Full Body 3D Portrait">
           <div class="type-name">Full Body 3D Portrait</div>
           <div class="type-price">$28.80</div>
         </div>
-        <div class="type-opt" data-type="aromatherapy" data-price="36.80" data-name="Car Air Vent Aromatherapy" onclick="selectType(this)">
+        <div class="type-opt" data-type="aromatherapy" data-price="36.80" data-orig="73.60" data-name="Car Air Vent Aromatherapy" onclick="selectType(this)">
           <div class="check">✓</div>
           <img class="type-img" src="./images/fridge/20_thumb.webp" alt="Car Air Vent Aromatherapy">
           <div class="type-name">Car Air Vent Aromatherapy</div>
@@ -316,6 +320,7 @@ function showImage(idx) {
 // Type selector
 let selectedType = 'fridge';
 let selectedPrice = 19.80;
+let selectedOrig = 39.60;
 let selectedName = 'Fridge Magnet';
 
 function selectType(el) {
@@ -323,8 +328,11 @@ function selectType(el) {
   el.classList.add('selected');
   selectedType = el.dataset.type;
   selectedPrice = parseFloat(el.dataset.price);
+  selectedOrig = parseFloat(el.dataset.orig);
   selectedName = el.dataset.name;
-  document.getElementById('priceDisplay').textContent = `$${selectedPrice.toFixed(2)}`;
+  document.getElementById('priceOrig').textContent = '$' + selectedOrig.toFixed(2);
+  document.getElementById('priceDisplay').textContent = '$' + selectedPrice.toFixed(2);
+  document.getElementById('priceOrig').textContent = `$${(selectedPrice * 2).toFixed(2)}`;
   document.getElementById('priceNote').textContent = selectedName;
   renderPayPal();
 }
