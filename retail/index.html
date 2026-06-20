@@ -434,6 +434,22 @@ a{color:inherit;text-decoration:none}
           </div>
         </div>
       </a>
+      <!-- 11: Pet Bib Scarf -->
+      <a href="pet-bib.html" class="bestseller-card">
+        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#fce4ec,#f8bbd0)">
+          <span class="bestseller-badge hot">🎀 New</span>
+          <img src="./images/bib/1_thumb.webp" alt="Pet Bib Scarf" loading="lazy">
+        </div>
+        <div class="bestseller-card-body">
+          <h3>Pet Bib Scarf</h3>
+          <p>Cute bowtie drool bib, 10 designs for cats & dogs</p>
+          <div class="bestseller-price">
+            <span class="original">$27.60</span>
+            <span class="sale">$13.80</span>
+            <span class="discount-tag">50% OFF</span>
+          </div>
+        </div>
+      </a>
     </div>
     <button class="bestseller-arrow bestseller-next" onclick="scrollBestseller(1)" aria-label="Next">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
@@ -627,7 +643,14 @@ function handleSearch() {
     {name:'collar',url:'pet-necklace.html'},
     {name:'pet collar',url:'pet-necklace.html'},
     {name:'pearl collar',url:'pet-necklace.html'},
-    {name:'chanel style',url:'pet-necklace.html'}
+    {name:'chanel style',url:'pet-necklace.html'},
+    {name:'bib',url:'pet-bib.html'},
+    {name:'scarf',url:'pet-bib.html'},
+    {name:'bib scarf',url:'pet-bib.html'},
+    {name:'drool bib',url:'pet-bib.html'},
+    {name:'bowtie',url:'pet-bib.html'},
+    {name:'pet bib',url:'pet-bib.html'},
+    {name:'口水巾',url:'pet-bib.html'}
   ];
   const match = products.find(p => p.name.includes(q));
   if (match) window.location.href = match.url;
