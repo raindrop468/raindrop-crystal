@@ -402,18 +402,18 @@ a{color:inherit;text-decoration:none}
           </div>
         </div>
       </a>
-      <!-- 8: 3D Pet Portrait -->
-      <a href="pet-fridge.html" class="bestseller-card">
-        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#f5f0ff,#e8ddf5)">
-          <span class="bestseller-badge hot">🔥 Hot</span>
-          <img src="./images/fridge/1b_thumb.webp" alt="3D Pet Portrait" loading="lazy">
+      <!-- 9: Custom Pet Portrait -->
+      <a href="pet-portrait.html" class="bestseller-card">
+        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#fdf6ed,#f5ede0)">
+          <span class="bestseller-badge">Digital</span>
+          <img src="./images/portrait/1_thumb.webp" alt="Custom Pet Portrait" loading="lazy">
         </div>
         <div class="bestseller-card-body">
-          <h3>3D Pet Portrait</h3>
-          <p>Fridge magnet / Full body / Car aromatherapy</p>
+          <h3>Custom Pet Portrait</h3>
+          <p>Hand-drawn digital portrait, cat & dog illustration</p>
           <div class="bestseller-price">
-            <span class="original">$39.60 – $73.60</span>
-            <span class="sale">$19.80 – $36.80</span>
+            <span class="original">$39.60</span>
+            <span class="sale">$19.80</span>
             <span class="discount-tag">50% OFF</span>
           </div>
         </div>
@@ -599,7 +599,13 @@ function handleSearch() {
     {name:'custom pillow',url:'pet-bolster.html'},
     {name:'plush pillow',url:'pet-bolster.html'},
     {name:'cushion',url:'pet-bolster.html'},
-    {name:'抱枕',url:'pet-bolster.html'}
+    {name:'抱枕',url:'pet-bolster.html'},
+    {name:'portrait',url:'pet-portrait.html'},
+    {name:'digital portrait',url:'pet-portrait.html'},
+    {name:'custom portrait',url:'pet-portrait.html'},
+    {name:'pet portrait',url:'pet-portrait.html'},
+    {name:'hand drawn',url:'pet-portrait.html'},
+    {name:'illustration',url:'pet-portrait.html'}
   ];
   const match = products.find(p => p.name.includes(q));
   if (match) window.location.href = match.url;
