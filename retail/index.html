@@ -450,6 +450,20 @@ a{color:inherit;text-decoration:none}
           </div>
         </div>
       </a>
+      <!-- 12: Pet Hair Clip -->
+      <a href="pet-hairclip.html" class="bestseller-card">
+        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#fef3c7,#fde68a)">
+          <span class="bestseller-badge hot">🎀 New</span>
+          <img src="./images/hairclip/1_thumb.webp" alt="Pet Hair Clip" loading="lazy">
+        </div>
+        <div class="bestseller-card-body">
+          <h3>Pet Hair Clip</h3>
+          <p>Handmade BB hair clip, 16 unique designs</p>
+          <div class="bestseller-price">
+            <span class="sale">$9.90 – $32.80</span>
+          </div>
+        </div>
+      </a>
     </div>
     <button class="bestseller-arrow bestseller-next" onclick="scrollBestseller(1)" aria-label="Next">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
@@ -650,7 +664,14 @@ function handleSearch() {
     {name:'drool bib',url:'pet-bib.html'},
     {name:'bowtie',url:'pet-bib.html'},
     {name:'pet bib',url:'pet-bib.html'},
-    {name:'口水巾',url:'pet-bib.html'}
+    {name:'口水巾',url:'pet-bib.html'},
+    {name:'hair clip',url:'pet-hairclip.html'},
+    {name:'hairclip',url:'pet-hairclip.html'},
+    {name:'bb clip',url:'pet-hairclip.html'},
+    {name:'pet clip',url:'pet-hairclip.html'},
+    {name:'hair accessory',url:'pet-hairclip.html'},
+    {name:'handmade clip',url:'pet-hairclip.html'},
+    {name:'发卡',url:'pet-hairclip.html'}
   ];
   const match = products.find(p => p.name.includes(q));
   if (match) window.location.href = match.url;
