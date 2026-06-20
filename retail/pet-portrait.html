@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Custom Pet Portrait Digital File — Hand-Drawn Cat & Dog Illustration | Raindrop Pet</title>
-<meta name="description" content="Custom hand-drawn pet portrait digital file. Realistic comic style illustration of your cat or dog. Delivered via WhatsApp. $19.80 portrait / $29.80 full body.">
+<title>Custom Pet Portrait — Digital Hand-Drawn Illustration (Cat & Dog) | Raindrop Pet</title>
+<meta name="description" content="Custom digital hand-drawn pet portrait illustration. Realistic comic style of your cat or dog. Delivered via WhatsApp. $19.80 head portrait / $29.80 full body.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -135,11 +135,11 @@ footer{background:#2d2d2d;color:#ccc;padding:48px 32px 24px}
 
 <!-- Promo Bar -->
 <div class="promo">
-  <span>🎨 Custom Digital Pet Portrait — Hand-Drawn Illustration</span>
-  <span>💰 Portrait $19.80 · Full Body $29.80 · 50% OFF Limited Time</span>
+  <span>🎨 Custom Pet Portrait — Digital Hand-Drawn Illustration</span>
+  <span>💰 Head Portrait $19.80 · Full Body $29.80 · 50% OFF Limited Time</span>
   <span>📱 Free Delivery via WhatsApp · Order Now</span>
-  <span>🎨 Custom Digital Pet Portrait — Hand-Drawn Illustration</span>
-  <span>💰 Portrait $19.80 · Full Body $29.80 · 50% OFF Limited Time</span>
+  <span>🎨 Custom Pet Portrait — Digital Hand-Drawn Illustration</span>
+  <span>💰 Head Portrait $19.80 · Full Body $29.80 · 50% OFF Limited Time</span>
   <span>📱 Free Delivery via WhatsApp · Order Now</span>
 </div>
 
@@ -164,6 +164,7 @@ footer{background:#2d2d2d;color:#ccc;padding:48px 32px 24px}
       <a href="pet-bracelet.html">Bracelet</a>
       <a href="pet-bolster.html">Pillow</a>
       <a href="pet-portrait.html" class="active">Portrait</a>
+      <a href="pet-necklace.html">Necklace</a>
       <a href="https://wa.me/8618271425419" target="_blank" rel="noopener" class="nav-cta">💬 WhatsApp</a>
     </div>
   </div>
@@ -184,7 +185,7 @@ footer{background:#2d2d2d;color:#ccc;padding:48px 32px 24px}
   </div>
 
   <div class="info">
-    <h1>Custom Pet Portrait — Hand-Drawn Digital File (Cat & Dog Illustration)</h1>
+    <h1>Custom Pet Portrait — Digital Hand-Drawn Illustration (Cat & Dog)</h1>
     <p class="subtitle">Turn your beloved pet's photo into a beautiful hand-drawn digital portrait. Realistic comic style illustration, perfect as a keepsake or gift. Simply send your photo via WhatsApp — our artist will create a custom digital portrait and deliver the high-resolution file to you.</p>
 
     <div class="price-row">
@@ -192,16 +193,16 @@ footer{background:#2d2d2d;color:#ccc;padding:48px 32px 24px}
       <span class="price" id="priceSale">$19.80</span>
       <span class="discount-tag">50% OFF</span>
     </div>
-    <div class="price-note" id="priceNote">Portrait style selected · Full Body $29.80</div>
+    <div class="price-note" id="priceNote">Head Portrait style selected · Full Body $29.80</div>
 
     <!-- Style Selector -->
     <div class="style-selector">
       <h3>Select Style</h3>
       <div class="style-options">
-        <div class="style-opt selected" data-style="portrait" data-name="Portrait" data-price="19.80" data-original="39.60" onclick="selectStyle(this)">
+        <div class="style-opt selected" data-style="portrait" data-name="Head Portrait" data-price="19.80" data-original="39.60" onclick="selectStyle(this)">
           <div class="check">✓</div>
           <span class="style-icon">🖼️</span>
-          <div class="style-name">Portrait</div>
+          <div class="style-name">Head Portrait</div>
           <div class="style-price">$19.80 <small style="color:#999;font-weight:400;text-decoration:line-through;font-size:.75rem">$39.60</small></div>
         </div>
         <div class="style-opt" data-style="fullbody" data-name="Full Body" data-price="29.80" data-original="59.60" onclick="selectStyle(this)">
@@ -237,7 +238,7 @@ footer{background:#2d2d2d;color:#ccc;padding:48px 32px 24px}
       <h3>Specifications</h3>
       <dl class="specs-grid">
         <dt>Type</dt><dd>Digital File / Custom Portrait</dd>
-        <dt>Style</dt><dd>Portrait / Full Body</dd>
+        <dt>Style</dt><dd>Head Portrait / Full Body</dd>
         <dt>Format</dt><dd>JPG / PNG High Resolution</dd>
         <dt>Delivery</dt><dd>Via WhatsApp or Email</dd>
         <dt>Turnaround</dt><dd>3-5 Days</dd>
@@ -302,6 +303,7 @@ footer{background:#2d2d2d;color:#ccc;padding:48px 32px 24px}
       <a href="pet-bracelet.html">Alloy Bracelet & Necklace</a>
       <a href="pet-bolster.html">Custom Pet Pillow</a>
       <a href="pet-portrait.html">Custom Portrait</a>
+      <a href="pet-necklace.html">Pearl Pet Collar</a>
     </div>
     <div class="footer-col">
       <h4>Help</h4>
@@ -346,7 +348,7 @@ function showImage(idx) {
 
 // Style selector
 let selectedStyle = 'portrait';
-let selectedName = 'Portrait';
+let selectedName = 'Head Portrait';
 let currentPrice = '19.80';
 let currentOriginal = '39.60';
 
@@ -362,8 +364,8 @@ function selectStyle(el) {
   document.getElementById('priceSale').textContent = `$${currentPrice}`;
   document.getElementById('priceNote').textContent =
     selectedStyle === 'portrait'
-      ? 'Portrait style selected · Full Body $29.80'
-      : 'Full Body style selected · Portrait $19.80';
+      ? 'Head Portrait style selected · Full Body $29.80'
+      : 'Full Body style selected · Head Portrait $19.80';
 
   renderPayPal();
 }

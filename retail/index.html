@@ -418,6 +418,22 @@ a{color:inherit;text-decoration:none}
           </div>
         </div>
       </a>
+      <!-- 10: Pearl Pet Collar -->
+      <a href="pet-necklace.html" class="bestseller-card">
+        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#fff5f5,#fce4ec)">
+          <span class="bestseller-badge hot">📿 New</span>
+          <img src="./images/necklace/1_thumb.webp" alt="Pearl Pet Collar" loading="lazy">
+        </div>
+        <div class="bestseller-card-body">
+          <h3>Pearl Pet Collar</h3>
+          <p>Original Chanel-style pearl necklace, 3 designs</p>
+          <div class="bestseller-price">
+            <span class="original">$19.80</span>
+            <span class="sale">$9.90</span>
+            <span class="discount-tag">50% OFF</span>
+          </div>
+        </div>
+      </a>
     </div>
     <button class="bestseller-arrow bestseller-next" onclick="scrollBestseller(1)" aria-label="Next">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
@@ -605,7 +621,13 @@ function handleSearch() {
     {name:'custom portrait',url:'pet-portrait.html'},
     {name:'pet portrait',url:'pet-portrait.html'},
     {name:'hand drawn',url:'pet-portrait.html'},
-    {name:'illustration',url:'pet-portrait.html'}
+    {name:'illustration',url:'pet-portrait.html'},
+    {name:'necklace',url:'pet-necklace.html'},
+    {name:'pearl',url:'pet-necklace.html'},
+    {name:'collar',url:'pet-necklace.html'},
+    {name:'pet collar',url:'pet-necklace.html'},
+    {name:'pearl collar',url:'pet-necklace.html'},
+    {name:'chanel style',url:'pet-necklace.html'}
   ];
   const match = products.find(p => p.name.includes(q));
   if (match) window.location.href = match.url;
