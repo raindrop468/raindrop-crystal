@@ -630,6 +630,20 @@ a{color:inherit;text-decoration:none}
           </div>
         </div>
       </a>
+      <!-- 8: Custom Pet Rug -->
+      <a href="pet-rug.html" class="bestseller-card">
+        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#fef9f0,#f5ede0)">
+          <span class="bestseller-badge hot">🧶 New</span>
+          <img src="./images/rug/1_thumb.webp" alt="Custom Pet Rug" loading="lazy">
+        </div>
+        <div class="bestseller-card-body">
+          <h3>Custom Pet Rug</h3>
+          <p>Cartoon pet photo rug · 5 sizes · 2 materials</p>
+          <div class="bestseller-price">
+            <span class="sale">$23.80 – $48.80</span>
+          </div>
+        </div>
+      </a>
     </div>
     <button class="bestseller-arrow bestseller-next" onclick="scrollTrack('customProductsTrack', 1)" aria-label="Next">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
@@ -836,7 +850,15 @@ function handleSearch() {
     {name:'pet clip',url:'pet-hairclip.html'},
     {name:'hair accessory',url:'pet-hairclip.html'},
     {name:'handmade clip',url:'pet-hairclip.html'},
-    {name:'发卡',url:'pet-hairclip.html'}
+    {name:'发卡',url:'pet-hairclip.html'},
+    {name:'rug',url:'pet-rug.html'},
+    {name:'pet rug',url:'pet-rug.html'},
+    {name:'carpet',url:'pet-rug.html'},
+    {name:'floor mat',url:'pet-rug.html'},
+    {name:'custom rug',url:'pet-rug.html'},
+    {name:'faux cashmere',url:'pet-rug.html'},
+    {name:'fleece rug',url:'pet-rug.html'},
+    {name:'地毯',url:'pet-rug.html'}
   ];
   const match = products.find(p => p.name.includes(q));
   if (match) window.location.href = match.url;
