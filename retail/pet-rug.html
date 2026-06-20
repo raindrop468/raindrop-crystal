@@ -228,7 +228,7 @@ footer{background:#2d2d2d;color:#ccc;padding:48px 32px 24px}
 
 <!-- Detail Images -->
 <section class="detail-section">
-  <h2>Gallery — Custom Pet Rug Examples</h2>
+  <h2>Product Details — Material & Close-up Views</h2>
   <div class="detail-grid" id="detailGrid"></div>
 </section>
 
@@ -284,13 +284,15 @@ footer{background:#2d2d2d;color:#ccc;padding:48px 32px 24px}
 </footer>
 
 <script>
-// Gallery — all 12 images (1-12)
-const allPhotos = ['1','2','3','4','5','6','7','8','9','10','11','12'];
+// Gallery — images 1-6 (main gallery)
+const galleryPhotos = ['1','2','3','4','5','6'];
+// Detail — images 7-12 (detail section)
+const detailPhotos = ['7','8','9','10','11','12'];
 let currentIdx = 0;
 const thumbsEl = document.getElementById('thumbs');
 const mainImg = document.getElementById('mainImg');
 
-allPhotos.forEach((id, i) => {
+galleryPhotos.forEach((id, i) => {
   const img = document.createElement('img');
   img.src = `./images/rug/${id}_thumb.webp`;
   img.alt = `Rug Design ${id}`;
@@ -329,9 +331,9 @@ options.forEach((o, i) => {
   styleOptionsEl.appendChild(div);
 });
 
-// Detail gallery — all 12 images
+// Detail gallery — images 7-12
 const detailGrid = document.getElementById('detailGrid');
-allPhotos.forEach(id => {
+detailPhotos.forEach(id => {
   const img = document.createElement('img');
   img.src = `./images/rug/${id}.webp`;
   img.alt = `Rug Design ${id}`;
@@ -341,7 +343,7 @@ allPhotos.forEach(id => {
 
 function showImage(idx) {
   currentIdx = idx;
-  mainImg.src = `./images/rug/${allPhotos[idx]}.webp`;
+  mainImg.src = `./images/rug/${galleryPhotos[idx]}.webp`;
   document.querySelectorAll('.gallery-thumbs img').forEach((t, i) => {
     t.classList.toggle('active', i === idx);
   });
