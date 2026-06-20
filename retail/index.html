@@ -278,35 +278,263 @@ a{color:inherit;text-decoration:none}
   </div>
 </section>
 
-<!-- Best Sellers Carousel -->
-<section class="bestsellers-section" id="bestsellers">
+<!-- 当季新品 -->
+<section class="bestsellers-section" id="newArrivals">
   <div class="bestsellers-header">
-    <div class="tag">🔥 Best Sellers</div>
-    <h2>Our Most Loved Products</h2>
-    <p>Top-rated by pet parents worldwide — limited time 50% off</p>
+    <div class="tag">✨ New Arrivals</div>
+    <h2>Seasonal Picks</h2>
+    <p>Fresh designs just landed — limited time 50% OFF</p>
   </div>
   <div class="bestsellers-wrapper">
-    <button class="bestseller-arrow bestseller-prev" onclick="scrollBestseller(-1)" aria-label="Previous">
+    <button class="bestseller-arrow bestseller-prev" onclick="scrollTrack('newArrivalsTrack', -1)" aria-label="Previous">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
     </button>
-    <div class="bestsellers-track" id="bestsellerTrack">
-      <!-- 1: Pet Portrait Puzzle -->
-      <a href="pet-puzzle.html" class="bestseller-card">
-        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#f5f0e8,#e8dcc8)">
+    <div class="bestsellers-track" id="newArrivalsTrack">
+      <!-- 1: Sweet Style Adjustable Ring -->
+      <a href="pet-ring.html" class="bestseller-card">
+        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#fff5ed,#fce4d6)">
           <span class="bestseller-badge hot">🔥 Hot</span>
-          <img src="./images/puzzle/1_thumb.webp" alt="Pet Portrait Puzzle" loading="lazy">
+          <img src="./images/rings/1_thumb.webp" alt="Sweet Style Adjustable Ring" loading="lazy">
         </div>
         <div class="bestseller-card-body">
-          <h3>Pet Portrait Puzzle</h3>
-          <p>Custom photo jigsaw · 3 sizes · 200-1200 pcs</p>
+          <h3>Sweet Style Ring</h3>
+          <p>Gold/silver/cat designs · Alloy · Adjustable</p>
           <div class="bestseller-price">
-            <span class="original">$65.60 – $93.60</span>
-            <span class="sale">$32.80 – $46.80</span>
+            <span class="original">$17.60</span>
+            <span class="sale">$8.80</span>
             <span class="discount-tag">50% OFF</span>
           </div>
         </div>
       </a>
-      <!-- 2: Custom Pet Pillow -->
+      <!-- 2: Pearl Pet Collar -->
+      <a href="pet-necklace.html" class="bestseller-card">
+        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#fff5f5,#fce4ec)">
+          <span class="bestseller-badge hot">📿 New</span>
+          <img src="./images/necklace/1_thumb.webp" alt="Pearl Pet Collar" loading="lazy">
+        </div>
+        <div class="bestseller-card-body">
+          <h3>Pearl Pet Collar</h3>
+          <p>Original Chanel-style pearl, 3 designs</p>
+          <div class="bestseller-price">
+            <span class="original">$19.80</span>
+            <span class="sale">$9.90</span>
+            <span class="discount-tag">50% OFF</span>
+          </div>
+        </div>
+      </a>
+      <!-- 3: Pet Bib Scarf -->
+      <a href="pet-bib.html" class="bestseller-card">
+        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#fce4ec,#f8bbd0)">
+          <span class="bestseller-badge hot">🎀 New</span>
+          <img src="./images/bib/1_thumb.webp" alt="Pet Bib Scarf" loading="lazy">
+        </div>
+        <div class="bestseller-card-body">
+          <h3>Pet Bib Scarf</h3>
+          <p>Cute bowtie drool bib, 10 designs</p>
+          <div class="bestseller-price">
+            <span class="original">$27.60</span>
+            <span class="sale">$13.80</span>
+            <span class="discount-tag">50% OFF</span>
+          </div>
+        </div>
+      </a>
+      <!-- 4: Dog Rope Chew Toy -->
+      <a href="pet-rope-toys.html" class="bestseller-card">
+        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#f5f0e0,#e8e0c8)">
+          <span class="bestseller-badge hot">🔥 Hot</span>
+          <img src="./images/rope-toys/1_thumb.webp" alt="Dog Rope Chew Toy" loading="lazy">
+        </div>
+        <div class="bestseller-card-body">
+          <h3>Dog Rope Chew Toy</h3>
+          <p>Cotton rope knots · 6 styles · Teething</p>
+          <div class="bestseller-price">
+            <span class="original">$25.60 – $33.60</span>
+            <span class="sale">$12.80 – $16.80</span>
+            <span class="discount-tag">50% OFF</span>
+          </div>
+        </div>
+      </a>
+      <!-- 5: Custom Pet Bracelet & Necklace -->
+      <a href="pet-bracelet.html" class="bestseller-card">
+        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#fff5ed,#fce4d6)">
+          <span class="bestseller-badge hot">🔥 Hot</span>
+          <img src="./images/bracelet/1_thumb.webp" alt="Custom Pet Bracelet & Necklace" loading="lazy">
+        </div>
+        <div class="bestseller-card-body">
+          <h3>Pet Bracelet & Necklace</h3>
+          <p>Adjustable fashion jewelry · 8 styles · Alloy</p>
+          <div class="bestseller-price">
+            <span class="original">$39.60 – $45.60</span>
+            <span class="sale">$19.80 – $22.80</span>
+            <span class="discount-tag">50% OFF</span>
+          </div>
+        </div>
+      </a>
+      <!-- 6: Dog Embroidery Patch -->
+      <a href="pet-patches.html" class="bestseller-card">
+        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#f5f0ff,#e8dfd5)">
+          <span class="bestseller-badge">Set of 9</span>
+          <img src="./images/patches/1_thumb.webp" alt="Dog Embroidery Patch" loading="lazy">
+        </div>
+        <div class="bestseller-card-body">
+          <h3>Embroidery Patch</h3>
+          <p>Set of 9 · Iron-on / Sew-on · Corgi & more</p>
+          <div class="bestseller-price">
+            <span class="original">$17.60</span>
+            <span class="sale">$8.80</span>
+            <span class="discount-tag">50% OFF</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <button class="bestseller-arrow bestseller-next" onclick="scrollTrack('newArrivalsTrack', 1)" aria-label="Next">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+  </div>
+</section>
+
+<!-- 热卖单品 -->
+<section class="bestsellers-section" id="bestSellers">
+  <div class="bestsellers-header">
+    <div class="tag">🔥 Best Sellers</div>
+    <h2>Our Most Loved Products</h2>
+    <p>Top-rated by pet parents worldwide</p>
+  </div>
+  <div class="bestsellers-wrapper">
+    <button class="bestseller-arrow bestseller-prev" onclick="scrollTrack('bestSellersTrack', -1)" aria-label="Previous">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <div class="bestsellers-track" id="bestSellersTrack">
+      <!-- 1: Pet Hair Clip -->
+      <a href="pet-hairclip.html" class="bestseller-card">
+        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#fef3c7,#fde68a)">
+          <span class="bestseller-badge hot">🎀 New</span>
+          <img src="./images/hairclip/1_thumb.webp" alt="Pet Hair Clip" loading="lazy">
+        </div>
+        <div class="bestseller-card-body">
+          <h3>Pet Hair Clip</h3>
+          <p>Handmade BB hair clip, 16 unique designs</p>
+          <div class="bestseller-price">
+            <span class="sale">$9.90 – $32.80</span>
+          </div>
+        </div>
+      </a>
+      <!-- 2: Pet Urn -->
+      <a href="pet-urn.html" class="bestseller-card">
+        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#f5f0e8,#e8dcc8)">
+          <span class="bestseller-badge">Memorial</span>
+          <img src="./images/urn/1_thumb.webp" alt="Pet Urn" loading="lazy">
+        </div>
+        <div class="bestseller-card-body">
+          <h3>Pet Urn</h3>
+          <p>Ceramic memorial urn · White/Black/Red · 20×15×14cm</p>
+          <div class="bestseller-price">
+            <span class="original">$44</span>
+            <span class="sale">$22</span>
+            <span class="discount-tag">50% OFF</span>
+          </div>
+        </div>
+      </a>
+      <!-- 3: Wool Felt Rabbit Doll -->
+      <a href="pet-wool-felt.html" class="bestseller-card">
+        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#f5f0ff,#e8dfd5)">
+          <span class="bestseller-badge hot">🔥 Hot</span>
+          <img src="./images/wool-felt/1_thumb.webp" alt="Wool Felt Rabbit Doll" loading="lazy">
+        </div>
+        <div class="bestseller-card-body">
+          <h3>Wool Felt Rabbit Doll</h3>
+          <p>Nepal handmade · 16 styles · Bag charm</p>
+          <div class="bestseller-price">
+            <span class="original">$53.60</span>
+            <span class="sale">$26.80</span>
+            <span class="discount-tag">50% OFF</span>
+          </div>
+        </div>
+      </a>
+      <!-- 4: Classic Crystal -->
+      <a href="classic.html" class="bestseller-card">
+        <div class="bestseller-card-img">
+          <span class="bestseller-badge hot">🔥 Hot</span>
+          <img src="./images/classic/1_thumb.webp" alt="Classic Crystal" loading="lazy">
+        </div>
+        <div class="bestseller-card-body">
+          <h3>Classic Crystal Collar</h3>
+          <p>9 crystal types · Amethyst, Rose Quartz & more</p>
+          <div class="bestseller-price">
+            <span class="original">$164</span>
+            <span class="sale">$82</span>
+            <span class="discount-tag">50% OFF</span>
+          </div>
+        </div>
+      </a>
+      <!-- 5: Zodiac Guardian Crystal -->
+      <a href="zodiac.html" class="bestseller-card">
+        <div class="bestseller-card-img">
+          <span class="bestseller-badge hot">🔥 Hot</span>
+          <img src="./images/zodiac/1_thumb.webp" alt="Zodiac Guardian Crystal" loading="lazy">
+        </div>
+        <div class="bestseller-card-body">
+          <h3>Zodiac Guardian Crystal</h3>
+          <p>12 birth-month crystals · Amazonite, Garnet & more</p>
+          <div class="bestseller-price">
+            <span class="original">$82</span>
+            <span class="sale">$41</span>
+            <span class="discount-tag">50% OFF</span>
+          </div>
+        </div>
+      </a>
+      <!-- 6: Dog Plush Squeaky Toy -->
+      <a href="pet-plush.html" class="bestseller-card">
+        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#f5f0e8,#e8dcc8)">
+          <span class="bestseller-badge hot">🔥 Hot</span>
+          <img src="./images/plush/1_thumb.webp" alt="Dog Plush Squeaky Toy" loading="lazy">
+        </div>
+        <div class="bestseller-card-body">
+          <h3>Plush Squeaky Toy</h3>
+          <p>Soft plush · Squeaker inside · 4 styles</p>
+          <div class="bestseller-price">
+            <span class="original">$19.60</span>
+            <span class="sale">$9.80</span>
+            <span class="discount-tag">50% OFF</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <button class="bestseller-arrow bestseller-next" onclick="scrollTrack('bestSellersTrack', 1)" aria-label="Next">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+  </div>
+</section>
+
+<!-- 定制产品 -->
+<section class="bestsellers-section" id="customProducts">
+  <div class="bestsellers-header">
+    <div class="tag">🎨 Custom Made</div>
+    <h2>Make It Personal</h2>
+    <p>Turn your pet's photo into a unique keepsake</p>
+  </div>
+  <div class="bestsellers-wrapper">
+    <button class="bestseller-arrow bestseller-prev" onclick="scrollTrack('customProductsTrack', -1)" aria-label="Previous">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <div class="bestsellers-track" id="customProductsTrack">
+      <!-- 1: Custom Pet Portrait -->
+      <a href="pet-portrait.html" class="bestseller-card">
+        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#fdf6ed,#f5ede0)">
+          <span class="bestseller-badge">Digital</span>
+          <img src="./images/portrait/1_thumb.webp" alt="Custom Pet Portrait" loading="lazy">
+        </div>
+        <div class="bestseller-card-body">
+          <h3>Custom Pet Portrait</h3>
+          <p>Hand-drawn digital illustration, cat & dog</p>
+          <div class="bestseller-price">
+            <span class="original">$39.60</span>
+            <span class="sale">$19.80</span>
+            <span class="discount-tag">50% OFF</span>
+          </div>
+        </div>
+      </a>
+      <!-- 2: Custom Pet Photo Pillow -->
       <a href="pet-bolster.html" class="bestseller-card">
         <div class="bestseller-card-img" style="background:linear-gradient(135deg,#fef3e7,#fde4cc)">
           <span class="bestseller-badge hot">🔥 Hot</span>
@@ -322,66 +550,66 @@ a{color:inherit;text-decoration:none}
           </div>
         </div>
       </a>
-      <!-- 3: Wool Felt Rabbit Doll -->
-      <a href="pet-wool-felt.html" class="bestseller-card">
-        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#f5f0ff,#e8dfd5)">
+      <!-- 3: 3D Pet Fridge Magnet -->
+      <a href="pet-fridge.html" class="bestseller-card">
+        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#f5f0ff,#e8ddf5)">
           <span class="bestseller-badge hot">🔥 Hot</span>
-          <img src="./images/wool-felt/1_thumb.webp" alt="Wool Felt Rabbit Doll" loading="lazy">
+          <img src="./images/fridge/1b_thumb.webp" alt="3D Pet Fridge Magnet" loading="lazy">
         </div>
         <div class="bestseller-card-body">
-          <h3>Wool Felt Rabbit Doll</h3>
-          <p>Nepal handmade · 16 styles · Bag charm &amp; keychain</p>
+          <h3>3D Fridge Magnet</h3>
+          <p>Fridge magnet / Full body / Car aromatherapy</p>
           <div class="bestseller-price">
-            <span class="original">$53.60</span>
-            <span class="sale">$26.80</span>
+            <span class="original">$39.60 – $73.60</span>
+            <span class="sale">$19.80 – $36.80</span>
             <span class="discount-tag">50% OFF</span>
           </div>
         </div>
       </a>
-      <!-- 4: Dog Rope Chew Toy -->
-      <a href="pet-rope-toys.html" class="bestseller-card">
-        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#f5f0e0,#e8e0c8)">
-          <span class="bestseller-badge hot">🔥 Hot</span>
-          <img src="./images/rope-toys/1_thumb.webp" alt="Dog Rope Chew Toy" loading="lazy">
+      <!-- 4: Acrylic Pet Keychain -->
+      <a href="pet-keychain.html" class="bestseller-card">
+        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#f5f0ff,#e8ddf5)">
+          <span class="bestseller-badge">Photo Gift</span>
+          <img src="./images/keychain/11_thumb.webp" alt="Acrylic Pet Keychain" loading="lazy">
         </div>
         <div class="bestseller-card-body">
-          <h3>Dog Rope Chew Toy</h3>
-          <p>Cotton rope knots · 6 styles · Teething &amp; play</p>
+          <h3>Acrylic Keychain</h3>
+          <p>Transparent/clear · 4 styles · ~6cm · Acrylic</p>
           <div class="bestseller-price">
-            <span class="original">$25.60 – $33.60</span>
-            <span class="sale">$12.80 – $16.80</span>
+            <span class="original">$9.80</span>
+            <span class="sale">$4.90</span>
             <span class="discount-tag">50% OFF</span>
           </div>
         </div>
       </a>
-      <!-- 5: Zodiac Guardian Crystal -->
-      <a href="zodiac.html" class="bestseller-card">
-        <div class="bestseller-card-img">
-          <span class="bestseller-badge hot">🔥 Hot</span>
-          <img src="./images/zodiac/1_thumb.webp" alt="Zodiac Guardian Crystal" loading="lazy">
+      <!-- 5: Leather Pet Hair Keychain -->
+      <a href="pet-leather.html" class="bestseller-card">
+        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#f5f0e8,#e8dcc8)">
+          <span class="bestseller-badge">Leather</span>
+          <img src="./images/leather/7_thumb.webp" alt="Leather Pet Hair Keychain" loading="lazy">
         </div>
         <div class="bestseller-card-body">
-          <h3>Zodiac Guardian Crystal</h3>
-          <p>12 birth-month crystals · Amazonite, Garnet &amp; more</p>
+          <h3>Leather Keychain</h3>
+          <p>7 colors · Blank $4.90 / Custom $9.80</p>
           <div class="bestseller-price">
-            <span class="original">$82</span>
-            <span class="sale">$41</span>
+            <span class="original">$9.80 – $19.60</span>
+            <span class="sale">$4.90 – $9.80</span>
             <span class="discount-tag">50% OFF</span>
           </div>
         </div>
       </a>
-      <!-- 6: Alloy Bracelet & Necklace -->
-      <a href="pet-bracelet.html" class="bestseller-card">
-        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#fff5ed,#fce4d6)">
+      <!-- 6: Pet Portrait Puzzle -->
+      <a href="pet-puzzle.html" class="bestseller-card">
+        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#f5f0e8,#e8dcc8)">
           <span class="bestseller-badge hot">🔥 Hot</span>
-          <img src="./images/bracelet/1_thumb.webp" alt="Alloy Bracelet & Necklace" loading="lazy">
+          <img src="./images/puzzle/1_thumb.webp" alt="Pet Portrait Puzzle" loading="lazy">
         </div>
         <div class="bestseller-card-body">
-          <h3>Alloy Bracelet &amp; Necklace</h3>
-          <p>Adjustable fashion jewelry · 8 styles · Gift ready</p>
+          <h3>Pet Portrait Puzzle</h3>
+          <p>Custom photo jigsaw · 3 sizes · 200-1200 pcs</p>
           <div class="bestseller-price">
-            <span class="original">$39.60 – $45.60</span>
-            <span class="sale">$19.80 – $22.80</span>
+            <span class="original">$65.60 – $93.60</span>
+            <span class="sale">$32.80 – $46.80</span>
             <span class="discount-tag">50% OFF</span>
           </div>
         </div>
@@ -402,75 +630,12 @@ a{color:inherit;text-decoration:none}
           </div>
         </div>
       </a>
-      <!-- 9: Custom Pet Portrait -->
-      <a href="pet-portrait.html" class="bestseller-card">
-        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#fdf6ed,#f5ede0)">
-          <span class="bestseller-badge">Digital</span>
-          <img src="./images/portrait/1_thumb.webp" alt="Custom Pet Portrait" loading="lazy">
-        </div>
-        <div class="bestseller-card-body">
-          <h3>Custom Pet Portrait</h3>
-          <p>Hand-drawn digital portrait, cat & dog illustration</p>
-          <div class="bestseller-price">
-            <span class="original">$39.60</span>
-            <span class="sale">$19.80</span>
-            <span class="discount-tag">50% OFF</span>
-          </div>
-        </div>
-      </a>
-      <!-- 10: Pearl Pet Collar -->
-      <a href="pet-necklace.html" class="bestseller-card">
-        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#fff5f5,#fce4ec)">
-          <span class="bestseller-badge hot">📿 New</span>
-          <img src="./images/necklace/1_thumb.webp" alt="Pearl Pet Collar" loading="lazy">
-        </div>
-        <div class="bestseller-card-body">
-          <h3>Pearl Pet Collar</h3>
-          <p>Original Chanel-style pearl necklace, 3 designs</p>
-          <div class="bestseller-price">
-            <span class="original">$19.80</span>
-            <span class="sale">$9.90</span>
-            <span class="discount-tag">50% OFF</span>
-          </div>
-        </div>
-      </a>
-      <!-- 11: Pet Bib Scarf -->
-      <a href="pet-bib.html" class="bestseller-card">
-        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#fce4ec,#f8bbd0)">
-          <span class="bestseller-badge hot">🎀 New</span>
-          <img src="./images/bib/1_thumb.webp" alt="Pet Bib Scarf" loading="lazy">
-        </div>
-        <div class="bestseller-card-body">
-          <h3>Pet Bib Scarf</h3>
-          <p>Cute bowtie drool bib, 10 designs for cats & dogs</p>
-          <div class="bestseller-price">
-            <span class="original">$27.60</span>
-            <span class="sale">$13.80</span>
-            <span class="discount-tag">50% OFF</span>
-          </div>
-        </div>
-      </a>
-      <!-- 12: Pet Hair Clip -->
-      <a href="pet-hairclip.html" class="bestseller-card">
-        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#fef3c7,#fde68a)">
-          <span class="bestseller-badge hot">🎀 New</span>
-          <img src="./images/hairclip/1_thumb.webp" alt="Pet Hair Clip" loading="lazy">
-        </div>
-        <div class="bestseller-card-body">
-          <h3>Pet Hair Clip</h3>
-          <p>Handmade BB hair clip, 16 unique designs</p>
-          <div class="bestseller-price">
-            <span class="sale">$9.90 – $32.80</span>
-          </div>
-        </div>
-      </a>
     </div>
-    <button class="bestseller-arrow bestseller-next" onclick="scrollBestseller(1)" aria-label="Next">
+    <button class="bestseller-arrow bestseller-next" onclick="scrollTrack('customProductsTrack', 1)" aria-label="Next">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
     </button>
   </div>
 </section>
-
 <!-- Our Philosophy -->
 <section class="philosophy">
   <div class="philosophy-inner">
@@ -597,8 +762,8 @@ a{color:inherit;text-decoration:none}
 
 <script>
 // ===== BESTSELLERS CAROUSEL =====
-function scrollBestseller(dir) {
-  const track = document.getElementById('bestsellerTrack');
+function scrollTrack(trackId, dir) {
+  const track = document.getElementById(trackId);
   const cardWidth = track.querySelector('.bestseller-card').offsetWidth + 20;
   track.scrollBy({ left: dir * cardWidth * 2, behavior: 'smooth' });
 }
