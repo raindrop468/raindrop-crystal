@@ -45,7 +45,10 @@ img{max-width:100%;display:block}
 .gallery-thumbs img,.gallery-thumbs video{border-radius:8px;cursor:pointer;opacity:.6;transition:all .2s;aspect-ratio:1/1;object-fit:cover;border:2px solid transparent}
 .gallery-thumbs img:hover,.gallery-thumbs video:hover{opacity:.85}
 .gallery-thumbs img.active,.gallery-thumbs video.active{opacity:1;border-color:#c4956a}
-.gallery-thumbs video{pointer-events:none}
+.gallery-thumbs .thumb-video-wrap{position:relative;cursor:pointer}
+.gallery-thumbs .thumb-video-wrap video{pointer-events:none}
+.gallery-thumbs .thumb-play-icon{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:28px;height:28px;background:rgba(0,0,0,.6);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;pointer-events:none}
+.gallery-thumbs .thumb-video-wrap.active .thumb-play-icon{background:rgba(196,149,106,.85)}
 
 /* Info */
 .info{padding-top:8px}
@@ -189,10 +192,10 @@ footer{background:#2d2d2d;color:#ccc;padding:48px 32px 24px}
 <section class="product">
   <div class="gallery">
     <div class="gallery-main" id="galleryMain">
-      <video id="mainVideo" controls muted playsinline style="display:none">
+      <video id="mainVideo" controls muted playsinline autoplay style="display:block">
         <source src="./images/petbed/1.mp4" type="video/mp4">
       </video>
-      <img id="mainImg" src="./images/petbed/2.webp" alt="Waterproof Pet Bed" style="display:block">
+      <img id="mainImg" src="./images/petbed/2.webp" alt="Waterproof Pet Bed" style="display:none">
     </div>
     <div class="gallery-thumbs" id="thumbs"></div>
   </div>
@@ -320,22 +323,37 @@ const galleryItems = [
 // Detail images: 4-13
 const detailPhotos = ['4','5','6','7','8','9','10','11','12','13'];
 
-let currentIdx = 1; // Start on image 2 (Design A)
+let currentIdx = 0; // Start on video
 const thumbsEl = document.getElementById('thumbs');
 const mainImg = document.getElementById('mainImg');
 const mainVideo = document.getElementById('mainVideo');
 
 galleryItems.forEach((item, i) => {
-  const el = document.createElement(item.type === 'video' ? 'video' : 'img');
-  el.src = item.thumb;
-  el.alt = item.alt;
-  el.onclick = () => showGalleryItem(i);
-  if (i === currentIdx) el.classList.add('active');
   if (item.type === 'video') {
-    el.muted = true;
-    el.preload = 'metadata';
+    // Wrap video thumb with play icon overlay
+    const wrap = document.createElement('div');
+    wrap.className = 'thumb-video-wrap';
+    wrap.onclick = () => showGalleryItem(i);
+    if (i === currentIdx) wrap.classList.add('active');
+    const vid = document.createElement('video');
+    vid.src = item.thumb;
+    vid.alt = item.alt;
+    vid.muted = true;
+    vid.preload = 'metadata';
+    const playIcon = document.createElement('div');
+    playIcon.className = 'thumb-play-icon';
+    playIcon.innerHTML = '▶';
+    wrap.appendChild(vid);
+    wrap.appendChild(playIcon);
+    thumbsEl.appendChild(wrap);
+  } else {
+    const el = document.createElement('img');
+    el.src = item.thumb;
+    el.alt = item.alt;
+    el.onclick = () => showGalleryItem(i);
+    if (i === currentIdx) el.classList.add('active');
+    thumbsEl.appendChild(el);
   }
-  thumbsEl.appendChild(el);
 });
 
 // Style options
@@ -412,9 +430,12 @@ function showGalleryItem(idx) {
     mainImg.src = item.src;
     mainImg.alt = item.alt;
   }
-  document.querySelectorAll('.gallery-thumbs img, .gallery-thumbs video').forEach((t, i) => {
-    t.classList.toggle('active', i === idx);
+  document.querySelectorAll('.gallery-thumbs img, .gallery-thumbs .thumb-video-wrap').forEach((t) => {
+    t.classList.remove('active');
   });
+  // Re-add active to the correct element
+  const allThumbs = document.querySelectorAll('.gallery-thumbs > *');
+  if (allThumbs[idx]) allThumbs[idx].classList.add('active');
 }
 
 // Style selector
