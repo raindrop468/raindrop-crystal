@@ -386,6 +386,22 @@ a{color:inherit;text-decoration:none}
           </div>
         </div>
       </a>
+      <!-- 7: Waterproof Pet Bed -->
+      <a href="pet-bed.html" class="bestseller-card">
+        <div class="bestseller-card-img" style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9)">
+          <span class="bestseller-badge hot">🛏️ New</span>
+          <img src="./images/petbed/2_thumb.webp" alt="Waterproof Pet Bed" loading="lazy">
+        </div>
+        <div class="bestseller-card-body">
+          <h3>Waterproof Pet Bed</h3>
+          <p>Anti-bite · All-season · 2 styles × 4 sizes</p>
+          <div class="bestseller-price">
+            <span class="original">$33.60</span>
+            <span class="sale">$16.80</span>
+            <span class="discount-tag">50% OFF</span>
+          </div>
+        </div>
+      </a>
     </div>
     <button class="bestseller-arrow bestseller-next" onclick="scrollTrack('newArrivalsTrack', 1)" aria-label="Next">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
@@ -858,7 +874,16 @@ function handleSearch() {
     {name:'custom rug',url:'pet-rug.html'},
     {name:'faux cashmere',url:'pet-rug.html'},
     {name:'fleece rug',url:'pet-rug.html'},
-    {name:'地毯',url:'pet-rug.html'}
+    {name:'地毯',url:'pet-rug.html'},
+    {name:'pet bed',url:'pet-bed.html'},
+    {name:'dog bed',url:'pet-bed.html'},
+    {name:'cat bed',url:'pet-bed.html'},
+    {name:'waterproof bed',url:'pet-bed.html'},
+    {name:'anti-bite bed',url:'pet-bed.html'},
+    {name:'pet nest',url:'pet-bed.html'},
+    {name:'狗窝',url:'pet-bed.html'},
+    {name:'猫窝',url:'pet-bed.html'},
+    {name:'宠物垫',url:'pet-bed.html'}
   ];
   const match = products.find(p => p.name.includes(q));
   if (match) window.location.href = match.url;
