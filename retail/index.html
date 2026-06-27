@@ -1001,6 +1001,10 @@ const lightboxCounter = document.getElementById("lightboxCounter");
 let currentIndex = 0;
 const BATCH_SIZE = 12;
 let loadedCount = 0;
+const REVIEW_ASSET_VERSION = "20260627-review-sync";
+function reviewAsset(url) {
+  return `${url}?v=${REVIEW_ASSET_VERSION}`;
+}
 
 function loadGalleryBatch() {
   const batch = MEDIA_ITEMS.slice(loadedCount, loadedCount + BATCH_SIZE);
@@ -1011,12 +1015,12 @@ function loadGalleryBatch() {
     item.setAttribute("data-index", startIndex + i);
     item.setAttribute("onclick", `openLightbox(${startIndex + i})`);
     if (media.type === "video") {
-      item.innerHTML = `<video src="${media.src}" muted autoplay loop playsinline preload="auto"></video><div class="video-badge">▶</div><div class="overlay"><span>Video #${media.id}</span></div>`;
+      item.innerHTML = `<video src="${reviewAsset(media.src)}" muted autoplay loop playsinline preload="auto"></video><div class="video-badge">&#9658;</div><div class="overlay"><span>Video #${media.id}</span></div>`;
       const preview = item.querySelector("video");
       preview.play().catch(() => {});
       item.addEventListener("mouseenter", () => preview.play().catch(() => {}));
     } else {
-      item.innerHTML = `<img src="${media.thumb}" alt="Customer Photo #${media.id}" loading="lazy"><div class="overlay"><span>Photo #${media.id}</span></div>`;
+      item.innerHTML = `<img src="${reviewAsset(media.src)}" alt="Customer Photo #${media.id}" loading="lazy"><div class="overlay"><span>Photo #${media.id}</span></div>`;
     }
     galleryGrid.appendChild(item);
   });
@@ -1041,9 +1045,9 @@ function closeLightbox() {
 function updateLightbox() {
   const media = MEDIA_ITEMS[currentIndex];
   if (media.type === "video") {
-    lightboxContent.innerHTML = `<video src="${media.src}" controls autoplay playsinline preload="auto"></video>`;
+    lightboxContent.innerHTML = `<video src="${reviewAsset(media.src)}" controls autoplay playsinline preload="auto"></video>`;
   } else {
-    lightboxContent.innerHTML = `<img src="${media.src}" alt="Customer Photo #${media.id}">`;
+    lightboxContent.innerHTML = `<img src="${reviewAsset(media.src)}" alt="Customer Photo #${media.id}">`;
   }
   lightboxCounter.textContent = `${currentIndex + 1} / ${TOTAL_MEDIA}`;
 }
